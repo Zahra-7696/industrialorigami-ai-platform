@@ -839,7 +839,9 @@ All rights are reserved unless a licence is added to the repository.
 
 \---
 
-## Acknowledgement
+## Developed By
 
-This project is being developed as a real company platform and a professional engineering portfolio. Architecture and implementation decisions are documented to demonstrate not merely that the software works, but why it was designed that way. Because apparently “it worked on my laptop” remains humanity’s most durable deployment strategy.
+This website and technology platform were designed and developed by **Zahra Torabi** for IndustrialOrigami.AI.
+
+The project demonstrates full-stack software development, multilingual web design, artificial intelligence integration, cloud architecture, DevOps, testing, monitoring, and data visualisation using technologies including Next.js, React, TypeScript, Node.js, PostgreSQL, Docker, Kubernetes, GitHub Actions, AWS, RAG, and Large Language Models.
 
