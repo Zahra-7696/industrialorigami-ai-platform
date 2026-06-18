@@ -1,275 +1,321 @@
 # IndustrialOrigami.AI Platform
 
-A multilingual, production-oriented company website and technology platform for **IndustrialOrigami.AI**.
+A multilingual company website and technology platform for **IndustrialOrigami.AI**, a New Zealand venture working across artificial intelligence, robotics, software engineering, data science, and applied research and development.
 
-The platform is being developed as both:
+This repository serves two purposes:
 
-1. the official public-facing website for IndustrialOrigami.AI, and
-2. a professional portfolio project demonstrating full-stack engineering, AI/ML integration, cloud architecture, DevOps, observability, testing, and multilingual application design.
+1. the public-facing website for IndustrialOrigami.AI; and
+2. a professional portfolio project demonstrating multilingual full-stack engineering, AI/ML integration, cloud architecture, DevOps, testing, observability, and technical product development.
 
-The long-term platform will support company information, intelligent robotics projects, AI/ML services, RAG-based document assistance, dashboards, analytics, customer enquiries, project content, and internal administration.
+---
 
-\---
+## Current Status
 
-## Project Status
+**Current stage:** Multilingual public website and project-portfolio implementation
 
-**Current phase:** Phase 1 — multilingual public website foundation
+Implemented:
 
-The project is under active development. Features, architecture, deployment targets, and infrastructure will evolve in stages.
+- English, Persian, and Simplified Chinese routes
+- right-to-left support for Persian
+- responsive desktop and mobile navigation
+- dropdown menus for Services and Projects
+- About page with company information and team profiles
+- individual service pages
+- individual project pages
+- dedicated Intelligent Robotic Hand project page
+- Careers and Collaborate pages
+- team photographs, qualifications, email links, and LinkedIn links
+- branded assets, metadata, favicon, and social-sharing image
+- reusable design components and shared styling
 
-\---
+Planned:
+
+- validated enquiry forms
+- PostgreSQL database
+- API layer
+- authentication and administration
+- RAG-based knowledge assistant
+- analytics dashboards
+- automated testing
+- containers, monitoring, and cloud deployment
+
+---
 
 ## Core Objectives
 
 The platform is designed to:
 
-* present IndustrialOrigami.AI as a professional New Zealand AI and robotics company
-* showcase the Intelligent Robotic Hand programme
-* explain the company’s AI, machine learning, data science, software, and engineering capabilities
-* support English, Persian, and Simplified Chinese
-* provide a responsive and accessible user experience
-* include a secure contact and partnership enquiry workflow
-* evolve into a full-stack application with PostgreSQL, APIs, authentication, and dashboards
-* include a RAG-based company knowledge assistant
-* demonstrate CI/CD, testing, containerisation, monitoring, and cloud deployment
-* serve as a strong portfolio project for full-stack, AI/ML, MLOps, and cloud engineering roles
+- present IndustrialOrigami.AI as a professional New Zealand AI and robotics company
+- explain the company’s technical services
+- showcase the Intelligent Robotic Hand programme
+- present additional AI, data, software, and digital-twin concepts
+- support English, Persian, and Simplified Chinese
+- provide an accessible and responsive user experience
+- support future customer, research, funding, and partnership enquiries
+- evolve into a secure full-stack platform
+- demonstrate CI/CD, testing, containerisation, monitoring, and cloud deployment
+- serve as a portfolio project for full-stack, AI/ML, MLOps, data, and cloud-engineering roles
 
-\---
+---
 
 ## Technology Stack
 
-### Current Stack
+### Current
 
-* **Next.js**
-* **React**
-* **TypeScript**
-* **Tailwind CSS**
-* **ESLint**
-* **App Router**
-* **Git**
-* **GitHub**
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Next.js App Router
+- Next.js Image
+- ESLint
+- Git
+- GitHub
 
-### Planned Backend and Data Stack
+### Planned Backend and Data
 
-* **Node.js**
-* **Next.js Route Handlers**
-* **Python**
-* **FastAPI**
-* **PostgreSQL**
-* **pgvector**
-* **REST APIs**
-* **OpenAPI documentation**
+- Node.js
+- Next.js Route Handlers
+- Python
+- FastAPI
+- PostgreSQL
+- pgvector
+- REST APIs
+- OpenAPI
 
-### Planned AI and Machine Learning Stack
+### Planned AI and Machine Learning
 
-* **Large Language Models**
-* **Retrieval-Augmented Generation**
-* **Embedding models**
-* **Vector search**
-* **Ollama for local development**
-* **Amazon Bedrock in a later cloud phase**
-* **Model evaluation and feedback tracking**
-* **RAG source citation and grounded response generation**
+- Large Language Models
+- Retrieval-Augmented Generation
+- embedding models
+- vector search
+- Ollama for local development
+- Amazon Bedrock in a later cloud phase
+- RAG evaluation and feedback tracking
+- grounded answers with source citations
 
-### Planned DevOps and Infrastructure Stack
+### Planned DevOps and Infrastructure
 
-* **Docker**
-* **Docker Compose**
-* **GitHub Actions**
-* **Jenkins as an optional enterprise CI/CD demonstration**
-* **Kubernetes**
-* **Prometheus**
-* **Grafana**
-* **AWS IAM**
-* **Amazon S3**
-* **AWS Lambda**
-* **Amazon API Gateway**
-* **Amazon Bedrock**
-* **AWS CloudWatch**
-* **AWS Secrets Manager**
+- Docker
+- Docker Compose
+- GitHub Actions
+- Jenkins as an optional enterprise demonstration
+- Kubernetes
+- Prometheus
+- Grafana
+- AWS IAM
+- Amazon S3
+- AWS Lambda
+- Amazon API Gateway
+- Amazon Bedrock
+- AWS CloudWatch
+- AWS Secrets Manager
 
-### Planned Testing and Quality Stack
+### Planned Testing and Quality
 
-* **Vitest**
-* **React Testing Library**
-* **Playwright**
-* **Pytest**
-* **ESLint**
-* **TypeScript strict mode**
-* **Prettier**
-* **GitHub CodeQL**
-* **Dependency scanning**
-* **Container image scanning**
-* **Accessibility testing**
+- Vitest
+- React Testing Library
+- Playwright
+- Pytest
+- TypeScript strict mode
+- Prettier
+- GitHub CodeQL
+- dependency scanning
+- container scanning
+- accessibility testing
 
-\---
+---
 
 ## Multilingual Support
 
-The website will support:
+| Language | Locale | Direction |
+|---|---|---|
+| English | `en` | Left-to-right |
+| Persian | `fa` | Right-to-left |
+| Simplified Chinese | `zh` | Left-to-right |
 
-|Language|Locale|Direction|
-|-|-|-|
-|English|`en`|Left-to-right|
-|Persian|`fa`|Right-to-left|
-|Simplified Chinese|`zh`|Left-to-right|
-
-Planned routes:
+Translations are stored in:
 
 ```text
-/en
-/fa
-/zh
-
-/en/about
-/fa/about
-/zh/about
-
-/en/robotic-hand
-/fa/robotic-hand
-/zh/robotic-hand
+i18n/dictionaries/
+├── en.json
+├── fa.json
+└── zh.json
 ```
 
-Persian pages will automatically use `dir="rtl"`.
+---
 
-\---
-
-## Planned Public Pages
-
-The initial public website will include:
-
-1. Home
-2. About
-3. Team
-4. Solutions
-5. Intelligent Robotic Hand
-6. AI and Machine Learning Services
-7. Research and Development
-8. Projects and Case Studies
-9. Insights or Blog
-10. Careers
-11. Contact
-12. AI Knowledge Assistant
-13. Privacy Policy
-14. Terms of Use
-15. Accessibility Statement
-16. Custom 404 Page
-
-\---
-
-## Planned Platform Capabilities
-
-### Public Website
-
-* responsive navigation
-* multilingual content
-* language selector
-* RTL support for Persian
-* company overview
-* team profiles
-* solutions and service pages
-* robotic-hand project page
-* case studies
-* news and insights
-* partnership and funding enquiries
-* contact form
-* downloadable public documents
-* SEO metadata
-* social sharing metadata
-* accessible navigation
-* responsive design
-
-### Admin Dashboard
-
-* content management
-* multilingual content management
-* team profile management
-* project and case study management
-* contact enquiry management
-* careers and vacancy management
-* RAG document management
-* analytics and reporting
-* role-based access
-* audit logs
-* system health overview
-
-### AI Knowledge Assistant
-
-* company-document ingestion
-* text chunking
-* embeddings
-* vector search
-* source-aware answers
-* citation display
-* response feedback
-* unsupported-answer refusal
-* multilingual questions
-* model evaluation dashboard
-* retrieval-quality monitoring
-
-### Data Visualisation
-
-Planned charts and dashboards include:
-
-* website traffic by language
-* page visits by month
-* contact enquiries by category
-* most-viewed services and projects
-* chatbot questions by topic
-* RAG retrieval quality
-* model response time
-* API response latency
-* error rate
-* CI/CD pipeline success rate
-* robotic-hand grasp success rate
-* robotic-hand sensor and actuator test metrics
-
-\---
-
-## Proposed Architecture
+## Current Website Map
 
 ```text
-                        ┌──────────────────────────────┐
-                        │        Web Browser           │
-                        │ English / Persian / Chinese  │
-                        └──────────────┬───────────────┘
-                                       │
-                                       ▼
-                        ┌──────────────────────────────┐
-                        │       Next.js Frontend       │
-                        │ React + TypeScript + CSS     │
-                        └──────────────┬───────────────┘
-                                       │
-                 ┌─────────────────────┼─────────────────────┐
-                 │                     │                     │
-                 ▼                     ▼                     ▼
-        ┌────────────────┐   ┌──────────────────┐   ┌──────────────────┐
-        │ Next.js APIs   │   │ FastAPI AI API   │   │ Authentication   │
-        │ Node.js        │   │ RAG / ML / LLM   │   │ Roles / Sessions │
-        └────────┬───────┘   └─────────┬────────┘   └────────┬─────────┘
-                 │                     │                     │
-                 └──────────────┬──────┴──────────────┬──────┘
-                                │                     │
-                                ▼                     ▼
-                    ┌──────────────────────┐  ┌─────────────────────┐
-                    │ PostgreSQL           │  │ Object Storage      │
-                    │ Business Data        │  │ S3 or Local Storage │
-                    │ pgvector Embeddings  │  │ Documents / Media   │
-                    └──────────────────────┘  └─────────────────────┘
+src/app/[lang]/
+├── about/
+│   └── page.tsx
+├── services/
+│   ├── page.tsx
+│   └── [slug]/
+│       └── page.tsx
+├── projects/
+│   ├── page.tsx
+│   ├── robotic-hand/
+│   │   └── page.tsx
+│   └── [slug]/
+│       └── page.tsx
+├── careers/
+│   ├── page.tsx
+│   └── [slug]/
+│       └── page.tsx
+├── collaborate/
+│   └── page.tsx
+├── layout.tsx
+├── page.tsx
+└── template.tsx
 ```
 
-\---
+Main navigation:
+
+```text
+Home | About | Services | Projects | Careers | Collaborate | Language
+```
+
+---
+
+## Service Routes
+
+```text
+/[lang]/services/robotics-and-automation
+/[lang]/services/data-science-and-analytics
+/[lang]/services/software-development
+/[lang]/services/rag-intelligent-assistants
+/[lang]/services/research-prototyping-technology-consulting
+```
+
+### Services
+
+- Robotics and Automation
+- Data Science and Analytics
+- Software Development
+- RAG and Intelligent Assistants
+- Research, Prototyping and Technology Consulting
+
+---
+
+## Project Routes
+
+```text
+/[lang]/projects/robotic-hand
+/[lang]/projects/industrial-rag-platform
+/[lang]/projects/predictive-maintenance
+/[lang]/projects/digital-twin
+```
+
+### Intelligent Robotic Hand
+
+The flagship R&D programme combines:
+
+- mechanical design
+- sensing
+- force and position feedback
+- real-time motor control
+- computer vision
+- edge AI
+- ROS 2
+- deterministic industrial communication
+- staged prototype validation
+
+The page includes genuine early-stage sensing and motion-capture images. These images are presented as development evidence, not as photographs of a completed product.
+
+### Industrial RAG Platform
+
+A multilingual knowledge-assistant concept using document ingestion, embeddings, vector retrieval, source citations, evaluation, and a chat interface.
+
+### Predictive Maintenance
+
+A proposed industrial analytics project using time-series data, anomaly detection, forecasting, model monitoring, and maintenance dashboards.
+
+### Digital Twin
+
+A research and architecture concept for modelling, monitoring, simulation, and safe evaluation of physical or networked systems.
+
+---
+
+## Intelligent Robotic Hand Technology
+
+### Planned Hardware
+
+- NVIDIA Jetson edge computer
+- ARM real-time controller
+- actuators and motor drivers
+- position sensors
+- force, current, pressure, and tactile sensors
+- external analogue-to-digital converters
+- industrial communication interface
+- watchdogs, limits, and emergency-stop behaviour
+
+### Planned Software
+
+- Linux
+- CUDA
+- cuDNN
+- TensorRT
+- Python
+- C++
+- OpenCV
+- PyTorch
+- ROS 2
+- FreeRTOS or bare-metal firmware
+- PID control
+- future adaptive or learning-based control
+
+### Planned Evaluation
+
+- grasp success rate
+- position-control error
+- force-control error
+- maximum contact force
+- response latency
+- complete grasp-cycle time
+- communication jitter
+- packet-loss behaviour
+- repeatability
+- actuator temperature
+- energy consumption
+- payload capability
+- fault detection and recovery
+
+---
 
 ## Repository Structure
 
-The project currently uses the standard Next.js structure and will gradually evolve into a monorepository.
-
-### Current Structure
-
 ```text
 industrialorigami-ai-platform/
-├── app/
+├── components/
+│   ├── layout/
+│   ├── pages/
+│   ├── sections/
+│   └── ui/
+├── i18n/
+│   ├── dictionaries/
+│   ├── config.ts
+│   └── get-dictionary.ts
+├── lib/
+│   ├── careers.ts
+│   ├── catalog.ts
+│   ├── robotic-hand-content.ts
+│   └── team.ts
 ├── public/
+│   ├── brand/
+│   ├── projects/
+│   │   └── robotic-hand/
+│   └── team/
+├── src/
+│   └── app/
+│       ├── [lang]/
+│       ├── globals.css
+│       ├── icon.png
+│       └── opengraph-image.png
+├── tests/
+├── types/
 ├── .gitignore
 ├── eslint.config.mjs
 ├── next.config.ts
@@ -280,179 +326,45 @@ industrialorigami-ai-platform/
 └── tsconfig.json
 ```
 
-### Planned Structure
+---
+
+
+### Routes and Slugs
+
+Service and project slugs are defined in:
 
 ```text
-industrialorigami-ai-platform/
-├── apps/
-│   └── web/
-├── services/
-│   └── ai-api/
-├── packages/
-│   ├── ui/
-│   ├── config/
-│   └── types/
-├── database/
-│   ├── migrations/
-│   └── seed/
-├── infrastructure/
-│   ├── docker/
-│   ├── kubernetes/
-│   ├── monitoring/
-│   └── aws/
-├── documents/
-│   ├── architecture/
-│   ├── requirements/
-│   └── api/
-├── .github/
-│   ├── workflows/
-│   └── ISSUE\_TEMPLATE/
-├── docker-compose.yml
-├── README.md
-└── CONTRIBUTING.md
+lib/catalog.ts
 ```
 
-The repository will be restructured only when the application requires it. Empty folders are not architecture. They are merely optimism with indentation.
+### Robotic Hand Content
 
-\---
+Detailed multilingual content is stored in:
 
-## Development Roadmap
+```text
+lib/robotic-hand-content.ts
+```
 
-### Phase 0 — Requirements and Planning
+Project images are stored in:
 
-* define business objectives
-* define target audiences
-* define brand identity
-* create site map
-* define page requirements
-* define multilingual strategy
-* document security expectations
-* define success criteria
-* create initial architecture decision records
+```text
+public/projects/robotic-hand/
+├── hand-sensor.jpeg
+└── hand-motion-capture.jpeg
+```
 
-### Phase 1 — Multilingual Public Website
-
-* initialise Next.js project
-* create English, Persian, and Chinese routing
-* implement RTL support
-* build responsive navigation
-* build footer
-* create Home page
-* create About page
-* create Team page
-* create Solutions page
-* create Robotic Hand page
-* create Contact page
-* add SEO metadata
-* add GitHub Actions build workflow
-* deploy static version
-
-### Phase 2 — Portfolio and Content
-
-* add Projects and Case Studies
-* add Research and Development
-* add Blog or Insights
-* add Careers
-* add technical diagrams
-* add dashboards and charts
-* add downloadable public documents
-* add local search
-
-### Phase 3 — Backend and Database
-
-* add PostgreSQL
-* define database schema
-* add contact form persistence
-* add newsletter registration
-* add authentication
-* add role-based access
-* create admin dashboard
-* add REST APIs
-* add API documentation
-
-### Phase 4 — RAG and LLM Assistant
-
-* add FastAPI AI service
-* add document ingestion
-* add chunking
-* add embeddings
-* add pgvector
-* add retrieval
-* add source citations
-* add chatbot interface
-* add feedback
-* add evaluation
-* add local LLM support
-* add Bedrock integration later
-
-### Phase 5 — Analytics and Dashboards
-
-* website analytics
-* contact-enquiry reporting
-* RAG evaluation dashboard
-* robotic-hand metrics
-* charts and filters
-* CSV export
-* audit logs
-
-### Phase 6 — Testing, Security, and Quality
-
-* unit testing
-* component testing
-* API testing
-* end-to-end testing
-* accessibility testing
-* TypeScript strict checks
-* dependency scanning
-* CodeQL analysis
-* secret scanning
-* container scanning
-* secure headers
-* input validation
-* rate limiting
-
-### Phase 7 — Docker and Monitoring
-
-* Dockerise Next.js
-* Dockerise FastAPI
-* add PostgreSQL and pgvector
-* add Docker Compose
-* add Prometheus
-* add Grafana
-* add application metrics
-* add alerting
-* add health checks
-
-### Phase 8 — Kubernetes and Cloud
-
-* deploy locally with kind, k3d, or Minikube
-* add Kubernetes manifests
-* add ConfigMaps and Secrets
-* add ingress
-* add autoscaling demonstration
-* create AWS architecture
-* configure IAM
-* use S3
-* use Lambda and API Gateway where suitable
-* integrate Bedrock
-* configure CloudWatch
-* configure budgets and cost alerts
-
-\---
+---
 
 ## Local Development
 
 ### Prerequisites
 
-Install:
+- Node.js 20 or later
+- npm
+- Git
+- Visual Studio Code
 
-* Node.js 20 or later
-* npm
-* Git
-* Visual Studio Code
-* Docker Desktop, required in later phases
-
-Check your versions:
+Check versions:
 
 ```powershell
 node --version
@@ -460,20 +372,20 @@ npm --version
 git --version
 ```
 
-### Clone the Repository
+### Clone
 
 ```powershell
-git clone https://github.com/YOUR\_USERNAME/industrialorigami-ai-platform.git
+git clone https://github.com/YOUR_USERNAME/industrialorigami-ai-platform.git
 cd industrialorigami-ai-platform
 ```
 
-### Install Dependencies
+### Install
 
 ```powershell
 npm install
 ```
 
-### Start the Development Server
+### Run
 
 ```powershell
 npm run dev
@@ -485,36 +397,45 @@ Open:
 http://localhost:3000
 ```
 
-### Production Build
+Useful routes:
 
-```powershell
-npm run build
+```text
+http://localhost:3000/en
+http://localhost:3000/en/about
+http://localhost:3000/en/services
+http://localhost:3000/en/projects
+http://localhost:3000/en/projects/robotic-hand
+http://localhost:3000/en/careers
+http://localhost:3000/en/collaborate
 ```
 
-### Start the Production Server Locally
-
-```powershell
-npm run start
-```
-
-### Run Linting
+### Build and Lint
 
 ```powershell
 npm run lint
+npm run build
+npm run start
 ```
 
-\---
+### Clear the Next.js Cache
+
+```powershell
+Remove-Item -Recurse -Force .next
+npm run dev
+```
+
+---
 
 ## Available Scripts
 
-|Command|Purpose|
-|-|-|
-|`npm run dev`|Start development server|
-|`npm run build`|Create production build|
-|`npm run start`|Start production server|
-|`npm run lint`|Run ESLint|
+| Command | Purpose |
+|---|---|
+| `npm run dev` | Start the development server |
+| `npm run build` | Create a production build |
+| `npm run start` | Start the production server |
+| `npm run lint` | Run ESLint |
 
-Additional scripts will be added for:
+Planned scripts:
 
 ```text
 npm run test
@@ -525,31 +446,110 @@ npm run format
 npm run analyze
 ```
 
-\---
+---
 
 ## Environment Variables
 
-Create a local `.env.local` file when environment variables are introduced.
-
-Example:
+Create `.env.local` only when required.
 
 ```env
-NEXT\_PUBLIC\_SITE\_URL=http://localhost:3000
-
-DATABASE\_URL=postgresql://postgres:postgres@localhost:5432/industrialorigami
-
-AUTH\_SECRET=replace-with-a-secure-random-secret
-
-AI\_API\_URL=http://localhost:8000
-
-AWS\_REGION=ap-southeast-2
-AWS\_S3\_BUCKET=
-AWS\_BEDROCK\_MODEL\_ID=
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/industrialorigami
+AUTH_SECRET=replace-with-a-secure-random-secret
+AI_API_URL=http://localhost:8000
+AWS_REGION=ap-southeast-2
+AWS_S3_BUCKET=
+AWS_BEDROCK_MODEL_ID=
 ```
 
-Never commit `.env.local`, credentials, API keys, database passwords, private keys, or cloud secrets.
+Never commit secrets, passwords, API keys, customer information, or private company documents.
 
-\---
+---
+
+## Proposed Full-Stack Architecture
+
+```text
+Web Browser
+    │
+    ▼
+Next.js Frontend
+    │
+    ├── Next.js APIs
+    ├── FastAPI AI Service
+    └── Authentication
+            │
+            ├── PostgreSQL + pgvector
+            └── S3 or Local Object Storage
+```
+
+---
+
+## Development Roadmap
+
+### Completed or In Progress
+
+- initialise Next.js
+- implement multilingual routing
+- implement Persian RTL
+- build responsive navigation
+- add Services and Projects dropdown menus
+- build Home and About pages
+- add team profiles, qualifications, images, emails, and LinkedIn links
+- build service index and individual service pages
+- build project index and individual project pages
+- build the detailed Robotic Hand page
+- build Careers and Collaborate pages
+- add metadata, favicon, and social-sharing image
+- add responsive styling
+
+### Next: Backend and Enquiries
+
+- validate forms
+- add Next.js Route Handlers
+- add PostgreSQL
+- persist enquiries
+- add notifications
+- add spam protection
+- add rate limiting
+- add API documentation
+
+### Later: Authentication and Administration
+
+- authentication
+- role-based access
+- admin dashboard
+- multilingual content management
+- project and service management
+- career and enquiry management
+- audit logs
+
+### Later: RAG and LLM Assistant
+
+- FastAPI AI service
+- document ingestion
+- chunking
+- embeddings
+- pgvector
+- retrieval
+- source citations
+- chatbot interface
+- feedback
+- evaluation
+- local LLM support
+- Amazon Bedrock integration
+
+### Later: Testing, Containers, Monitoring, and Cloud
+
+- unit, component, API, and end-to-end tests
+- accessibility testing
+- security scanning
+- Docker and Docker Compose
+- Prometheus and Grafana
+- Kubernetes
+- AWS IAM, S3, Bedrock, and CloudWatch
+- budgets and cost alerts
+
+---
 
 ## Git Workflow
 
@@ -558,272 +558,132 @@ Recommended branches:
 ```text
 main
 develop
-feature/\*
-fix/\*
-docs/\*
-refactor/\*
+feature/*
+fix/*
+docs/*
+refactor/*
 ```
 
 Example:
 
 ```powershell
-git checkout -b feature/multilingual-routing
-git add .
-git commit -m "feat: add multilingual locale routing"
-git push -u origin feature/multilingual-routing
+git checkout -b docs/update-readme
+git add README.md
+git commit -m "docs: update project README"
+git push -u origin docs/update-readme
 ```
 
-Recommended commit format:
-
-```text
-feat: add multilingual navigation
-fix: correct Persian RTL layout
-docs: update local setup guide
-test: add navigation component tests
-refactor: simplify locale configuration
-chore: update dependencies
-```
-
-\---
-
-## CI/CD Plan
-
-GitHub Actions will be the primary CI/CD platform.
-
-Planned workflow:
-
-```text
-Pull Request
-   ↓
-Install Dependencies
-   ↓
-Lint
-   ↓
-Type Check
-   ↓
-Unit Tests
-   ↓
-Build
-   ↓
-Security Scans
-   ↓
-End-to-End Tests
-   ↓
-Deploy
-```
-
-Jenkins may be added later as a separate enterprise CI/CD demonstration. It will not replace GitHub Actions during the early phases.
-
-\---
-
-## Monitoring and Observability
-
-The platform will later include:
-
-* application health endpoints
-* API latency
-* request count
-* error rate
-* database connection monitoring
-* RAG retrieval latency
-* LLM response latency
-* token and model usage
-* chatbot feedback
-* build and deployment metrics
-* robotic-hand experiment metrics
-
-Prometheus will collect metrics and Grafana will provide dashboards.
-
-\---
-
-
-
+---
 
 ## Security Principles
 
-The project will follow these principles:
+- no secrets in Git
+- least-privilege access
+- server-side validation
+- safe error messages
+- secure authentication
+- role-based access control
+- encrypted transport
+- dependency updates
+- security scanning
+- rate limiting
+- audit logging
+- protected administration routes
+- privacy-aware analytics
+- controlled access to company documents
+- no private robotic-hand intellectual property in the public repository
 
-* no secrets in Git
-* least-privilege IAM
-* server-side validation
-* safe error messages
-* secure authentication
-* role-based access control
-* encrypted transport
-* dependency updates
-* security scanning
-* rate limiting
-* audit logging
-* protected admin routes
-* backup and recovery planning
-* privacy-aware analytics
-* controlled access to company documents
-* no private robotic-hand intellectual property in the public repository
+---
 
-\---
+## Accessibility and Performance Goals
 
-## Accessibility Goals
+- keyboard navigation
+- semantic HTML
+- visible focus states
+- sufficient colour contrast
+- accessible forms
+- language attributes
+- correct RTL layout
+- reduced-motion support
+- meaningful image alternative text
+- optimised images
+- lazy loading where appropriate
+- eager loading for above-the-fold LCP images
+- minimal client-side JavaScript
+- server components where appropriate
+- Lighthouse-based review
 
-The website will aim to support:
-
-* keyboard navigation
-* semantic HTML
-* visible focus states
-* sufficient colour contrast
-* accessible form labels
-* screen-reader-friendly content
-* language attributes
-* correct RTL layout
-* reduced-motion preferences
-* accessible error messages
-* responsive text sizing
-
-\---
-
-## Performance Goals
-
-The project will aim for:
-
-* responsive rendering
-* optimised images
-* lazy loading
-* minimal client-side JavaScript
-* server components where appropriate
-* caching where appropriate
-* compressed assets
-* efficient database queries
-* measured API performance
-* Lighthouse-based performance review
-
-\---
-
-## Documentation
-
-Planned documentation includes:
-
-```text
-documents/
-├── architecture/
-│   ├── system-architecture.md
-│   ├── security-architecture.md
-│   └── deployment-architecture.md
-├── requirements/
-│   ├── functional-requirements.md
-│   ├── non-functional-requirements.md
-│   └── multilingual-requirements.md
-├── api/
-│   └── api-contracts.md
-└── decisions/
-    └── architecture-decision-records/
-```
-
-\---
-
-## Contribution Guidelines
-
-The project will later include a dedicated `CONTRIBUTING.md`.
-
-Until then:
-
-1. create a branch
-2. make focused changes
-3. run linting and build checks
-4. write or update tests
-5. use clear commit messages
-6. open a pull request
-7. request review
-8. do not merge failing pipelines
-
-\---
-
-## Intellectual Property
-
-This repository may contain public website code and selected open technical demonstrations.
-
-Do not commit:
-
-* confidential company plans
-* unpublished robotic-hand CAD files
-* proprietary control algorithms
-* private datasets
-* investor information
-* immigration documents
-* customer information
-* passwords or tokens
-* private funding proposals
-* personal information
-
-Licensing for public code will be confirmed after the company decides which components are open source and which remain proprietary.
-
-\---
+---
 
 ## Team
 
 ### David Ewing
 
-**Founder and Managing Director**
+**Founder and Managing Director**  
+**Master’s in Computer Science**
 
-Responsible for company strategy, partnerships, business development, funding, product direction, and stakeholder engagement.
+Leads company strategy, partnerships, business development, funding, product direction, stakeholder engagement, and company operations.
 
 ### Zahra Torabi
 
-**AI, Software Engineering, and Research Development Lead**
+**AI, Software Engineering, and R&D Lead**  
+**PhD in Computer Science, specialising in Artificial Intelligence**
 
-Responsible for AI/ML research, reinforcement learning, software development, intelligent optimisation, data-driven systems, RAG, model evaluation, cloud and MLOps direction, and technical implementation.
+Leads AI/ML research, reinforcement learning, intelligent optimisation, software engineering, RAG, evaluation, cloud and MLOps direction, and technical implementation.
 
 ### Lilian
 
-**Data Science and Analytics Lead**
+**Data Science and Analytics Lead**  
+**Master of Data Science**
 
-Responsible for data preparation, statistical analysis, predictive modelling, analytics, visualisation, and evaluation.
+Contributes data preparation, statistical analysis, predictive modelling, visualisation, experimentation, and evaluation.
 
 ### Gurwinder
 
-**Mechanical and Project Engineering Lead**
+**Mechanical and Project Engineering Lead**  
+**Bachelor of Mechanical Engineering**
 
-Gurwinder holds a Bachelor of Mechanical Engineering and brings hands-on experience in metal fabrication, CAD design, and project engineering. He contributes to mechanical design, manufacturing processes, fabrication planning, prototype assembly, and project delivery. He is currently undertaking a refrigeration-industry apprenticeship, further developing thermal and mechanical-services expertise.
+Brings experience in metal fabrication, CAD design, project engineering, manufacturing planning, prototype assembly, and project delivery.
 
-\---
+---
 
-## Company Focus
+## Intellectual Property
 
-IndustrialOrigami.AI works across:
+Do not commit:
 
-* artificial intelligence
-* machine learning
-* reinforcement learning
-* robotics
-* intelligent automation
-* mechanical engineering
-* data science
-* software engineering
-* computer vision
-* RAG and LLM systems
-* predictive analytics
-* cloud systems
-* research commercialisation
+- confidential company plans
+- unpublished robotic-hand CAD files
+- proprietary control algorithms
+- private datasets
+- investor information
+- immigration documents
+- customer information
+- credentials or tokens
+- private funding proposals
+- personal information not approved for publication
 
-\---
+Licensing will be confirmed after the company decides which components are open source and which remain proprietary.
+
+---
 
 ## Contact
 
-Website: `https://industrialorigami.ai`  
-Email: add confirmed company email  
-Location: Christchurch, New Zealand
+**Website:** `https://industrialorigami.ai`  
+**Email:** Add the confirmed company email  
+**Location:** Christchurch, New Zealand
 
-\---
+---
 
 ## Licence
 
-No licence has been selected yet.
+No public licence has been selected yet.
 
 All rights are reserved unless a licence is added to the repository.
 
-\---
+---
 
 ## Developed By
 
 This website and technology platform were designed and developed by **Zahra Torabi** for IndustrialOrigami.AI.
 
-The project demonstrates full-stack software development, multilingual web design, artificial intelligence integration, cloud architecture, DevOps, testing, monitoring, and data visualisation using technologies including Next.js, React, TypeScript, Node.js, PostgreSQL, Docker, Kubernetes, GitHub Actions, AWS, RAG, and Large Language Models.
-
+The project demonstrates multilingual full-stack development, artificial intelligence integration, cloud architecture, DevOps, testing, monitoring, data visualisation, and technical product design using technologies including Next.js, React, TypeScript, Node.js, Python, PostgreSQL, Docker, Kubernetes, GitHub Actions, AWS, RAG, and Large Language Models.
