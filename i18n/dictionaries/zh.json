@@ -1,0 +1,528 @@
+{
+  "metadata": {
+    "title": "IndustrialOrigami.AI | 人工智能、机器人与智能工程",
+    "description": "在新西兰开发实用的人工智能、机器人、软件和智能工程解决方案。"
+  },
+  "brand": {
+    "name": "IndustrialOrigami.AI",
+    "tagline": "塑造智能"
+  },
+  "navigation": {
+    "home": "首页",
+    "about": "关于我们",
+    "services": "服务",
+    "projects": "项目",
+    "careers": "职业机会",
+    "collaborate": "合作"
+  },
+  "home": {
+    "eyebrow": "人工智能 · 机器人 · 智能工程",
+    "title": "塑造智能，构建实用技术。",
+    "description": "IndustrialOrigami.AI 融合人工智能、软件、数据和机械工程，解决现实产业问题。",
+    "servicesCta": "探索服务",
+    "projectCta": "查看机器人手",
+    "featuredLabel": "重点项目",
+    "featuredDescription": "融合传感、边缘人工智能、确定性控制和工业通信的模块化机器人手。",
+    "servicesEyebrow": "服务",
+    "servicesTitle": "五项专注能力，一个综合团队。",
+    "servicesDescription": "打开每项服务以查看详细能力、交付成果和适合的合作方式。",
+    "viewAllServices": "查看全部服务",
+    "projectsEyebrow": "项目",
+    "projectsTitle": "展示真实工程能力的项目组合。",
+    "projectsDescription": "机器人手是旗舰研发项目，其他项目作为透明标注的作品集与未来商业化概念。",
+    "viewProject": "查看项目",
+    "collaborateEyebrow": "合作",
+    "collaborateTitle": "您有值得解决的问题吗？",
+    "collaborateDescription": "我们欢迎行业试点、研究合作、融资、投资和技术项目。"
+  },
+  "about": {
+    "eyebrow": "关于 IndustrialOrigami.AI",
+    "title": "一家面向实用深科技的新西兰公司。",
+    "intro": "我们融合人工智能、数据、软件和工程，创造负责任且具有现实价值的技术。",
+    "storyTitle": "从复杂理念到实用系统。",
+    "storyParagraphs": [
+      "IndustrialOrigami.AI was established to bridge advanced research and practical commercial technology.",
+      "The company is developing an intelligent robotic hand while building wider capability in AI, data science, software engineering and intelligent automation.",
+      "Our method is evidence-led: understand the problem, build a focused prototype, measure performance, learn from users and scale only when the technical and commercial case is credible."
+    ],
+    "companyEyebrow": "公司简介",
+    "companyFacts": [
+      {
+        "label": "Location",
+        "value": "Christchurch, New Zealand"
+      },
+      {
+        "label": "Focus",
+        "value": "AI, robotics, data, software and intelligent engineering"
+      },
+      {
+        "label": "Business model",
+        "value": "Professional services, collaborative R&D and proprietary product development"
+      },
+      {
+        "label": "Ambition",
+        "value": "Locally owned capability with international relevance"
+      }
+    ],
+    "teamEyebrow": "团队",
+    "teamTitle": "跨学科能力。",
+    "teamDescription": "创始团队结合战略、人工智能、软件、数据科学、机械设计、CAD、制造和项目工程。",
+    "emailLabel": "电子邮件",
+    "emailPending": "添加电子邮件",
+    "linkedinPending": "添加 LinkedIn",
+    "team": {
+      "david": {
+        "name": "David Ewing",
+        "role": "Founder and Managing Director",
+        "description": "David leads strategy, partnerships, funding, product direction, stakeholder engagement and overall company development."
+      },
+      "zahra": {
+        "name": "Zahra Torabi",
+        "role": "AI, Software Engineering and R&D Lead",
+        "description": "Zahra leads AI and machine learning research, reinforcement learning, intelligent optimisation, software development, RAG, evaluation and technical implementation."
+      },
+      "lilian": {
+        "name": "Lilian",
+        "role": "Data Science and Analytics Lead",
+        "description": "Lilian contributes data preparation, statistical modelling, predictive analytics, visualisation, experimentation and model validation."
+      },
+      "gurwinder": {
+        "name": "Gurwinder",
+        "role": "Mechanical and Project Engineering Lead",
+        "description": "Gurwinder brings mechanical engineering, metal fabrication, CAD design and project-engineering experience to prototype development and manufacturing planning."
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "服务",
+    "title": "围绕业务成果设计的技术服务。",
+    "intro": "我们结合研究与工程能力，帮助组织探索、构建和验证智能产品与系统。",
+    "viewService": "查看服务",
+    "overviewTitle": "Service overview",
+    "capabilitiesTitle": "Core capabilities",
+    "deliverablesTitle": "Possible deliverables",
+    "fitTitle": "Suitable engagements",
+    "items": [
+      {
+        "slug": "robotics-and-automation",
+        "title": "机器人与自动化",
+        "menuDescription": "自适应操作、传感、控制和自动化原型。",
+        "summary": "Research and prototype development for robotic systems, intelligent end-effectors and industrial automation.",
+        "overview": [
+          "We help investigate whether a robotic or automated solution is technically and commercially appropriate for a defined workflow.",
+          "Work may include mechanical concepts, sensor selection, control architecture, computer vision, prototype integration and staged validation."
+        ],
+        "capabilities": [
+          "Robotic end-effectors",
+          "Sensor integration",
+          "Control architecture",
+          "Computer vision",
+          "Automation feasibility"
+        ],
+        "deliverables": [
+          "Technical requirements",
+          "Prototype architecture",
+          "Control and sensing plan",
+          "Test framework",
+          "Pilot recommendation"
+        ],
+        "fit": [
+          "Manufacturing and engineering businesses",
+          "Research laboratories",
+          "Automation integrators",
+          "Education and training providers"
+        ]
+      },
+      {
+        "slug": "data-science-and-analytics",
+        "title": "数据科学与分析",
+        "menuDescription": "预测建模、分析、仪表板和决策支持。",
+        "summary": "Data products that help organisations understand operations, identify patterns and support decisions.",
+        "overview": [
+          "We structure analytical work around a clear business or operational question rather than producing charts with no decision attached.",
+          "Projects may include forecasting, classification, statistical analysis, feature engineering, model evaluation and dashboard development."
+        ],
+        "capabilities": [
+          "Predictive modelling",
+          "Data preparation",
+          "Statistical analysis",
+          "Dashboards and charts",
+          "Operational analytics"
+        ],
+        "deliverables": [
+          "Data-quality assessment",
+          "Analytical model",
+          "Evaluation report",
+          "Interactive dashboard",
+          "Deployment recommendation"
+        ],
+        "fit": [
+          "Operational teams",
+          "Agriculture and infrastructure",
+          "Technology organisations",
+          "Research and innovation projects"
+        ]
+      },
+      {
+        "slug": "software-development",
+        "title": "软件开发",
+        "menuDescription": "全栈平台、API、数据库、测试和云就绪系统。",
+        "summary": "Maintainable web platforms, backend services and digital products built with modern engineering practices.",
+        "overview": [
+          "We develop software with clear architecture, version control, testing, documentation and deployment pathways.",
+          "The service can cover responsive interfaces, APIs, backend services, relational databases, authentication, dashboards and cloud-ready packaging."
+        ],
+        "capabilities": [
+          "React and Next.js",
+          "Node.js and APIs",
+          "Python and FastAPI",
+          "PostgreSQL",
+          "Testing and CI/CD"
+        ],
+        "deliverables": [
+          "Requirements and architecture",
+          "Frontend application",
+          "Backend API",
+          "Database schema",
+          "Automated test and deployment pipeline"
+        ],
+        "fit": [
+          "Startups and SMEs",
+          "Research commercialisation",
+          "Internal business tools",
+          "AI-enabled products"
+        ]
+      },
+      {
+        "slug": "rag-intelligent-assistants",
+        "title": "RAG 与智能助手",
+        "menuDescription": "具有检索、引用和评估的知识助手。",
+        "summary": "Knowledge assistants grounded in approved organisational documents, data and controlled sources.",
+        "overview": [
+          "Retrieval-Augmented Generation can help users find and understand information while reducing unsupported model answers.",
+          "A responsible implementation requires document governance, chunking, embeddings, retrieval, citations, evaluation, feedback and access controls."
+        ],
+        "capabilities": [
+          "Document ingestion",
+          "Embeddings and vector retrieval",
+          "Source citations",
+          "Evaluation and feedback",
+          "LLM integration"
+        ],
+        "deliverables": [
+          "Knowledge-base design",
+          "Ingestion pipeline",
+          "RAG API",
+          "Chat interface",
+          "Evaluation dashboard"
+        ],
+        "fit": [
+          "Company knowledge systems",
+          "Technical documentation",
+          "Research collections",
+          "Customer and employee support"
+        ]
+      },
+      {
+        "slug": "research-prototyping-technology-consulting",
+        "title": "研究、原型与技术咨询",
+        "menuDescription": "可行性、原型、验证、融资和商业化支持。",
+        "summary": "Structured support for technical uncertainty, early product concepts and research-to-market development.",
+        "overview": [
+          "Early-stage technology work needs a defensible question, a staged plan and measurable evidence.",
+          "We support feasibility analysis, architecture, prototype planning, validation metrics, technical writing, funding preparation and commercialisation pathways."
+        ],
+        "capabilities": [
+          "Feasibility studies",
+          "Prototype planning",
+          "Technical architecture",
+          "Validation metrics",
+          "Funding and commercialisation support"
+        ],
+        "deliverables": [
+          "Feasibility report",
+          "R&D work programme",
+          "Prototype specification",
+          "Risk register",
+          "Funding or investment package"
+        ],
+        "fit": [
+          "Early-stage ventures",
+          "Research teams",
+          "Innovation programmes",
+          "Organisations exploring new technology"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "eyebrow": "项目",
+    "title": "具有可衡量技术目标的重点项目。",
+    "intro": "我们的组合包括一个活跃的旗舰研发项目以及明确标注的技术演示和未来商业化概念。",
+    "viewProject": "查看项目",
+    "statusTitle": "Project status",
+    "overviewTitle": "Project overview",
+    "technologyTitle": "Technology and architecture",
+    "valueTitle": "Potential value",
+    "roadmapEyebrow": "Roadmap",
+    "roadmapTitle": "A staged route to evidence.",
+    "items": [
+      {
+        "slug": "robotic-hand",
+        "title": "智能机器人手",
+        "menuDescription": "利用传感、边缘人工智能和确定性控制实现自适应操作。",
+        "category": "Robotics and AI",
+        "status": "Research and prototype development",
+        "statusDescription": "The concept and system architecture are being developed through staged technical and commercial validation.",
+        "summary": "A modular robotic hand and forearm platform combining mechanical engineering, sensing, real-time control, computer vision and edge AI.",
+        "overview": [
+          "Conventional industrial grippers perform well for repetitive tasks and predictable objects but may be less useful when shape, orientation, fragility or material changes.",
+          "The project investigates whether a modular, force-aware and vision-guided hand can provide useful flexibility without becoming impractically complex or expensive.",
+          "Development begins with an index-finger and thumb mechanism before a complete multi-finger system is attempted."
+        ],
+        "technology": [
+          "Approximately fifteen actuators in the full concept",
+          "Jetson edge AI",
+          "ARM real-time control",
+          "Force, current, position and tactile sensing",
+          "EtherCAT or another deterministic industrial link"
+        ],
+        "value": [
+          "Flexible industrial handling",
+          "Research and education platform",
+          "Locally developed intellectual property",
+          "Integration opportunity for automation partners"
+        ],
+        "roadmap": [
+          {
+            "phase": "Phase 1",
+            "title": "Finger and thumb",
+            "description": "Validate linkage, force, actuation, sensing, control and safety."
+          },
+          {
+            "phase": "Phase 2",
+            "title": "Integrated hand",
+            "description": "Combine multiple digits, perception, planning and industrial communication."
+          },
+          {
+            "phase": "Phase 3",
+            "title": "Industry pilot",
+            "description": "Test a narrow application and quantify performance, cost and value."
+          }
+        ]
+      },
+      {
+        "slug": "industrial-rag-platform",
+        "title": "工业 RAG 平台",
+        "menuDescription": "面向技术与企业知识的来源支撑型助手。",
+        "category": "Generative AI",
+        "status": "Portfolio architecture and prototype concept",
+        "statusDescription": "This project is presented as a portfolio and future service concept rather than a completed customer deployment.",
+        "summary": "A multilingual knowledge platform that retrieves approved technical documents and produces source-aware answers for employees, customers and engineers.",
+        "overview": [
+          "Industrial organisations often store valuable knowledge across manuals, policies, reports, specifications and project documents.",
+          "The platform demonstrates ingestion, chunking, embeddings, vector retrieval, citations, multilingual interaction, evaluation and feedback.",
+          "It is intended to become both a company knowledge assistant and a reusable demonstration of responsible LLM integration."
+        ],
+        "technology": [
+          "Next.js chat interface",
+          "FastAPI AI service",
+          "PostgreSQL and pgvector",
+          "Local or cloud LLM integration",
+          "Evaluation and source citation"
+        ],
+        "value": [
+          "Faster access to approved knowledge",
+          "Reduced unsupported AI answers",
+          "Reusable company platform",
+          "Portfolio evidence for RAG and full-stack roles"
+        ],
+        "roadmap": [
+          {
+            "phase": "Phase 1",
+            "title": "Document pipeline",
+            "description": "Build ingestion, chunking, metadata and vector storage."
+          },
+          {
+            "phase": "Phase 2",
+            "title": "Assistant and citations",
+            "description": "Create retrieval, answer generation and source display."
+          },
+          {
+            "phase": "Phase 3",
+            "title": "Evaluation and access control",
+            "description": "Add quality metrics, feedback, authentication and permissions."
+          }
+        ]
+      },
+      {
+        "slug": "predictive-maintenance",
+        "title": "预测性维护",
+        "menuDescription": "用于设备风险和维护计划的机器学习信号。",
+        "category": "Machine Learning",
+        "status": "Proposed portfolio and industry-discovery project",
+        "statusDescription": "The project requires a suitable equipment dataset and industry partner before performance claims can be made.",
+        "summary": "A data and machine-learning system for identifying abnormal equipment behaviour and supporting maintenance decisions.",
+        "overview": [
+          "Unplanned equipment failure can create downtime, cost and safety risk, but useful prediction depends on data quality and a clearly defined failure or degradation signal.",
+          "The project demonstrates how sensor histories, maintenance records and operational context can be prepared, modelled and monitored.",
+          "The system will compare practical baselines with more advanced methods rather than assuming that a complex model is automatically better."
+        ],
+        "technology": [
+          "Time-series data pipelines",
+          "Anomaly detection",
+          "Classification and forecasting",
+          "Model monitoring",
+          "Maintenance dashboard"
+        ],
+        "value": [
+          "Earlier indication of equipment problems",
+          "Evidence-based maintenance prioritisation",
+          "Reduced avoidable downtime",
+          "Reusable industrial analytics capability"
+        ],
+        "roadmap": [
+          {
+            "phase": "Phase 1",
+            "title": "Data and failure definition",
+            "description": "Assess sensor coverage, labels, maintenance history and business value."
+          },
+          {
+            "phase": "Phase 2",
+            "title": "Model and dashboard",
+            "description": "Develop baselines, evaluation and operational visualisation."
+          },
+          {
+            "phase": "Phase 3",
+            "title": "Pilot monitoring",
+            "description": "Validate alerts, drift, false positives and maintenance usefulness."
+          }
+        ]
+      },
+      {
+        "slug": "digital-twin",
+        "title": "数字孪生",
+        "menuDescription": "用于测试智能决策的仿真与监控环境。",
+        "category": "Simulation and Systems",
+        "status": "Research and architecture concept",
+        "statusDescription": "The digital twin is a future research and demonstration project and is not yet represented as a deployed product.",
+        "summary": "A near-real-time virtual representation of a physical or networked system for simulation, monitoring and safe evaluation of intelligent decisions.",
+        "overview": [
+          "A digital twin can combine system state, historical data, simulation and analytics to help teams explore changes before applying them to a live environment.",
+          "The concept extends earlier research interests in network and intelligent-system optimisation while remaining applicable to industrial systems.",
+          "A credible implementation requires a defined asset, update frequency, simulation fidelity and decision use case."
+        ],
+        "technology": [
+          "System-state ingestion",
+          "Simulation model",
+          "Real-time or near-real-time updates",
+          "Scenario testing",
+          "Analytics and visualisation"
+        ],
+        "value": [
+          "Safer evaluation of changes",
+          "Improved system understanding",
+          "Training and experimentation",
+          "Support for optimisation and predictive decisions"
+        ],
+        "roadmap": [
+          {
+            "phase": "Phase 1",
+            "title": "Use case and model",
+            "description": "Define the physical or networked system, variables and simulation purpose."
+          },
+          {
+            "phase": "Phase 2",
+            "title": "Data synchronisation",
+            "description": "Connect state data, dashboards and scenario controls."
+          },
+          {
+            "phase": "Phase 3",
+            "title": "Decision experiments",
+            "description": "Evaluate optimisation, prediction or control strategies before deployment."
+          }
+        ]
+      }
+    ]
+  },
+  "careers": {
+    "eyebrow": "职业机会",
+    "title": "参与在新西兰构建实用人工智能与机器人。",
+    "intro": "IndustrialOrigami.AI 是一家早期公司，正在与对未来技术、研究和商业机会感兴趣的人建立联系。",
+    "opportunitiesTitle": "Current opportunities",
+    "opportunitiesDescription": "No formal vacancy is currently advertised. The expression-of-interest pathway allows us to meet potential future collaborators and team members.",
+    "typeLabel": "Type",
+    "types": {
+      "expressionOfInterest": "Expression of interest"
+    },
+    "viewOpportunity": "查看详情",
+    "roles": {
+      "future-opportunities": {
+        "title": "Future Opportunities and Talent Network",
+        "summary": "Connect with us if your experience may support future AI, software, robotics, embedded systems, electronics, manufacturing, product or commercial work."
+      }
+    }
+  },
+  "collaborate": {
+    "eyebrow": "合作",
+    "title": "与 IndustrialOrigami.AI 合作。",
+    "intro": "我们欢迎有关产业问题、研究、试点、融资、投资和技术合作的务实交流。",
+    "pathwaysTitle": "Ways to collaborate",
+    "pathwaysDescription": "Choose the pathway that best matches your organisation or idea.",
+    "pathways": [
+      {
+        "title": "Industry projects",
+        "description": "Explore a business problem, feasibility study, prototype or pilot."
+      },
+      {
+        "title": "Research partnerships",
+        "description": "Develop joint R&D, validation, student or institutional collaboration."
+      },
+      {
+        "title": "Funding and investment",
+        "description": "Discuss grants, incubation, seed capital and commercialisation support."
+      },
+      {
+        "title": "Technical contribution",
+        "description": "Contribute specialist engineering, software, manufacturing or advisory capability."
+      }
+    ],
+    "detailsTitle": "Contact details",
+    "details": [
+      {
+        "label": "Location",
+        "value": "Christchurch, New Zealand"
+      },
+      {
+        "label": "Company",
+        "value": "IndustrialOrigami.AI"
+      },
+      {
+        "label": "Focus",
+        "value": "AI, robotics, software, data and intelligent engineering"
+      }
+    ],
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "interest": "Area of interest",
+      "options": [
+        "Industry project",
+        "Research partnership",
+        "Funding or investment",
+        "Technical collaboration",
+        "Career expression of interest"
+      ],
+      "message": "Message",
+      "submit": "Send enquiry",
+      "note": "This form is currently a visual prototype. Validation, API submission, database storage and notifications will be added in the backend phase."
+    }
+  },
+  "footer": {
+    "summary": "来自新西兰基督城的人工智能、机器人、软件和智能工程。",
+    "explore": "探索",
+    "locationTitle": "地点",
+    "location": "新西兰基督城",
+    "rights": "保留所有权利。"
+  }
+}

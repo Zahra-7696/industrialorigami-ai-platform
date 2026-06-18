@@ -636,26 +636,8 @@ Prometheus will collect metrics and Grafana will provide dashboards.
 
 \---
 
-## Free and Low-Cost Development Strategy
 
-The early phases are designed to avoid unnecessary cloud costs.
 
-|Requirement|Initial Approach|
-|-|-|
-|Git hosting|GitHub|
-|CI/CD|GitHub Actions|
-|Website hosting|GitHub Pages or another free static host|
-|Database|Local PostgreSQL in Docker|
-|Vector database|Local pgvector|
-|LLM|Local Ollama|
-|Monitoring|Local Prometheus and Grafana|
-|Containers|Docker Compose|
-|Kubernetes|Local kind, k3d, or Minikube|
-|Cloud|Added only after the application is stable|
-
-AWS services are not assumed to be permanently free. Cloud budgets and billing alerts must be configured before deployment.
-
-\---
 
 ## Security Principles
 
