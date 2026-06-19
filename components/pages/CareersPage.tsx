@@ -1,8 +1,9 @@
+"use client";
+
 import Link from "next/link";
 
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/get-dictionary";
-import { careerOpportunities } from "@/lib/careers";
 
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -12,11 +13,43 @@ type CareersPageProps = {
   dictionary: Dictionary;
 };
 
-export function CareersPage({
-  locale,
-  dictionary,
-}: CareersPageProps) {
+type CareerOpportunity = {
+  slug: string;
+  type: string;
+  title: string;
+  summary: string;
+};
+
+const fallbackOpportunity: CareerOpportunity = {
+  slug: "future-opportunities",
+  type: "Expression of interest",
+  title: "Future Opportunities and Talent Network",
+  summary:
+    "Connect with us if your experience may support future AI, software, robotics, embedded systems, electronics, manufacturing, product or commercial work.",
+};
+
+function getCareerOpportunities(content: Dictionary["careers"]): CareerOpportunity[] {
+  const possibleContent = content as Dictionary["careers"] & {
+    opportunities?: CareerOpportunity[];
+  };
+
+  if (
+    Array.isArray(possibleContent.opportunities) &&
+    possibleContent.opportunities.length > 0
+  ) {
+    return possibleContent.opportunities;
+  }
+
+  return [fallbackOpportunity];
+}
+
+export function CareersPage({ locale, dictionary }: CareersPageProps) {
   const content = dictionary.careers;
+  const opportunities = getCareerOpportunities(content);
+  const viewDetails =
+    "viewDetails" in content && typeof content.viewDetails === "string"
+      ? content.viewDetails
+      : "View details";
 
   return (
     <main>
@@ -29,34 +62,36 @@ export function CareersPage({
       <section className="section-space section-white">
         <div className="site-container">
           <SectionHeading
-            title={content.opportunitiesTitle}
-            description={content.opportunitiesDescription}
+            title={content.currentTitle}
+            description={content.currentDescription}
           />
 
           <div className="mt-10 grid gap-5">
-            {careerOpportunities.map((opportunity) => (
+            {opportunities.map((opportunity) => (
               <article
                 key={opportunity.slug}
-                className="light-card rounded-3xl p-7"
+                className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-xl shadow-slate-200/70"
               >
-                <div className="flex flex-col justify-between gap-5 md:flex-row md:items-center">
+                <div className="grid items-center gap-6 lg:grid-cols-[1fr_auto]">
                   <div>
-                    <p className="text-sm font-bold text-brand-orange">
-                      {content.typeLabel}:{" "}
-                      {content.types[opportunity.type]}
+                    <p className="text-sm font-black text-brand-orange">
+                      Type: {opportunity.type}
                     </p>
-                    <h2 className="mt-2 text-2xl font-black text-brand-900">
-                      {content.roles[opportunity.slug].title}
+
+                    <h2 className="mt-4 text-2xl font-black text-brand-900">
+                      {opportunity.title}
                     </h2>
-                    <p className="mt-3 max-w-3xl leading-7 text-slate-600">
-                      {content.roles[opportunity.slug].summary}
+
+                    <p className="mt-4 max-w-4xl leading-8 text-slate-600">
+                      {opportunity.summary}
                     </p>
                   </div>
+
                   <Link
                     href={`/${locale}/careers/${opportunity.slug}`}
-                    className="shrink-0 rounded-xl bg-brand-900 px-5 py-3 text-center font-black text-white transition hover:bg-brand-700"
+                    className="button-primary justify-center text-center"
                   >
-                    {content.viewOpportunity}
+                    {viewDetails}
                   </Link>
                 </div>
               </article>

@@ -24,8 +24,8 @@ export const teamProfiles = [
     id: "gurwinder",
     image: "/team/gurwinder.jpg",
     degree: "Bachelor of Mechanical Engineering",
-    email: "",
-    linkedin: "",
+    email: "gurwindersunny@gmail.com",
+    linkedin: "https://www.linkedin.com/in/gurwinder-soundh-405791175/",
   },
 ] as const;
 

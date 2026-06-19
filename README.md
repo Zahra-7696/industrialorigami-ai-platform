@@ -1,17 +1,17 @@
 # IndustrialOrigami.AI Platform
 
-A multilingual company website and technology platform for **IndustrialOrigami.AI**, a New Zealand venture working across artificial intelligence, robotics, software engineering, data science, and applied research and development.
+A multilingual company website and technology platform for **IndustrialOrigami.AI**, a New Zealand venture working across artificial intelligence, robotics, software engineering, data science, intelligent automation, research and development, and early-stage robotic-hand innovation.
 
-This repository serves two purposes:
+This repository serves two linked purposes:
 
 1. the public-facing website for IndustrialOrigami.AI; and
-2. a professional portfolio project demonstrating multilingual full-stack engineering, AI/ML integration, cloud architecture, DevOps, testing, observability, and technical product development.
+2. a professional portfolio project demonstrating multilingual full-stack engineering, AI/ML integration, cloud architecture, DevOps, testing, observability, form handling, file upload workflows, and technical product development.
 
 ---
 
 ## Current Status
 
-**Current stage:** Multilingual public website and project-portfolio implementation
+**Current stage:** Multilingual public website, project portfolio, enquiry forms, and career expression-of-interest workflow.
 
 Implemented:
 
@@ -19,25 +19,34 @@ Implemented:
 - right-to-left support for Persian
 - responsive desktop and mobile navigation
 - dropdown menus for Services and Projects
+- Home page with service cards, project cards, and custom project imagery
 - About page with company information and team profiles
+- team photographs, qualifications, email links, and LinkedIn links
 - individual service pages
 - individual project pages
 - dedicated Intelligent Robotic Hand project page
-- Careers and Collaborate pages
-- team photographs, qualifications, email links, and LinkedIn links
+- Careers page with expression-of-interest pathway
+- dedicated career application page
+- CV, cover-letter, and additional-file uploads for career expressions of interest
+- Collaborate page with enquiry form
+- optional attachment upload for collaboration enquiries
+- server-side email sending through Next.js API routes and Nodemailer
+- frontend prototype pages for Log in and Sign up
 - branded assets, metadata, favicon, and social-sharing image
 - reusable design components and shared styling
+- environment-variable based configuration for email delivery
+- safe separation of secrets using `.env.local`
 
-Planned:
+In progress or planned:
 
-- validated enquiry forms
-- PostgreSQL database
-- API layer
-- authentication and administration
-- RAG-based knowledge assistant
+- real authentication and user sessions
+- PostgreSQL database storage for enquiries and career submissions
+- admin dashboard
+- saved application status tracking
+- RAG-based company knowledge assistant
 - analytics dashboards
 - automated testing
-- containers, monitoring, and cloud deployment
+- Docker, monitoring, and cloud deployment
 
 ---
 
@@ -45,22 +54,23 @@ Planned:
 
 The platform is designed to:
 
-- present IndustrialOrigami.AI as a professional New Zealand AI and robotics company
-- explain the company’s technical services
+- present IndustrialOrigami.AI as a professional New Zealand AI, robotics, data, software, and research company
+- explain the company’s technical capabilities and commercial focus
 - showcase the Intelligent Robotic Hand programme
-- present additional AI, data, software, and digital-twin concepts
-- support English, Persian, and Simplified Chinese
+- present additional AI, software, RAG, predictive-maintenance, and digital-twin concepts
+- support English, Persian, and Simplified Chinese audiences
 - provide an accessible and responsive user experience
-- support future customer, research, funding, and partnership enquiries
-- evolve into a secure full-stack platform
+- support customer, research, funding, partnership, and career enquiries
+- provide upload workflows for CVs, cover letters, proposals, and other supporting documents
+- evolve into a secure full-stack platform with persistent database storage
 - demonstrate CI/CD, testing, containerisation, monitoring, and cloud deployment
-- serve as a portfolio project for full-stack, AI/ML, MLOps, data, and cloud-engineering roles
+- serve as a portfolio project for full-stack, AI/ML, MLOps, data, cloud, and software-engineering roles
 
 ---
 
 ## Technology Stack
 
-### Current
+### Current Frontend
 
 - Next.js
 - React
@@ -68,20 +78,39 @@ The platform is designed to:
 - Tailwind CSS
 - Next.js App Router
 - Next.js Image
+- Client and server components
+- Responsive layout components
+- Multilingual dictionaries
 - ESLint
 - Git
 - GitHub
 
+### Current Server-Side Features
+
+- Next.js API routes
+- Server-side form processing
+- `FormData` handling
+- File upload handling
+- Nodemailer
+- Gmail SMTP support through app passwords
+- Environment-variable based configuration
+- Attachment validation
+- Basic server-side validation
+
 ### Planned Backend and Data
 
 - Node.js
-- Next.js Route Handlers
 - Python
 - FastAPI
 - PostgreSQL
 - pgvector
 - REST APIs
-- OpenAPI
+- OpenAPI documentation
+- database-backed contact enquiries
+- database-backed career applications
+- file metadata storage
+- admin dashboard for reviewing submissions
+- status tracking for applications and enquiries
 
 ### Planned AI and Machine Learning
 
@@ -89,17 +118,18 @@ The platform is designed to:
 - Retrieval-Augmented Generation
 - embedding models
 - vector search
-- Ollama for local development
+- local LLM support through Ollama
 - Amazon Bedrock in a later cloud phase
 - RAG evaluation and feedback tracking
 - grounded answers with source citations
+- multilingual company knowledge assistant
 
 ### Planned DevOps and Infrastructure
 
 - Docker
 - Docker Compose
 - GitHub Actions
-- Jenkins as an optional enterprise demonstration
+- Jenkins as an optional enterprise CI/CD demonstration
 - Kubernetes
 - Prometheus
 - Grafana
@@ -117,12 +147,15 @@ The platform is designed to:
 - React Testing Library
 - Playwright
 - Pytest
-- TypeScript strict mode
+- TypeScript strict checks
 - Prettier
 - GitHub CodeQL
 - dependency scanning
 - container scanning
 - accessibility testing
+- form-validation tests
+- API route tests
+- upload-limit tests
 
 ---
 
@@ -143,44 +176,78 @@ i18n/dictionaries/
 └── zh.json
 ```
 
+Persian pages use RTL layout support.
+
 ---
 
 ## Current Website Map
 
 ```text
-src/app/[lang]/
-├── about/
-│   └── page.tsx
-├── services/
-│   ├── page.tsx
-│   └── [slug]/
-│       └── page.tsx
-├── projects/
-│   ├── page.tsx
-│   ├── robotic-hand/
+src/app/
+├── api/
+│   ├── contact/
+│   │   └── route.ts
+│   └── careers/
+│       └── route.ts
+├── [lang]/
+│   ├── about/
 │   │   └── page.tsx
-│   └── [slug]/
-│       └── page.tsx
-├── careers/
+│   ├── services/
+│   │   ├── page.tsx
+│   │   └── [slug]/
+│   │       └── page.tsx
+│   ├── projects/
+│   │   ├── page.tsx
+│   │   ├── robotic-hand/
+│   │   │   └── page.tsx
+│   │   └── [slug]/
+│   │       └── page.tsx
+│   ├── careers/
+│   │   ├── page.tsx
+│   │   └── [slug]/
+│   │       └── page.tsx
+│   ├── collaborate/
+│   │   └── page.tsx
+│   ├── login/
+│   │   └── page.tsx
+│   ├── signup/
+│   │   └── page.tsx
+│   ├── layout.tsx
 │   ├── page.tsx
-│   └── [slug]/
-│       └── page.tsx
-├── collaborate/
-│   └── page.tsx
+│   └── template.tsx
+├── globals.css
+├── icon.png
+├── opengraph-image.png
+├── favicon.ico
 ├── layout.tsx
 ├── page.tsx
-└── template.tsx
+└── not-found.tsx
 ```
 
 Main navigation:
 
 ```text
-Home | About | Services | Projects | Careers | Collaborate | Language
+Home | About | Services | Projects | Careers | Collaborate | Log in | Sign up | Language
 ```
 
 ---
 
-## Service Routes
+## Public Routes
+
+### Core Routes
+
+```text
+/[lang]
+/[lang]/about
+/[lang]/services
+/[lang]/projects
+/[lang]/careers
+/[lang]/collaborate
+/[lang]/login
+/[lang]/signup
+```
+
+### Service Routes
 
 ```text
 /[lang]/services/robotics-and-automation
@@ -190,17 +257,7 @@ Home | About | Services | Projects | Careers | Collaborate | Language
 /[lang]/services/research-prototyping-technology-consulting
 ```
 
-### Services
-
-- Robotics and Automation
-- Data Science and Analytics
-- Software Development
-- RAG and Intelligent Assistants
-- Research, Prototyping and Technology Consulting
-
----
-
-## Project Routes
+### Project Routes
 
 ```text
 /[lang]/projects/robotic-hand
@@ -209,9 +266,51 @@ Home | About | Services | Projects | Careers | Collaborate | Language
 /[lang]/projects/digital-twin
 ```
 
+### Career Routes
+
+```text
+/[lang]/careers
+/[lang]/careers/future-opportunities
+```
+
+### API Routes
+
+```text
+/api/contact
+/api/careers
+```
+
+---
+
+## Services
+
+### Robotics and Automation
+
+Research and prototype development for robotic systems, sensing, control, intelligent end-effectors, and industrial automation.
+
+### Data Science and Analytics
+
+Predictive modelling, data preparation, statistical analysis, dashboards, visualisation, and operational decision support.
+
+### Software Development
+
+Responsive web platforms, APIs, backend services, relational databases, testing, CI/CD, and cloud-ready architecture.
+
+### RAG and Intelligent Assistants
+
+Knowledge assistants grounded in approved organisational documents, retrieval pipelines, source citations, evaluation, and feedback.
+
+### Research, Prototyping and Technology Consulting
+
+Feasibility studies, architecture, prototype planning, validation metrics, technical writing, funding support, and commercialisation pathways.
+
+---
+
+## Projects
+
 ### Intelligent Robotic Hand
 
-The flagship R&D programme combines:
+The flagship R&D programme explores a modular robotic hand and forearm platform combining:
 
 - mechanical design
 - sensing
@@ -222,8 +321,6 @@ The flagship R&D programme combines:
 - ROS 2
 - deterministic industrial communication
 - staged prototype validation
-
-The page includes genuine early-stage sensing and motion-capture images. These images are presented as development evidence, not as photographs of a completed product.
 
 ### Industrial RAG Platform
 
@@ -247,7 +344,10 @@ A research and architecture concept for modelling, monitoring, simulation, and s
 - ARM real-time controller
 - actuators and motor drivers
 - position sensors
-- force, current, pressure, and tactile sensors
+- force sensors
+- current sensors
+- pressure sensors
+- tactile sensors
 - external analogue-to-digital converters
 - industrial communication interface
 - watchdogs, limits, and emergency-stop behaviour
@@ -285,10 +385,127 @@ A research and architecture concept for modelling, monitoring, simulation, and s
 
 ---
 
+## Forms and Email Workflows
+
+### Collaboration Form
+
+The Collaborate page includes:
+
+- name
+- email
+- area of interest
+- message
+- optional attachment
+
+The form submits to:
+
+```text
+/api/contact
+```
+
+The API route sends an email to the configured contact inbox and attaches the optional uploaded file.
+
+Allowed attachment types:
+
+```text
+PDF, DOC, DOCX, TXT, PNG, JPG, JPEG
+```
+
+Maximum file size:
+
+```text
+10 MB
+```
+
+### Career Expression-of-Interest Form
+
+The Careers detail page includes:
+
+- full name
+- email address
+- phone number
+- address
+- type of interest dropdown
+- right-to-work-in-New-Zealand dropdown
+- short message
+- required CV upload
+- optional cover letter upload
+- optional additional file upload
+
+The form submits to:
+
+```text
+/api/careers
+```
+
+The API route sends an email to the configured careers inbox with attachments.
+
+Allowed career attachment types:
+
+```text
+PDF, DOC, DOCX, TXT, PNG, JPG, JPEG
+```
+
+Maximum file size:
+
+```text
+10 MB per file
+```
+
+Current status:
+
+- email sending is implemented
+- database saving is planned
+
+Future database storage will support:
+
+- candidate profile
+- submitted file metadata
+- selected interest
+- right-to-work status
+- submission date
+- application status
+- internal review notes
+- follow-up history
+
+---
+
+## Authentication Pages
+
+The project includes frontend prototype routes:
+
+```text
+/[lang]/login
+/[lang]/signup
+```
+
+Current status:
+
+- visual UI only
+- no real authentication yet
+- no sessions yet
+- no database user storage yet
+
+Future implementation will include:
+
+- secure password hashing
+- database-backed users
+- sessions or JWT
+- role-based access control
+- email verification
+- password reset
+- admin-only routes
+- rate limiting
+- audit logging
+
+---
+
 ## Repository Structure
 
 ```text
 industrialorigami-ai-platform/
+├── .git/
+├── .next/
 ├── components/
 │   ├── layout/
 │   ├── pages/
@@ -303,22 +520,36 @@ industrialorigami-ai-platform/
 │   ├── catalog.ts
 │   ├── robotic-hand-content.ts
 │   └── team.ts
+├── node_modules/
 ├── public/
 │   ├── brand/
+│   ├── home/
+│   ├── illustrations/
 │   ├── projects/
 │   │   └── robotic-hand/
 │   └── team/
 ├── src/
 │   └── app/
+│       ├── api/
+│       │   ├── careers/
+│       │   └── contact/
 │       ├── [lang]/
 │       ├── globals.css
 │       ├── icon.png
-│       └── opengraph-image.png
+│       ├── opengraph-image.png
+│       ├── favicon.ico
+│       ├── layout.tsx
+│       ├── page.tsx
+│       └── not-found.tsx
 ├── tests/
 ├── types/
+├── .env.local
 ├── .gitignore
+├── AGENTS.md
+├── CLAUDE.md
 ├── eslint.config.mjs
 ├── next.config.ts
+├── next-env.d.ts
 ├── package.json
 ├── package-lock.json
 ├── postcss.config.mjs
@@ -326,12 +557,29 @@ industrialorigami-ai-platform/
 └── tsconfig.json
 ```
 
+Note: `.next/` and `node_modules/` are generated locally and should not be committed to Git.
+
 ---
 
+## Important Content Files
+
+### Team Profiles
+
+Team image paths, qualifications, email addresses, and LinkedIn URLs are configured in:
+
+```text
+lib/team.ts
+```
+
+Team images are stored in:
+
+```text
+public/team/
+```
 
 ### Routes and Slugs
 
-Service and project slugs are defined in:
+Service and project route identifiers are defined in:
 
 ```text
 lib/catalog.ts
@@ -339,7 +587,7 @@ lib/catalog.ts
 
 ### Robotic Hand Content
 
-Detailed multilingual content is stored in:
+Detailed multilingual robotic-hand content is stored in:
 
 ```text
 lib/robotic-hand-content.ts
@@ -349,8 +597,30 @@ Project images are stored in:
 
 ```text
 public/projects/robotic-hand/
-├── hand-sensor.jpeg
-└── hand-motion-capture.jpeg
+```
+
+### Home Page Visual Assets
+
+Home page imagery can be stored in:
+
+```text
+public/home/
+public/illustrations/
+public/projects/
+```
+
+### API Routes
+
+Contact form email handling:
+
+```text
+src/app/api/contact/route.ts
+```
+
+Career form email handling:
+
+```text
+src/app/api/careers/route.ts
 ```
 
 ---
@@ -358,6 +628,8 @@ public/projects/robotic-hand/
 ## Local Development
 
 ### Prerequisites
+
+Install:
 
 - Node.js 20 or later
 - npm
@@ -385,6 +657,13 @@ cd industrialorigami-ai-platform
 npm install
 ```
 
+If email forms are enabled, install Nodemailer:
+
+```powershell
+npm install nodemailer
+npm install -D @types/nodemailer
+```
+
 ### Run
 
 ```powershell
@@ -397,7 +676,7 @@ Open:
 http://localhost:3000
 ```
 
-Useful routes:
+Useful development routes:
 
 ```text
 http://localhost:3000/en
@@ -406,7 +685,10 @@ http://localhost:3000/en/services
 http://localhost:3000/en/projects
 http://localhost:3000/en/projects/robotic-hand
 http://localhost:3000/en/careers
+http://localhost:3000/en/careers/future-opportunities
 http://localhost:3000/en/collaborate
+http://localhost:3000/en/login
+http://localhost:3000/en/signup
 ```
 
 ### Build and Lint
@@ -418,6 +700,8 @@ npm run start
 ```
 
 ### Clear the Next.js Cache
+
+If stale pages, route problems, or old images appear:
 
 ```powershell
 Remove-Item -Recurse -Force .next
@@ -450,7 +734,24 @@ npm run analyze
 
 ## Environment Variables
 
-Create `.env.local` only when required.
+Create a local file:
+
+```text
+.env.local
+```
+
+Required for email sending:
+
+```env
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=465
+SMTP_USER=z.torabi.university@gmail.com
+SMTP_APP_PASSWORD=replace-with-google-generated-app-password
+CONTACT_TO_EMAIL=z.torabi.university@gmail.com
+CAREERS_TO_EMAIL=z.torabi.university@gmail.com
+```
+
+Planned future variables:
 
 ```env
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
@@ -462,7 +763,18 @@ AWS_S3_BUCKET=
 AWS_BEDROCK_MODEL_ID=
 ```
 
-Never commit secrets, passwords, API keys, customer information, or private company documents.
+Important:
+
+- never commit `.env.local`
+- never commit passwords
+- never commit API keys
+- never commit Gmail app passwords
+- never expose secrets inside React components
+- server-side routes must handle email sending
+
+### Gmail SMTP Note
+
+For Gmail SMTP, `SMTP_APP_PASSWORD` must be a Google-generated Gmail App Password. It is not the normal Gmail password. It is also not a self-created password. Email authentication, because apparently human civilisation peaked at inventing sixteen-character secret strings for websites to mail PDFs.
 
 ---
 
@@ -474,12 +786,25 @@ Web Browser
     ▼
 Next.js Frontend
     │
-    ├── Next.js APIs
-    ├── FastAPI AI Service
-    └── Authentication
+    ├── Public multilingual pages
+    ├── Login and signup UI
+    ├── Contact form
+    └── Career application form
             │
-            ├── PostgreSQL + pgvector
-            └── S3 or Local Object Storage
+            ▼
+Next.js API Routes
+    │
+    ├── /api/contact
+    ├── /api/careers
+    └── future authenticated APIs
+            │
+            ├── Email service through SMTP
+            ├── PostgreSQL database
+            ├── File metadata storage
+            └── Future object storage
+                    │
+                    ├── S3 or equivalent
+                    └── RAG document storage
 ```
 
 ---
@@ -497,50 +822,64 @@ Next.js Frontend
 - add team profiles, qualifications, images, emails, and LinkedIn links
 - build service index and individual service pages
 - build project index and individual project pages
-- build the detailed Robotic Hand page
-- build Careers and Collaborate pages
+- build detailed Robotic Hand page
+- build Careers page
+- build career expression-of-interest route
+- build career form with CV, cover letter, and additional file upload
+- build Collaborate page
+- build collaboration form with optional attachment
+- add Nodemailer email workflows
+- add Login and Sign up UI prototypes
 - add metadata, favicon, and social-sharing image
 - add responsive styling
 
-### Next: Backend and Enquiries
+### Next: Database and Persistence
 
-- validate forms
-- add Next.js Route Handlers
 - add PostgreSQL
-- persist enquiries
-- add notifications
-- add spam protection
-- add rate limiting
-- add API documentation
+- define enquiry schema
+- define career application schema
+- persist contact enquiries
+- persist career submissions
+- store uploaded file metadata
+- optionally store uploaded files in S3 or another object store
+- add admin review status
+- add submission timestamps
+- add basic reporting views
 
 ### Later: Authentication and Administration
 
-- authentication
-- role-based access
-- admin dashboard
-- multilingual content management
-- project and service management
-- career and enquiry management
-- audit logs
+- implement real authentication
+- add role-based access
+- build admin dashboard
+- manage multilingual content
+- manage project and service content
+- manage career submissions
+- manage collaboration enquiries
+- add audit logs
+- add protected admin routes
 
 ### Later: RAG and LLM Assistant
 
-- FastAPI AI service
-- document ingestion
-- chunking
-- embeddings
-- pgvector
-- retrieval
-- source citations
-- chatbot interface
-- feedback
-- evaluation
-- local LLM support
-- Amazon Bedrock integration
+- add FastAPI AI service
+- add document ingestion
+- add chunking
+- add embeddings
+- add pgvector
+- add retrieval
+- add source citations
+- add chatbot interface
+- add feedback
+- add evaluation
+- add local LLM support
+- add Amazon Bedrock integration
 
 ### Later: Testing, Containers, Monitoring, and Cloud
 
-- unit, component, API, and end-to-end tests
+- unit tests
+- component tests
+- API route tests
+- upload validation tests
+- end-to-end tests
 - accessibility testing
 - security scanning
 - Docker and Docker Compose
@@ -573,13 +912,26 @@ git commit -m "docs: update project README"
 git push -u origin docs/update-readme
 ```
 
+Recommended commit format:
+
+```text
+feat: add career application form
+fix: handle missing career opportunities
+docs: update README
+refactor: simplify homepage project cards
+chore: update dependencies
+```
+
 ---
 
 ## Security Principles
 
 - no secrets in Git
+- no `.env.local` in Git
 - least-privilege access
 - server-side validation
+- file-size validation
+- file-type validation
 - safe error messages
 - secure authentication
 - role-based access control
@@ -602,6 +954,7 @@ git push -u origin docs/update-readme
 - visible focus states
 - sufficient colour contrast
 - accessible forms
+- meaningful labels
 - language attributes
 - correct RTL layout
 - reduced-motion support
@@ -661,6 +1014,8 @@ Do not commit:
 - credentials or tokens
 - private funding proposals
 - personal information not approved for publication
+- CVs, cover letters, or submitted application materials
+- uploaded enquiry attachments
 
 Licensing will be confirmed after the company decides which components are open source and which remain proprietary.
 
@@ -686,4 +1041,4 @@ All rights are reserved unless a licence is added to the repository.
 
 This website and technology platform were designed and developed by **Zahra Torabi** for IndustrialOrigami.AI.
 
-The project demonstrates multilingual full-stack development, artificial intelligence integration, cloud architecture, DevOps, testing, monitoring, data visualisation, and technical product design using technologies including Next.js, React, TypeScript, Node.js, Python, PostgreSQL, Docker, Kubernetes, GitHub Actions, AWS, RAG, and Large Language Models.
+The project demonstrates multilingual full-stack development, artificial intelligence integration, cloud architecture, DevOps, testing, monitoring, data visualisation, server-side form handling, file upload workflows, and technical product design using technologies including Next.js, React, TypeScript, Node.js, Python, PostgreSQL, Docker, Kubernetes, GitHub Actions, AWS, RAG, and Large Language Models.

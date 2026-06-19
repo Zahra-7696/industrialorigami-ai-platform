@@ -92,9 +92,7 @@ export function RoboticHandPage({
             ))}
           </div>
 
-          <p className="mx-auto mt-6 max-w-4xl rounded-2xl border border-amber-300 bg-amber-50 px-5 py-4 text-sm leading-7 text-amber-950">
-            {content.galleryNote}
-          </p>
+          
         </div>
       </section>
 

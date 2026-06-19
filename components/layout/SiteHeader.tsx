@@ -15,8 +15,24 @@ type SiteHeaderProps = {
   dictionary: Dictionary;
 };
 
+const authLabels: Record<Locale, { login: string; signup: string }> = {
+  en: {
+    login: "Log in",
+    signup: "Sign up",
+  },
+  fa: {
+    login: "ورود",
+    signup: "ثبت‌نام",
+  },
+  zh: {
+    login: "登录",
+    signup: "注册",
+  },
+};
+
 export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const auth = authLabels[locale];
 
   const serviceItems = dictionary.services.items.map((item) => ({
     href: `/${locale}/services/${item.slug}`,
@@ -32,7 +48,7 @@ export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-brand-950/96 text-white backdrop-blur-xl">
-      <div className="site-container flex min-h-20 items-center justify-between gap-5">
+      <div className="site-container flex min-h-20 items-center justify-between gap-4">
         <Link
           href={`/${locale}`}
           className="flex min-w-0 items-center gap-3"
@@ -59,7 +75,7 @@ export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
 
         <nav
           aria-label="Primary navigation"
-          className="hidden items-center gap-6 xl:flex"
+          className="hidden items-center gap-4 xl:flex"
         >
           <Link
             href={`/${locale}`}
@@ -100,7 +116,23 @@ export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
           </Link>
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-3">
+          <div className="flex items-center gap-2">
+            <Link
+              href={`/${locale}/login`}
+              className="rounded-full border border-white/25 px-4 py-2 text-xs font-black text-slate-100 transition hover:border-brand-gold hover:text-brand-gold"
+            >
+              {auth.login}
+            </Link>
+
+            <Link
+              href={`/${locale}/signup`}
+              className="rounded-full bg-brand-orange px-4 py-2 text-xs font-black text-brand-950 transition hover:bg-brand-gold"
+            >
+              {auth.signup}
+            </Link>
+          </div>
+
           <LanguageSwitcher currentLocale={locale} />
 
           <button
@@ -190,6 +222,23 @@ export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
             >
               {dictionary.navigation.collaborate}
             </Link>
+
+            <div className="mt-3 grid grid-cols-2 gap-3 border-t border-white/10 pt-4">
+              <Link
+                href={`/${locale}/login`}
+                onClick={() => setMobileOpen(false)}
+                className="rounded-xl border border-white/20 px-4 py-3 text-center text-sm font-black text-white"
+              >
+                {auth.login}
+              </Link>
+              <Link
+                href={`/${locale}/signup`}
+                onClick={() => setMobileOpen(false)}
+                className="rounded-xl bg-brand-orange px-4 py-3 text-center text-sm font-black text-brand-950"
+              >
+                {auth.signup}
+              </Link>
+            </div>
           </div>
         </nav>
       ) : null}

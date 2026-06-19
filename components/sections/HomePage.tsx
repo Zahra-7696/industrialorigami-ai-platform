@@ -11,23 +11,37 @@ type HomePageProps = {
   dictionary: Dictionary;
 };
 
+const serviceImages: Record<string, string> = {
+  "robotics-and-automation": "/home/service-robotics.png",
+  "data-science-and-analytics": "/home/service-data-science.png",
+  "software-development": "/home/service-software.png",
+  "rag-intelligent-assistants": "/home/service-rag.png",
+  "research-prototyping-technology-consulting": "/home/service-research.png",
+};
+
+const projectImages: Record<string, string> = {
+  "robotic-hand": "/projects/intelligent-robotic-hand.png",
+  "industrial-rag-platform": "/projects/industrial-rag-platform.png",
+  "predictive-maintenance": "/projects/predictive-maintenance.png",
+  "digital-twin": "/projects/digital-twin.png",
+};
+
 export function HomePage({ locale, dictionary }: HomePageProps) {
   const content = dictionary.home;
-  const featuredProject = dictionary.projects.items.find(
-    (project) => project.slug === "robotic-hand",
-  );
 
   return (
     <main>
       <section className="hero-background relative isolate overflow-hidden">
         <div className="hero-grid absolute inset-0 -z-20" />
 
-        <div className="site-container grid min-h-[calc(100vh-5rem)] items-center gap-14 py-14 lg:grid-cols-[1.08fr_0.92fr] lg:py-16">
+        <div className="site-container grid min-h-[calc(100vh-5rem)] items-center gap-14 py-14 lg:grid-cols-2 lg:py-16">
           <div>
             <p className="page-eyebrow hero-enter-1">{content.eyebrow}</p>
+
             <h1 className="hero-title hero-enter-2 mt-6">
               {content.title}
             </h1>
+
             <p className="hero-copy hero-enter-3 mt-7">
               {content.description}
             </p>
@@ -39,6 +53,7 @@ export function HomePage({ locale, dictionary }: HomePageProps) {
               >
                 {content.servicesCta}
               </Link>
+
               <Link
                 href={`/${locale}/projects/robotic-hand`}
                 className="button-secondary-dark"
@@ -48,26 +63,17 @@ export function HomePage({ locale, dictionary }: HomePageProps) {
             </div>
           </div>
 
-          <div className="hero-enter-3 relative mx-auto w-full max-w-lg">
-            <div className="tech-orbit-dark mx-auto flex aspect-square w-[62%] items-center justify-center rounded-full border border-white/16 bg-white/6 shadow-2xl">
+          <div className="hero-enter-3 mx-auto flex w-full justify-center lg:justify-end">
+            <div className="relative w-full max-w-[28rem]">
               <Image
-                src="/brand/logo-mark.png"
-                alt=""
-                width={360}
-                height={360}
+                src="/home/hero-robotic-hand.png"
+                alt="Robotic hand holding an orange origami shape"
+                width={558}
+                height={702}
                 priority
-                className="logo-float h-auto w-[67%] object-contain"
+                unoptimized
+                className="h-auto w-full object-contain drop-shadow-2xl"
               />
-            </div>
-
-            <div className="absolute -bottom-5 left-0 max-w-[18rem] rounded-2xl border border-white/15 bg-brand-950/86 p-5 shadow-2xl backdrop-blur-xl">
-              <p className="page-eyebrow">{content.featuredLabel}</p>
-              <p className="mt-2 text-base font-black leading-7 text-white">
-                {featuredProject?.title}
-              </p>
-              <p className="mt-2 text-sm leading-6 text-slate-300">
-                {content.featuredDescription}
-              </p>
             </div>
           </div>
         </div>
@@ -82,22 +88,40 @@ export function HomePage({ locale, dictionary }: HomePageProps) {
             centered
           />
 
-          <div className="mt-11 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
+          <div className="mt-11 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
             {dictionary.services.items.map((service, index) => (
               <Link
                 key={service.slug}
                 href={`/${locale}/services/${service.slug}`}
-                className="light-card light-card-interactive rounded-3xl p-6"
+                className="light-card light-card-interactive overflow-hidden rounded-3xl"
               >
-                <span className="text-xs font-black text-brand-orange">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <h2 className="mt-4 text-lg font-black leading-6 text-brand-900">
-                  {service.title}
-                </h2>
-                <p className="mt-3 text-sm leading-7 text-slate-600">
-                  {service.menuDescription}
-                </p>
+                <div className="h-44 bg-brand-950">
+                  <Image
+                    src={
+                      serviceImages[service.slug] ??
+                      "/home/service-research.png"
+                    }
+                    alt=""
+                    width={640}
+                    height={360}
+                    unoptimized
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+
+                <div className="p-6">
+                  <span className="text-xs font-black text-brand-orange">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <h2 className="mt-4 text-lg font-black leading-6 text-brand-900">
+                    {service.title}
+                  </h2>
+
+                  <p className="mt-3 text-sm leading-7 text-slate-600">
+                    {service.menuDescription}
+                  </p>
+                </div>
               </Link>
             ))}
           </div>
@@ -119,45 +143,47 @@ export function HomePage({ locale, dictionary }: HomePageProps) {
             eyebrow={content.projectsEyebrow}
             title={content.projectsTitle}
             description={content.projectsDescription}
+            centered
           />
 
-          <div className="mt-10 grid gap-5 lg:grid-cols-[1.4fr_0.6fr]">
-            {featuredProject ? (
+          <div className="mt-11 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+            {dictionary.projects.items.map((project) => (
               <Link
-                href={`/${locale}/projects/${featuredProject.slug}`}
-                className="soft-panel light-card-interactive rounded-[2rem] p-8"
+                key={project.slug}
+                href={`/${locale}/projects/${project.slug}`}
+                className="light-card light-card-interactive overflow-hidden rounded-[2rem]"
               >
-                <p className="page-eyebrow">{content.featuredLabel}</p>
-                <h2 className="mt-4 text-3xl font-black text-brand-900">
-                  {featuredProject.title}
-                </h2>
-                <p className="mt-4 max-w-2xl leading-8 text-slate-600">
-                  {featuredProject.summary}
-                </p>
-                <span className="mt-6 inline-flex font-black text-brand-700">
-                  {content.viewProject} →
-                </span>
-              </Link>
-            ) : null}
+                <div className="h-52 bg-brand-950 sm:h-56">
+                  <Image
+                    src={
+                      projectImages[project.slug] ??
+                      "/home/service-software.png"
+                    }
+                    alt=""
+                    width={640}
+                    height={430}
+                    unoptimized
+                    className="h-full w-full object-cover"
+                  />
+                </div>
 
-            <div className="grid gap-4">
-              {dictionary.projects.items
-                .filter((project) => project.slug !== "robotic-hand")
-                .map((project) => (
-                  <Link
-                    key={project.slug}
-                    href={`/${locale}/projects/${project.slug}`}
-                    className="light-card light-card-interactive rounded-2xl p-5"
-                  >
-                    <h3 className="font-black text-brand-900">
-                      {project.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-6 text-slate-600">
-                      {project.menuDescription}
-                    </p>
-                  </Link>
-                ))}
-            </div>
+                <div className="p-6">
+                  <p className="page-eyebrow">{project.category}</p>
+
+                  <h2 className="mt-4 text-xl font-black text-brand-900">
+                    {project.title}
+                  </h2>
+
+                  <p className="mt-3 text-sm leading-7 text-slate-600">
+                    {project.menuDescription}
+                  </p>
+
+                  <span className="mt-5 inline-flex font-black text-brand-700">
+                    {content.viewProject} →
+                  </span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -168,13 +194,16 @@ export function HomePage({ locale, dictionary }: HomePageProps) {
             <div className="grid items-center gap-7 lg:grid-cols-[1fr_auto]">
               <div>
                 <p className="page-eyebrow">{content.collaborateEyebrow}</p>
+
                 <h2 className="section-title mt-4">
                   {content.collaborateTitle}
                 </h2>
+
                 <p className="section-copy mt-5">
                   {content.collaborateDescription}
                 </p>
               </div>
+
               <Link
                 href={`/${locale}/collaborate`}
                 className="button-primary"
