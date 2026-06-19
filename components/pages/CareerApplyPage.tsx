@@ -282,9 +282,7 @@ export function CareerApplyPage({
               {text.intro}
             </p>
 
-            <div className="mt-7 rounded-3xl border border-amber-200 bg-amber-50 p-6 text-sm leading-7 text-amber-950">
-              {text.note}
-            </div>
+            
           </aside>
 
           <form
