@@ -188,31 +188,6 @@ export function RoboticHandPage({
             description={content.workflowDescription}
             centered
           />
-
-         <div className="mt-11 grid gap-6 lg:grid-cols-2">
-            {content.gallery.map((image, index) => (
-            <figure
-            key={image.src}
-            className="light-card overflow-hidden rounded-[2rem]"
-             >
-           <div className="relative h-[340px] overflow-hidden bg-brand-900 sm:h-[420px] lg:h-[460px]">
-            <Image
-             src={image.src}
-             alt={image.alt}
-             fill
-             sizes="(max-width: 1024px) 100vw, 50vw"
-             loading={index === 0 ? "eager" : "lazy"}
-             unoptimized
-             className="object-contain p-3"
-            />
-            </div>
-
-          <figcaption className="p-6 leading-7 text-slate-600">
-          {image.caption}
-          </figcaption>
-          </figure>
-           ))}
-         </div>
         </div>
       </section>
 
