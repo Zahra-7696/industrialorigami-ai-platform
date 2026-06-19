@@ -1,3 +1,6 @@
+import Link from "next/link";
+
+import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/get-dictionary";
 
 import { PageHero } from "@/components/ui/PageHero";
@@ -5,11 +8,24 @@ import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 type ServicesPageProps = {
+  locale: Locale;
   dictionary: Dictionary;
 };
 
-export function ServicesPage({ dictionary }: ServicesPageProps) {
+type ServiceItem = {
+  slug: string;
+  title: string;
+  menuDescription: string;
+  summary: string;
+  overview: string[];
+  capabilities: string[];
+  deliverables: string[];
+  fit: string[];
+};
+
+export function ServicesPage({ locale, dictionary }: ServicesPageProps) {
   const content = dictionary.services;
+  const services = content.items as ServiceItem[];
 
   return (
     <main>
@@ -20,60 +36,42 @@ export function ServicesPage({ dictionary }: ServicesPageProps) {
       />
 
       <section className="section-space section-white">
-        <div className="site-container grid gap-6 md:grid-cols-2">
-          {content.items.map((item, index) => (
-            <Reveal key={item.title}>
-              <article className="light-card light-card-interactive h-full rounded-3xl p-7">
-                <span className="text-xs font-black text-brand-orange">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <h2 className="mt-4 text-2xl font-black text-brand-navy">
-                  {item.title}
-                </h2>
-                <p className="mt-3 leading-7 text-slate-600">
-                  {item.description}
-                </p>
-                <ul className="mt-5 grid gap-2">
-                  {item.capabilities.map((capability) => (
-                    <li
-                      key={capability}
-                      className="flex items-start gap-3 text-sm leading-6 text-slate-600"
-                    >
-                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-orange" />
-                      {capability}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="section-space section-soft border-y border-slate-200">
         <div className="site-container">
-          <Reveal>
-            <SectionHeading
-              eyebrow={content.processEyebrow}
-              title={content.processTitle}
-              description={content.processDescription}
-              centered
-            />
-          </Reveal>
-          <div className="mt-11 grid gap-5 md:grid-cols-4">
-            {content.process.map((step, index) => (
-              <Reveal key={step.title}>
-                <article className="light-card h-full rounded-3xl p-6">
-                  <span className="font-black text-brand-orange">
-                    0{index + 1}
-                  </span>
-                  <h3 className="mt-4 text-lg font-black text-brand-navy">
-                    {step.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">
-                    {step.description}
+          <SectionHeading
+            title={content.title}
+            description={content.intro}
+          />
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            {services.map((item) => (
+              <Reveal key={item.slug}>
+                <Link
+                  href={`/${locale}/services/${item.slug}`}
+                  className="light-card light-card-interactive block h-full rounded-[2rem] p-7"
+                >
+                  <h2 className="text-2xl font-black text-brand-900">
+                    {item.title}
+                  </h2>
+
+                  <p className="mt-3 leading-7 text-slate-600">
+                    {item.summary}
                   </p>
-                </article>
+
+                  <ul className="mt-5 grid gap-2">
+                    {item.capabilities.slice(0, 3).map((capability) => (
+                      <li
+                        key={capability}
+                        className="rounded-xl bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700"
+                      >
+                        {capability}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <span className="mt-6 inline-flex rounded-xl bg-brand-orange px-5 py-3 text-sm font-black text-brand-950">
+                    {content.viewService}
+                  </span>
+                </Link>
               </Reveal>
             ))}
           </div>

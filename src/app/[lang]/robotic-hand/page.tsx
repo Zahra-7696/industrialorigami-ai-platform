@@ -1,22 +1,19 @@
-import { notFound } from "next/navigation";
+import { redirect } from "next/navigation";
 
-import { RoboticHandPage } from "@/components/pages/RoboticHandPage";
-import { isLocale, type Locale } from "@/i18n/config";
-import { getDictionary } from "@/i18n/get-dictionary";
+import { isLocale } from "@/i18n/config";
 
 type PageProps = {
-  params: Promise<{ lang: string }>;
+  params: Promise<{
+    lang: string;
+  }>;
 };
 
 export default async function Page({ params }: PageProps) {
   const { lang } = await params;
 
   if (!isLocale(lang)) {
-    notFound();
+    redirect("/en/projects/robotic-hand");
   }
 
-  const locale: Locale = lang;
-  const dictionary = getDictionary(locale);
-
-  return <RoboticHandPage dictionary={dictionary} />;
+  redirect(`/${lang}/projects/robotic-hand`);
 }
