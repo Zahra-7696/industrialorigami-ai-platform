@@ -14,7 +14,7 @@ type SiteHeaderProps = {
   locale: Locale;
   dictionary: Dictionary;
 };
-
+{/*
 const authLabels: Record<Locale, { login: string; signup: string }> = {
   en: {
     login: "Log in",
@@ -29,10 +29,10 @@ const authLabels: Record<Locale, { login: string; signup: string }> = {
     signup: "注册",
   },
 };
-
+*/}
 export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const auth = authLabels[locale];
+ {/* const auth = authLabels[locale];*/}
 
   const serviceItems = dictionary.services.items.map((item) => ({
     href: `/${locale}/services/${item.slug}`,
@@ -117,8 +117,9 @@ export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
         </nav>
 
         <div className="flex shrink-0 items-center gap-3">
-           <div className="hidden items-center gap-2 lg:flex">
-            {/*<div className="flex items-center gap-2"> */}
+           {/*<div className="hidden items-center gap-2 lg:flex">*/}
+           {/*
+            <div className="flex items-center gap-2"> 
             <Link
               href={`/${locale}/login`}
               className="rounded-full border border-white/25 px-4 py-2 text-xs font-black text-slate-100 transition hover:border-brand-gold hover:text-brand-gold"
@@ -133,7 +134,7 @@ export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
               {auth.signup}
             </Link>
           </div>
-
+          */}
           <LanguageSwitcher currentLocale={locale} />
 
           <button
@@ -223,7 +224,7 @@ export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
             >
               {dictionary.navigation.collaborate}
             </Link>
-
+            {/*
             <div className="mt-3 grid grid-cols-2 gap-3 border-t border-white/10 pt-4">
               <Link
                 href={`/${locale}/login`}
@@ -240,6 +241,7 @@ export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
                 {auth.signup}
               </Link>
             </div>
+            */}
           </div>
         </nav>
       ) : null}
