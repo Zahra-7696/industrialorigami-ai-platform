@@ -68,7 +68,12 @@ export function AboutPage({ dictionary }: AboutPageProps) {
 
           <div className="mt-11 grid gap-6 md:grid-cols-2">
             {teamProfiles.map((profile, index) => {
-              const member = content.team[profile.id];
+              const member = content.team[index];
+
+              if (!member) {
+                return null;
+              }
+
               const hasEmail = isConfigured(profile.email);
               const hasLinkedIn = isConfigured(profile.linkedin);
 
@@ -114,7 +119,7 @@ export function AboutPage({ dictionary }: AboutPageProps) {
                             className="group rounded-xl border border-slate-300 bg-white px-4 py-3 transition hover:border-brand-orange hover:shadow-md"
                           >
                             <span className="block text-xs font-black uppercase tracking-wider text-brand-orange">
-                              {content.emailLabel}
+                              Email
                             </span>
 
                             <span className="mt-1 block break-all text-sm font-bold text-brand-900 group-hover:text-brand-700">
@@ -123,13 +128,13 @@ export function AboutPage({ dictionary }: AboutPageProps) {
                           </a>
                         ) : (
                           <span className="rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-400">
-                            {content.emailPending}
+                            Email unavailable
                           </span>
                         )}
 
                         {hasLinkedIn ? (
                           <a
-                            href={profile.linkedin}
+                            href={profile.linkedin.trim()}
                             target="_blank"
                             rel="noreferrer"
                             className="group rounded-xl border border-[#0A66C2]/30 bg-[#0A66C2]/5 px-4 py-3 transition hover:border-[#0A66C2] hover:shadow-md"
@@ -140,13 +145,14 @@ export function AboutPage({ dictionary }: AboutPageProps) {
 
                             <span className="mt-1 block break-all text-sm font-bold text-brand-900 group-hover:text-[#0A66C2]">
                               {profile.linkedin
+                                .trim()
                                 .replace(/^https?:\/\/(www\.)?/, "")
                                 .replace(/\/$/, "")}
                             </span>
                           </a>
                         ) : (
                           <span className="rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-400">
-                            {content.linkedinPending}
+                            LinkedIn unavailable
                           </span>
                         )}
                       </div>

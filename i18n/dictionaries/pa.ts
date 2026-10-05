@@ -1,10 +1,12 @@
 import en from "./en.json";
 
-// Start from the English dictionary so this Punjabi dictionary keeps exactly
-// the same data shape as the installed project. Punjabi translations then
-// override the public-facing copy. This also makes the locale resilient to
-// small content-schema differences between project revisions.
-const dictionary: any = JSON.parse(JSON.stringify(en));
+type Dictionary = typeof en;
+type ServiceItem = Dictionary["services"]["items"][number];
+type ProjectItem = Dictionary["projects"]["items"][number];
+
+// Start from the English dictionary so the Punjabi dictionary always keeps
+// exactly the same schema as the source dictionary.
+const dictionary: Dictionary = JSON.parse(JSON.stringify(en));
 
 Object.assign(dictionary.metadata, {
   title: "IndustrialOrigami.AI | AI, ਰੋਬੋਟਿਕਸ ਅਤੇ ਇੰਟੈਲੀਜੈਂਟ ਇੰਜੀਨੀਅਰਿੰਗ",
@@ -60,29 +62,26 @@ Object.assign(dictionary.about, {
     "ਟੀਮ ਰਣਨੀਤੀ, AI, ਸਾਫਟਵੇਅਰ, ਡਾਟਾ ਸਾਇੰਸ, ਮਕੈਨਿਕਲ ਡਿਜ਼ਾਈਨ, CAD, ਫੈਬਰਿਕੇਸ਼ਨ ਅਤੇ ਪ੍ਰੋਜੈਕਟ ਇੰਜੀਨੀਅਰਿੰਗ ਨੂੰ ਜੋੜਦੀ ਹੈ।",
 });
 
-if (Array.isArray(dictionary.about.storyParagraphs)) {
-  dictionary.about.storyParagraphs = [
-    "IndustrialOrigami.AI ਉੱਚ ਪੱਧਰੀ ਖੋਜ ਅਤੇ ਪ੍ਰਯੋਗਿਕ ਵਪਾਰਕ ਤਕਨਾਲੋਜੀ ਵਿਚਕਾਰ ਪੁਲ ਬਣਾਉਣ ਲਈ ਸਥਾਪਿਤ ਕੀਤਾ ਗਿਆ ਸੀ।",
-    "ਕੰਪਨੀ ਇੱਕ ਇੰਟੈਲੀਜੈਂਟ ਰੋਬੋਟਿਕ ਹੱਥ ਵਿਕਸਿਤ ਕਰ ਰਹੀ ਹੈ ਅਤੇ ਨਾਲ ਹੀ AI, ਡਾਟਾ ਸਾਇੰਸ, ਸਾਫਟਵੇਅਰ ਇੰਜੀਨੀਅਰਿੰਗ, CAD ਅਤੇ ਇੰਟੈਲੀਜੈਂਟ ਆਟੋਮੇਸ਼ਨ ਵਿੱਚ ਸਮਰੱਥਾ ਬਣਾਉਂਦੀ ਹੈ।",
-    "ਸਾਡਾ ਤਰੀਕਾ ਸਬੂਤ-ਆਧਾਰਿਤ ਹੈ: ਸਮੱਸਿਆ ਨੂੰ ਸਮਝੋ, ਕੇਂਦ੍ਰਿਤ ਪ੍ਰੋਟੋਟਾਈਪ ਬਣਾਓ, ਪ੍ਰਦਰਸ਼ਨ ਮਾਪੋ, ਉਪਭੋਗਤਾਵਾਂ ਤੋਂ ਸਿੱਖੋ ਅਤੇ ਤਕਨੀਕੀ ਤੇ ਵਪਾਰਕ ਮਾਮਲਾ ਭਰੋਸੇਯੋਗ ਹੋਣ 'ਤੇ ਹੀ ਸਕੇਲ ਕਰੋ।",
-  ];
-}
+dictionary.about.storyParagraphs = [
+  "IndustrialOrigami.AI ਉੱਚ ਪੱਧਰੀ ਖੋਜ ਅਤੇ ਪ੍ਰਯੋਗਿਕ ਵਪਾਰਕ ਤਕਨਾਲੋਜੀ ਵਿਚਕਾਰ ਪੁਲ ਬਣਾਉਣ ਲਈ ਸਥਾਪਿਤ ਕੀਤਾ ਗਿਆ ਸੀ।",
+  "ਕੰਪਨੀ ਇੱਕ ਇੰਟੈਲੀਜੈਂਟ ਰੋਬੋਟਿਕ ਹੱਥ ਵਿਕਸਿਤ ਕਰ ਰਹੀ ਹੈ ਅਤੇ ਨਾਲ ਹੀ AI, ਡਾਟਾ ਸਾਇੰਸ, ਸਾਫਟਵੇਅਰ ਇੰਜੀਨੀਅਰਿੰਗ, CAD ਅਤੇ ਇੰਟੈਲੀਜੈਂਟ ਆਟੋਮੇਸ਼ਨ ਵਿੱਚ ਸਮਰੱਥਾ ਬਣਾਉਂਦੀ ਹੈ।",
+  "ਸਾਡਾ ਤਰੀਕਾ ਸਬੂਤ-ਆਧਾਰਿਤ ਹੈ: ਸਮੱਸਿਆ ਨੂੰ ਸਮਝੋ, ਕੇਂਦ੍ਰਿਤ ਪ੍ਰੋਟੋਟਾਈਪ ਬਣਾਓ, ਪ੍ਰਦਰਸ਼ਨ ਮਾਪੋ, ਉਪਭੋਗਤਾਵਾਂ ਤੋਂ ਸਿੱਖੋ ਅਤੇ ਤਕਨੀਕੀ ਤੇ ਵਪਾਰਕ ਮਾਮਲਾ ਭਰੋਸੇਯੋਗ ਹੋਣ 'ਤੇ ਹੀ ਸਕੇਲ ਕਰੋ।",
+];
 
-if (Array.isArray(dictionary.about.companyFacts)) {
-  const factTranslations = [
-    ["ਸਥਾਨ", "ਕ੍ਰਾਈਸਟਚਰਚ, ਨਿਊਜ਼ੀਲੈਂਡ"],
-    ["ਕੇਂਦਰ", "AI, ਰੋਬੋਟਿਕਸ, ਡਾਟਾ, ਸਾਫਟਵੇਅਰ, CAD ਅਤੇ ਇੰਟੈਲੀਜੈਂਟ ਇੰਜੀਨੀਅਰਿੰਗ"],
-    ["ਵਪਾਰਕ ਮਾਡਲ", "ਪ੍ਰੋਫੈਸ਼ਨਲ ਸੇਵਾਵਾਂ, ਸਹਿਯੋਗੀ R&D ਅਤੇ ਮਲਕੀਅਤ ਵਾਲਾ ਉਤਪਾਦ ਵਿਕਾਸ"],
-    ["ਦ੍ਰਿਸ਼ਟੀਕੋਣ", "ਮਾਪਯੋਗ ਪ੍ਰਮਾਣਿਕਤਾ ਨਾਲ ਸਬੂਤ-ਆਧਾਰਿਤ ਤਕਨੀਕੀ ਵਿਕਾਸ"],
-  ];
-  dictionary.about.companyFacts = dictionary.about.companyFacts.map(
-    (fact: any, index: number) => ({
-      ...fact,
-      label: factTranslations[index]?.[0] ?? fact.label,
-      value: factTranslations[index]?.[1] ?? fact.value,
-    }),
-  );
-}
+const factTranslations = [
+  ["ਸਥਾਨ", "ਕ੍ਰਾਈਸਟਚਰਚ, ਨਿਊਜ਼ੀਲੈਂਡ"],
+  ["ਕੇਂਦਰ", "AI, ਰੋਬੋਟਿਕਸ, ਡਾਟਾ, ਸਾਫਟਵੇਅਰ, CAD ਅਤੇ ਇੰਟੈਲੀਜੈਂਟ ਇੰਜੀਨੀਅਰਿੰਗ"],
+  ["ਵਪਾਰਕ ਮਾਡਲ", "ਪ੍ਰੋਫੈਸ਼ਨਲ ਸੇਵਾਵਾਂ, ਸਹਿਯੋਗੀ R&D ਅਤੇ ਮਲਕੀਅਤ ਵਾਲਾ ਉਤਪਾਦ ਵਿਕਾਸ"],
+  ["ਦ੍ਰਿਸ਼ਟੀਕੋਣ", "ਮਾਪਯੋਗ ਪ੍ਰਮਾਣਿਕਤਾ ਨਾਲ ਸਬੂਤ-ਆਧਾਰਿਤ ਤਕਨੀਕੀ ਵਿਕਾਸ"],
+] as const;
+
+dictionary.about.companyFacts = dictionary.about.companyFacts.map(
+  (fact, index) => ({
+    ...fact,
+    label: factTranslations[index]?.[0] ?? fact.label,
+    value: factTranslations[index]?.[1] ?? fact.value,
+  }),
+);
 
 const teamTranslations: Record<string, { role: string; description: string }> = {
   "David Ewing": {
@@ -91,30 +90,25 @@ const teamTranslations: Record<string, { role: string; description: string }> = 
   },
   "Zahra Torabi": {
     role: "AI, ਸਾਫਟਵੇਅਰ ਇੰਜੀਨੀਅਰਿੰਗ ਅਤੇ R&D ਲੀਡ",
-    description: "AI/ML ਖੋਜ, ਰੀਇਨਫੋਰਸਮੈਂਟ ਲਰਨਿੰਗ, ਏਜੈਂਟਿਕ ਅਤੇ ਜਨਰੇਟਿਵ AI, ਸਾਫਟਵੇਅਰ ਇੰਜੀਨੀਅਰਿੰਗ, ਮੁਲਾਂਕਣ ਅਤੇ ਤਕਨੀਕੀ ਕਾਰਜਾਨਵੈਣ।",
+    description:
+      "AI/ML ਖੋਜ, ਰੀਇਨਫੋਰਸਮੈਂਟ ਲਰਨਿੰਗ, ਏਜੈਂਟਿਕ ਅਤੇ ਜਨਰੇਟਿਵ AI, ਸਾਫਟਵੇਅਰ ਇੰਜੀਨੀਅਰਿੰਗ, ਮੁਲਾਂਕਣ ਅਤੇ ਤਕਨੀਕੀ ਕਾਰਜਾਨਵੈਣ।",
   },
   Lilian: {
     role: "ਡਾਟਾ ਸਾਇੰਸ ਅਤੇ ਐਨਾਲਿਟਿਕਸ ਲੀਡ",
-    description: "ਡਾਟਾ ਤਿਆਰੀ, ਅੰਕੜਾ ਮਾਡਲਿੰਗ, ਭਵਿੱਖਬਾਣੀ ਵਿਸ਼ਲੇਸ਼ਣ, ਵਿਜ਼ੁਅਲਾਈਜ਼ੇਸ਼ਨ ਅਤੇ ਪ੍ਰਮਾਣਿਕਤਾ।",
+    description:
+      "ਡਾਟਾ ਤਿਆਰੀ, ਅੰਕੜਾ ਮਾਡਲਿੰਗ, ਭਵਿੱਖਬਾਣੀ ਵਿਸ਼ਲੇਸ਼ਣ, ਵਿਜ਼ੁਅਲਾਈਜ਼ੇਸ਼ਨ ਅਤੇ ਪ੍ਰਮਾਣਿਕਤਾ।",
   },
   Gurwinder: {
     role: "ਮਕੈਨਿਕਲ ਅਤੇ ਪ੍ਰੋਜੈਕਟ ਇੰਜੀਨੀਅਰਿੰਗ ਲੀਡ",
-    description: "ਮਕੈਨਿਕਲ ਇੰਜੀਨੀਅਰਿੰਗ, CAD ਡਿਜ਼ਾਈਨ, ਫੈਬਰਿਕੇਸ਼ਨ ਅਤੇ ਪ੍ਰੋਟੋਟਾਈਪ ਵਿਕਾਸ।",
+    description:
+      "ਮਕੈਨਿਕਲ ਇੰਜੀਨੀਅਰਿੰਗ, CAD ਡਿਜ਼ਾਈਨ, ਫੈਬਰਿਕੇਸ਼ਨ ਅਤੇ ਪ੍ਰੋਟੋਟਾਈਪ ਵਿਕਾਸ।",
   },
 };
 
-if (Array.isArray(dictionary.about.team)) {
-  dictionary.about.team = dictionary.about.team.map((member: any) => ({
-    ...member,
-    ...(teamTranslations[member.name] ?? {}),
-  }));
-} else if (dictionary.about.team && typeof dictionary.about.team === "object") {
-  for (const member of Object.values(dictionary.about.team) as any[]) {
-    if (member?.name && teamTranslations[member.name]) {
-      Object.assign(member, teamTranslations[member.name]);
-    }
-  }
-}
+dictionary.about.team = dictionary.about.team.map((member) => ({
+  ...member,
+  ...(teamTranslations[member.name] ?? {}),
+}));
 
 Object.assign(dictionary.services, {
   eyebrow: "ਸੇਵਾਵਾਂ",
@@ -128,45 +122,54 @@ Object.assign(dictionary.services, {
   fitTitle: "ਉਚਿਤ ਸਹਿਯੋਗ",
 });
 
-const serviceCopy: Record<string, any> = {
+const serviceCopy: Record<string, Partial<ServiceItem>> = {
   "robotics-and-automation": {
     title: "ਰੋਬੋਟਿਕਸ ਅਤੇ ਆਟੋਮੇਸ਼ਨ",
-    menuDescription: "ਅਨੁਕੂਲ ਮੈਨਿਪੂਲੇਸ਼ਨ, ਸੈਂਸਿੰਗ, ਕੰਟਰੋਲ ਅਤੇ ਆਟੋਮੇਸ਼ਨ ਪ੍ਰੋਟੋਟਾਈਪ।",
-    summary: "ਰੋਬੋਟਿਕ ਸਿਸਟਮਾਂ, ਇੰਟੈਲੀਜੈਂਟ ਐਂਡ-ਇਫੈਕਟਰਾਂ ਅਤੇ ਉਦਯੋਗਿਕ ਆਟੋਮੇਸ਼ਨ ਲਈ ਖੋਜ ਅਤੇ ਪ੍ਰੋਟੋਟਾਈਪ ਵਿਕਾਸ।",
+    menuDescription:
+      "ਅਨੁਕੂਲ ਮੈਨਿਪੂਲੇਸ਼ਨ, ਸੈਂਸਿੰਗ, ਕੰਟਰੋਲ ਅਤੇ ਆਟੋਮੇਸ਼ਨ ਪ੍ਰੋਟੋਟਾਈਪ।",
+    summary:
+      "ਰੋਬੋਟਿਕ ਸਿਸਟਮਾਂ, ਇੰਟੈਲੀਜੈਂਟ ਐਂਡ-ਇਫੈਕਟਰਾਂ ਅਤੇ ਉਦਯੋਗਿਕ ਆਟੋਮੇਸ਼ਨ ਲਈ ਖੋਜ ਅਤੇ ਪ੍ਰੋਟੋਟਾਈਪ ਵਿਕਾਸ।",
   },
   "data-science-and-analytics": {
     title: "ਡਾਟਾ ਸਾਇੰਸ ਅਤੇ ਐਨਾਲਿਟਿਕਸ",
-    menuDescription: "ਭਵਿੱਖਬਾਣੀ ਮਾਡਲਿੰਗ, ਵਿਸ਼ਲੇਸ਼ਣ, ਡੈਸ਼ਬੋਰਡ ਅਤੇ ਫੈਸਲਾ ਸਹਾਇਤਾ।",
-    summary: "ਡਾਟਾ ਉਤਪਾਦ ਜੋ ਸੰਸਥਾਵਾਂ ਨੂੰ ਓਪਰੇਸ਼ਨ ਸਮਝਣ, ਪੈਟਰਨ ਪਛਾਣਣ ਅਤੇ ਫੈਸਲੇ ਸਹਾਇਤ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦੇ ਹਨ।",
+    menuDescription:
+      "ਭਵਿੱਖਬਾਣੀ ਮਾਡਲਿੰਗ, ਵਿਸ਼ਲੇਸ਼ਣ, ਡੈਸ਼ਬੋਰਡ ਅਤੇ ਫੈਸਲਾ ਸਹਾਇਤਾ।",
+    summary:
+      "ਡਾਟਾ ਉਤਪਾਦ ਜੋ ਸੰਸਥਾਵਾਂ ਨੂੰ ਓਪਰੇਸ਼ਨ ਸਮਝਣ, ਪੈਟਰਨ ਪਛਾਣਣ ਅਤੇ ਫੈਸਲੇ ਸਹਾਇਤ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦੇ ਹਨ।",
   },
   "software-development": {
     title: "ਸਾਫਟਵੇਅਰ ਡਿਵੈਲਪਮੈਂਟ",
-    menuDescription: "ਫੁੱਲ-ਸਟੈਕ ਪਲੇਟਫਾਰਮ, API, ਡਾਟਾਬੇਸ, ਟੈਸਟਿੰਗ ਅਤੇ ਕਲਾਉਡ-ਰੇਡੀ ਸਿਸਟਮ।",
-    summary: "ਆਧੁਨਿਕ ਇੰਜੀਨੀਅਰਿੰਗ ਅਭਿਆਸਾਂ ਨਾਲ ਬਣੇ ਸੰਭਾਲਯੋਗ ਵੈੱਬ ਪਲੇਟਫਾਰਮ, ਬੈਕਐਂਡ ਸੇਵਾਵਾਂ ਅਤੇ ਡਿਜ਼ਿਟਲ ਉਤਪਾਦ।",
+    menuDescription:
+      "ਫੁੱਲ-ਸਟੈਕ ਪਲੇਟਫਾਰਮ, API, ਡਾਟਾਬੇਸ, ਟੈਸਟਿੰਗ ਅਤੇ ਕਲਾਉਡ-ਰੇਡੀ ਸਿਸਟਮ।",
+    summary:
+      "ਆਧੁਨਿਕ ਇੰਜੀਨੀਅਰਿੰਗ ਅਭਿਆਸਾਂ ਨਾਲ ਬਣੇ ਸੰਭਾਲਯੋਗ ਵੈੱਬ ਪਲੇਟਫਾਰਮ, ਬੈਕਐਂਡ ਸੇਵਾਵਾਂ ਅਤੇ ਡਿਜ਼ਿਟਲ ਉਤਪਾਦ।",
   },
   "agentic-generative-ai-systems": {
     title: "Agentic AI, GenAI, RAG ਅਤੇ LLM ਸਿਸਟਮ",
-    menuDescription: "ਏਜੈਂਟਿਕ ਵਰਕਫ਼ਲੋ, ਗ੍ਰਾਊਂਡਡ RAG, LLM, ਮਲਟੀਮੋਡਲ QA ਅਤੇ ਇੰਟੈਲੀਜੈਂਟ ਆਟੋਮੇਸ਼ਨ।",
-    summary: "ਅਸਲ ਵਪਾਰਕ ਕੰਮਾਂ ਲਈ LLM, ਰੀਟਰੀਵਲ, ਟੂਲ, ਮੈਮਰੀ ਅਤੇ ਨਿਯੰਤਰਿਤ ਏਜੈਂਟ ਵਰਕਫ਼ਲੋ ਨੂੰ ਜੋੜਦੇ ਪ੍ਰੋਡਕਸ਼ਨ-ਕੇਂਦ੍ਰਿਤ AI ਸਿਸਟਮ।",
+    menuDescription:
+      "ਏਜੈਂਟਿਕ ਵਰਕਫ਼ਲੋ, ਗ੍ਰਾਊਂਡਡ RAG, LLM, ਮਲਟੀਮੋਡਲ QA ਅਤੇ ਇੰਟੈਲੀਜੈਂਟ ਆਟੋਮੇਸ਼ਨ।",
+    summary:
+      "ਅਸਲ ਵਪਾਰਕ ਕੰਮਾਂ ਲਈ LLM, ਰੀਟਰੀਵਲ, ਟੂਲ, ਮੈਮਰੀ ਅਤੇ ਨਿਯੰਤਰਿਤ ਏਜੈਂਟ ਵਰਕਫ਼ਲੋ ਨੂੰ ਜੋੜਦੇ ਪ੍ਰੋਡਕਸ਼ਨ-ਕੇਂਦ੍ਰਿਤ AI ਸਿਸਟਮ।",
   },
   "research-prototyping-technology-consulting": {
     title: "ਖੋਜ, ਪ੍ਰੋਟੋਟਾਈਪਿੰਗ ਅਤੇ ਤਕਨਾਲੋਜੀ ਕਨਸਲਟਿੰਗ",
-    menuDescription: "ਸੰਭਾਵਤਾ, ਪ੍ਰੋਟੋਟਾਈਪ, ਪ੍ਰਮਾਣਿਕਤਾ, ਫੰਡਿੰਗ ਅਤੇ ਕਮਰਸ਼ੀਅਲਾਈਜ਼ੇਸ਼ਨ ਸਹਾਇਤਾ।",
-    summary: "ਤਕਨੀਕੀ ਅਨਿਸ਼ਚਿਤਤਾ, ਸ਼ੁਰੂਆਤੀ ਉਤਪਾਦ ਸੰਕਲਪਾਂ ਅਤੇ ਖੋਜ-ਤੋਂ-ਬਾਜ਼ਾਰ ਵਿਕਾਸ ਲਈ ਸੰਰਚਿਤ ਸਹਾਇਤਾ।",
+    menuDescription:
+      "ਸੰਭਾਵਤਾ, ਪ੍ਰੋਟੋਟਾਈਪ, ਪ੍ਰਮਾਣਿਕਤਾ, ਫੰਡਿੰਗ ਅਤੇ ਕਮਰਸ਼ੀਅਲਾਈਜ਼ੇਸ਼ਨ ਸਹਾਇਤਾ।",
+    summary:
+      "ਤਕਨੀਕੀ ਅਨਿਸ਼ਚਿਤਤਾ, ਸ਼ੁਰੂਆਤੀ ਉਤਪਾਦ ਸੰਕਲਪਾਂ ਅਤੇ ਖੋਜ-ਤੋਂ-ਬਾਜ਼ਾਰ ਵਿਕਾਸ ਲਈ ਸੰਰਚਿਤ ਸਹਾਇਤਾ।",
   },
 };
 
-if (Array.isArray(dictionary.services.items)) {
-  dictionary.services.items = dictionary.services.items.map((item: any) => ({
-    ...item,
-    ...(serviceCopy[item.slug] ?? {}),
-  }));
-}
+dictionary.services.items = dictionary.services.items.map((item) => ({
+  ...item,
+  ...(serviceCopy[item.slug] ?? {}),
+}));
 
 Object.assign(dictionary.projects, {
   eyebrow: "ਪ੍ਰੋਜੈਕਟ",
   title: "ਮਾਪਯੋਗ ਤਕਨੀਕੀ ਲਕਸ਼ਾਂ ਵਾਲੇ ਕੇਂਦ੍ਰਿਤ ਪ੍ਰੋਗਰਾਮ।",
-  intro: "ਸਾਡਾ ਪੋਰਟਫੋਲਿਓ ਸਰਗਰਮ R&D ਨੂੰ ਸਪਸ਼ਟ ਤੌਰ 'ਤੇ ਪਰਿਭਾਸ਼ਿਤ ਤਕਨਾਲੋਜੀ ਅਤੇ ਇੰਜੀਨੀਅਰਿੰਗ ਸਮਰੱਥਾਵਾਂ ਨਾਲ ਜੋੜਦਾ ਹੈ।",
+  intro:
+    "ਸਾਡਾ ਪੋਰਟਫੋਲਿਓ ਸਰਗਰਮ R&D ਨੂੰ ਸਪਸ਼ਟ ਤੌਰ 'ਤੇ ਪਰਿਭਾਸ਼ਿਤ ਤਕਨਾਲੋਜੀ ਅਤੇ ਇੰਜੀਨੀਅਰਿੰਗ ਸਮਰੱਥਾਵਾਂ ਨਾਲ ਜੋੜਦਾ ਹੈ।",
   viewProject: "ਪ੍ਰੋਜੈਕਟ ਵੇਖੋ",
   statusTitle: "ਪ੍ਰੋਜੈਕਟ ਸਥਿਤੀ",
   overviewTitle: "ਪ੍ਰੋਜੈਕਟ ਸੰਖੇਪ",
@@ -176,44 +179,48 @@ Object.assign(dictionary.projects, {
   roadmapTitle: "ਸਬੂਤ ਵੱਲ ਇੱਕ ਪੜਾਅਵਾਰ ਰਸਤਾ।",
 });
 
-const projectCopy: Record<string, any> = {
+const projectCopy: Record<string, Partial<ProjectItem>> = {
   "robotic-hand": {
     title: "ਇੰਟੈਲੀਜੈਂਟ ਰੋਬੋਟਿਕ ਹੱਥ",
-    menuDescription: "ਅਨੁਕੂਲ ਮੈਨਿਪੂਲੇਸ਼ਨ ਲਈ ਸੈਂਸਿੰਗ, ਐਜ AI ਅਤੇ ਡਿਟਰਮਿਨਿਸਟਿਕ ਕੰਟਰੋਲ।",
+    menuDescription:
+      "ਅਨੁਕੂਲ ਮੈਨਿਪੂਲੇਸ਼ਨ ਲਈ ਸੈਂਸਿੰਗ, ਐਜ AI ਅਤੇ ਡਿਟਰਮਿਨਿਸਟਿਕ ਕੰਟਰੋਲ।",
     category: "ਰੋਬੋਟਿਕਸ ਅਤੇ AI",
-    summary: "ਮਕੈਨਿਕਲ ਇੰਜੀਨੀਅਰਿੰਗ, ਸੈਂਸਿੰਗ, ਰੀਅਲ-ਟਾਈਮ ਕੰਟਰੋਲ, ਕੰਪਿਊਟਰ ਵਿਜ਼ਨ ਅਤੇ ਐਜ AI ਨੂੰ ਜੋੜਦਾ ਇੱਕ ਮੋਡਿਊਲਰ ਰੋਬੋਟਿਕ ਹੱਥ ਅਤੇ ਫੋਰਆਰਮ ਪਲੇਟਫਾਰਮ।",
+    summary:
+      "ਮਕੈਨਿਕਲ ਇੰਜੀਨੀਅਰਿੰਗ, ਸੈਂਸਿੰਗ, ਰੀਅਲ-ਟਾਈਮ ਕੰਟਰੋਲ, ਕੰਪਿਊਟਰ ਵਿਜ਼ਨ ਅਤੇ ਐਜ AI ਨੂੰ ਜੋੜਦਾ ਇੱਕ ਮੋਡਿਊਲਰ ਰੋਬੋਟਿਕ ਹੱਥ ਅਤੇ ਫੋਰਆਰਮ ਪਲੇਟਫਾਰਮ।",
   },
   "industrial-agentic-ai-platform": {
     title: "ਉਦਯੋਗਿਕ ਏਜੈਂਟਿਕ AI ਪਲੇਟਫਾਰਮ",
-    menuDescription: "ਏਜੈਂਟ, RAG, ਟੂਲ, ਮਲਟੀਮੋਡਲ QA ਅਤੇ ਨਿਯੰਤਰਿਤ ਆਟੋਮੇਸ਼ਨ ਲਈ ਇਕੀਕ੍ਰਿਤ AI ਪਲੇਟਫਾਰਮ।",
+    menuDescription:
+      "ਏਜੈਂਟ, RAG, ਟੂਲ, ਮਲਟੀਮੋਡਲ QA ਅਤੇ ਨਿਯੰਤਰਿਤ ਆਟੋਮੇਸ਼ਨ ਲਈ ਇਕੀਕ੍ਰਿਤ AI ਪਲੇਟਫਾਰਮ।",
     category: "Agentic ਅਤੇ Generative AI",
-    summary: "LLM, ਰੀਟਰੀਵਲ, ਟੂਲ, ਮੈਮਰੀ, ਹਵਾਲੇ ਅਤੇ ਨਿਯੰਤਰਿਤ ਏਜੈਂਟ ਵਰਕਫ਼ਲੋ ਨੂੰ ਜੋੜਦਾ ਬਹੁਭਾਸ਼ੀ ਉਦਯੋਗਿਕ AI ਪਲੇਟਫਾਰਮ।",
+    summary:
+      "LLM, ਰੀਟਰੀਵਲ, ਟੂਲ, ਮੈਮਰੀ, ਹਵਾਲੇ ਅਤੇ ਨਿਯੰਤਰਿਤ ਏਜੈਂਟ ਵਰਕਫ਼ਲੋ ਨੂੰ ਜੋੜਦਾ ਬਹੁਭਾਸ਼ੀ ਉਦਯੋਗਿਕ AI ਪਲੇਟਫਾਰਮ।",
   },
   "predictive-maintenance": {
     title: "ਪ੍ਰਿਡਿਕਟਿਵ ਮੇਂਟੇਨੈਂਸ",
-    menuDescription: "ਉਪਕਰਣ ਜੋਖਮ ਅਤੇ ਮੇਂਟੇਨੈਂਸ ਯੋਜਨਾ ਲਈ ਮਸ਼ੀਨ-ਲਰਨਿੰਗ ਸੰਕੇਤ।",
+    menuDescription:
+      "ਉਪਕਰਣ ਜੋਖਮ ਅਤੇ ਮੇਂਟੇਨੈਂਸ ਯੋਜਨਾ ਲਈ ਮਸ਼ੀਨ-ਲਰਨਿੰਗ ਸੰਕੇਤ।",
     category: "ਮਸ਼ੀਨ ਲਰਨਿੰਗ",
-    summary: "ਅਸਧਾਰਣ ਉਪਕਰਣ ਵਿਹਾਰ ਦੀ ਪਛਾਣ ਅਤੇ ਮੇਂਟੇਨੈਂਸ ਫੈਸਲਿਆਂ ਲਈ ਡਾਟਾ ਅਤੇ ਮਸ਼ੀਨ-ਲਰਨਿੰਗ ਸਿਸਟਮ।",
+    summary:
+      "ਅਸਧਾਰਣ ਉਪਕਰਣ ਵਿਹਾਰ ਦੀ ਪਛਾਣ ਅਤੇ ਮੇਂਟੇਨੈਂਸ ਫੈਸਲਿਆਂ ਲਈ ਡਾਟਾ ਅਤੇ ਮਸ਼ੀਨ-ਲਰਨਿੰਗ ਸਿਸਟਮ।",
   },
   "engineering-cad": {
     title: "ਇੰਜੀਨੀਅਰਿੰਗ CAD",
-    menuDescription: "Autodesk Inventor ਅਤੇ SolidWorks ਨਾਲ ਪੈਰਾਮੈਟ੍ਰਿਕ ਮਕੈਨਿਕਲ ਡਿਜ਼ਾਈਨ ਅਤੇ ਪ੍ਰੋਟੋਟਾਈਪਿੰਗ।",
+    menuDescription:
+      "Autodesk Inventor ਅਤੇ SolidWorks ਨਾਲ ਪੈਰਾਮੈਟ੍ਰਿਕ ਮਕੈਨਿਕਲ ਡਿਜ਼ਾਈਨ ਅਤੇ ਪ੍ਰੋਟੋਟਾਈਪਿੰਗ।",
     category: "ਮਕੈਨਿਕਲ ਇੰਜੀਨੀਅਰਿੰਗ ਅਤੇ CAD",
-    summary: "Autodesk Inventor ਅਤੇ SolidWorks ਦੀ ਵਰਤੋਂ ਨਾਲ ਮਕੈਨਿਕਲ ਭਾਗਾਂ, ਅਸੈਂਬਲੀਆਂ ਅਤੇ ਮੈਨੂਫੈਕਚਰਿੰਗ ਡ੍ਰਾਇੰਗਾਂ ਲਈ ਪੈਰਾਮੈਟ੍ਰਿਕ CAD ਵਰਕਫ਼ਲੋ।",
+    summary:
+      "Autodesk Inventor ਅਤੇ SolidWorks ਦੀ ਵਰਤੋਂ ਨਾਲ ਮਕੈਨਿਕਲ ਭਾਗਾਂ, ਅਸੈਂਬਲੀਆਂ ਅਤੇ ਮੈਨੂਫੈਕਚਰਿੰਗ ਡ੍ਰਾਇੰਗਾਂ ਲਈ ਪੈਰਾਮੈਟ੍ਰਿਕ CAD ਵਰਕਫ਼ਲੋ।",
   },
 };
 
-if (Array.isArray(dictionary.projects.items)) {
-  dictionary.projects.items = dictionary.projects.items.map((item: any) => ({
-    ...item,
-    ...(projectCopy[item.slug] ?? {}),
-  }));
-}
+dictionary.projects.items = dictionary.projects.items.map((item) => ({
+  ...item,
+  ...(projectCopy[item.slug] ?? {}),
+}));
 
-
-// Full Punjabi copy for the expanded industrial AI service and the two updated projects.
 const agenticService = dictionary.services.items.find(
-  (item: any) => item.slug === "agentic-generative-ai-systems",
+  (item) => item.slug === "agentic-generative-ai-systems",
 );
 if (agenticService) {
   Object.assign(agenticService, {
@@ -259,7 +266,7 @@ if (agenticService) {
 }
 
 const agenticProject = dictionary.projects.items.find(
-  (item: any) => item.slug === "industrial-agentic-ai-platform",
+  (item) => item.slug === "industrial-agentic-ai-platform",
 );
 if (agenticProject) {
   Object.assign(agenticProject, {
@@ -319,7 +326,7 @@ if (agenticProject) {
 }
 
 const cadProject = dictionary.projects.items.find(
-  (item: any) => item.slug === "engineering-cad",
+  (item) => item.slug === "engineering-cad",
 );
 if (cadProject) {
   Object.assign(cadProject, {
@@ -377,66 +384,65 @@ if (cadProject) {
   });
 }
 
-if (dictionary.careers) {
-  Object.assign(dictionary.careers, {
-    eyebrow: "ਕਰੀਅਰ",
-    title: "ਨਿਊਜ਼ੀਲੈਂਡ ਵਿੱਚ ਪ੍ਰਯੋਗਿਕ AI ਅਤੇ ਰੋਬੋਟਿਕਸ ਬਣਾਉਣ ਵਿੱਚ ਸਾਡੇ ਨਾਲ ਜੁੜੋ।",
-    intro: "IndustrialOrigami.AI ਭਵਿੱਖ ਦੀਆਂ ਤਕਨੀਕੀ, ਖੋਜ ਅਤੇ ਵਪਾਰਕ ਮੌਕਿਆਂ ਵਿੱਚ ਦਿਲਚਸਪੀ ਰੱਖਣ ਵਾਲੇ ਲੋਕਾਂ ਨਾਲ ਸੰਪਰਕ ਬਣਾਉਂਦਾ ਹੈ।",
-    opportunitiesTitle: "ਮੌਜੂਦਾ ਮੌਕੇ",
-    opportunitiesDescription: "ਇਸ ਵੇਲੇ ਕੋਈ ਰਸਮੀ ਅਸਾਮੀ ਇਸ਼ਤਿਹਾਰਿਤ ਨਹੀਂ ਹੈ। ਦਿਲਚਸਪੀ ਦਰਜ ਕਰਨ ਦਾ ਰਸਤਾ ਸਾਨੂੰ ਭਵਿੱਖ ਦੇ ਸੰਭਾਵੀ ਸਹਿਯੋਗੀਆਂ ਅਤੇ ਟੀਮ ਮੈਂਬਰਾਂ ਨਾਲ ਜੁੜਨ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।",
-    whatWeSeekTitle: "ਅਸੀਂ ਕੀ ਲੱਭ ਰਹੇ ਹਾਂ",
-    typeLabel: "ਕਿਸਮ",
-    types: { expressionOfInterest: "ਦਿਲਚਸਪੀ ਦਾ ਪ੍ਰਗਟਾਵਾ" },
-    viewOpportunity: "ਵੇਰਵੇ ਵੇਖੋ",
-    roles: {
-      "future-opportunities": {
-        title: "ਭਵਿੱਖ ਦੇ ਮੌਕੇ ਅਤੇ ਟੈਲੈਂਟ ਨੈੱਟਵਰਕ",
-        summary: "ਜੇ ਤੁਹਾਡਾ ਤਜਰਬਾ AI, ਸਾਫਟਵੇਅਰ, ਰੋਬੋਟਿਕਸ, ਐਂਬੈਡਿਡ ਸਿਸਟਮ, ਇਲੈਕਟ੍ਰਾਨਿਕਸ, ਮੈਨੂਫੈਕਚਰਿੰਗ, ਉਤਪਾਦ ਜਾਂ ਵਪਾਰਕ ਕੰਮ ਵਿੱਚ ਸਾਡੀਆਂ ਭਵਿੱਖ ਦੀਆਂ ਲੋੜਾਂ ਲਈ ਲਾਭਦਾਇਕ ਹੋ ਸਕਦਾ ਹੈ, ਤਾਂ ਸਾਡੇ ਨਾਲ ਜੁੜੋ।",
-      },
+Object.assign(dictionary.careers, {
+  eyebrow: "ਕਰੀਅਰ",
+  title: "ਨਿਊਜ਼ੀਲੈਂਡ ਵਿੱਚ ਪ੍ਰਯੋਗਿਕ AI ਅਤੇ ਰੋਬੋਟਿਕਸ ਬਣਾਉਣ ਵਿੱਚ ਸਾਡੇ ਨਾਲ ਜੁੜੋ।",
+  intro:
+    "IndustrialOrigami.AI ਭਵਿੱਖ ਦੀਆਂ ਤਕਨੀਕੀ, ਖੋਜ ਅਤੇ ਵਪਾਰਕ ਮੌਕਿਆਂ ਵਿੱਚ ਦਿਲਚਸਪੀ ਰੱਖਣ ਵਾਲੇ ਲੋਕਾਂ ਨਾਲ ਸੰਪਰਕ ਬਣਾਉਂਦਾ ਹੈ।",
+  opportunitiesTitle: "ਮੌਜੂਦਾ ਮੌਕੇ",
+  opportunitiesDescription:
+    "ਇਸ ਵੇਲੇ ਕੋਈ ਰਸਮੀ ਅਸਾਮੀ ਇਸ਼ਤਿਹਾਰਿਤ ਨਹੀਂ ਹੈ। ਦਿਲਚਸਪੀ ਦਰਜ ਕਰਨ ਦਾ ਰਸਤਾ ਸਾਨੂੰ ਭਵਿੱਖ ਦੇ ਸੰਭਾਵੀ ਸਹਿਯੋਗੀਆਂ ਅਤੇ ਟੀਮ ਮੈਂਬਰਾਂ ਨਾਲ ਜੁੜਨ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।",
+  whatWeSeekTitle: "ਅਸੀਂ ਕੀ ਲੱਭ ਰਹੇ ਹਾਂ",
+  typeLabel: "ਕਿਸਮ",
+  types: { expressionOfInterest: "ਦਿਲਚਸਪੀ ਦਾ ਪ੍ਰਗਟਾਵਾ" },
+  viewOpportunity: "ਵੇਰਵੇ ਵੇਖੋ",
+  roles: {
+    "future-opportunities": {
+      title: "ਭਵਿੱਖ ਦੇ ਮੌਕੇ ਅਤੇ ਟੈਲੈਂਟ ਨੈੱਟਵਰਕ",
+      summary:
+        "ਜੇ ਤੁਹਾਡਾ ਤਜਰਬਾ AI, ਸਾਫਟਵੇਅਰ, ਰੋਬੋਟਿਕਸ, ਐਂਬੈਡਿਡ ਸਿਸਟਮ, ਇਲੈਕਟ੍ਰਾਨਿਕਸ, ਮੈਨੂਫੈਕਚਰਿੰਗ, ਉਤਪਾਦ ਜਾਂ ਵਪਾਰਕ ਕੰਮ ਵਿੱਚ ਸਾਡੀਆਂ ਭਵਿੱਖ ਦੀਆਂ ਲੋੜਾਂ ਲਈ ਲਾਭਦਾਇਕ ਹੋ ਸਕਦਾ ਹੈ, ਤਾਂ ਸਾਡੇ ਨਾਲ ਜੁੜੋ।",
     },
-  });
-}
+  },
+});
 
-if (dictionary.collaborate) {
-  Object.assign(dictionary.collaborate, {
-    eyebrow: "ਸਹਿਯੋਗ",
-    title: "IndustrialOrigami.AI ਨਾਲ ਕੰਮ ਕਰੋ।",
-    intro: "ਅਸੀਂ ਉਦਯੋਗਿਕ ਸਮੱਸਿਆਵਾਂ, ਖੋਜ, ਪਾਇਲਟ, ਫੰਡਿੰਗ, ਨਿਵੇਸ਼ ਅਤੇ ਤਕਨੀਕੀ ਭਾਗੀਦਾਰੀਆਂ ਬਾਰੇ ਗੰਭੀਰ ਗੱਲਬਾਤ ਦਾ ਸਵਾਗਤ ਕਰਦੇ ਹਾਂ।",
-    pathwaysTitle: "ਸਹਿਯੋਗ ਦੇ ਤਰੀਕੇ",
-    pathwaysDescription: "ਉਹ ਮਾਰਗ ਚੁਣੋ ਜੋ ਤੁਹਾਡੀ ਸੰਸਥਾ ਜਾਂ ਵਿਚਾਰ ਨਾਲ ਸਭ ਤੋਂ ਵਧੀਆ ਮੇਲ ਖਾਂਦਾ ਹੈ।",
-    detailsTitle: "ਸੰਪਰਕ ਵੇਰਵੇ",
-  });
+Object.assign(dictionary.collaborate, {
+  eyebrow: "ਸਹਿਯੋਗ",
+  title: "IndustrialOrigami.AI ਨਾਲ ਕੰਮ ਕਰੋ।",
+  intro:
+    "ਅਸੀਂ ਉਦਯੋਗਿਕ ਸਮੱਸਿਆਵਾਂ, ਖੋਜ, ਪਾਇਲਟ, ਫੰਡਿੰਗ, ਨਿਵੇਸ਼ ਅਤੇ ਤਕਨੀਕੀ ਭਾਗੀਦਾਰੀਆਂ ਬਾਰੇ ਗੰਭੀਰ ਗੱਲਬਾਤ ਦਾ ਸਵਾਗਤ ਕਰਦੇ ਹਾਂ।",
+  pathwaysTitle: "ਸਹਿਯੋਗ ਦੇ ਤਰੀਕੇ",
+  pathwaysDescription:
+    "ਉਹ ਮਾਰਗ ਚੁਣੋ ਜੋ ਤੁਹਾਡੀ ਸੰਸਥਾ ਜਾਂ ਵਿਚਾਰ ਨਾਲ ਸਭ ਤੋਂ ਵਧੀਆ ਮੇਲ ਖਾਂਦਾ ਹੈ।",
+  detailsTitle: "ਸੰਪਰਕ ਵੇਰਵੇ",
+});
 
-  if (dictionary.collaborate.form) {
-    Object.assign(dictionary.collaborate.form, {
-      name: "ਨਾਮ",
-      email: "ਈਮੇਲ",
-      interest: "ਦਿਲਚਸਪੀ ਦਾ ਖੇਤਰ",
-      message: "ਸੁਨੇਹਾ",
-      submit: "ਪੁੱਛਗਿੱਛ ਭੇਜੋ",
-    });
-  }
-}
+Object.assign(dictionary.collaborate.form, {
+  name: "ਨਾਮ",
+  email: "ਈਮੇਲ",
+  interest: "ਦਿਲਚਸਪੀ ਦਾ ਖੇਤਰ",
+  message: "ਸੁਨੇਹਾ",
+  submit: "ਪੁੱਛਗਿੱਛ ਭੇਜੋ",
+});
 
-if (dictionary.auth) {
-  Object.assign(dictionary.auth, {
-    loginTitle: "ਕੰਪਨੀ ਪੋਰਟਲ",
-    signupTitle: "ਦਿਲਚਸਪੀ ਦਰਜ ਕਰੋ",
-    description: "ਸੁਰੱਖਿਅਤ ਗਾਹਕ ਅਤੇ ਭਾਗੀਦਾਰ ਪੋਰਟਲ ਭਵਿੱਖ ਦੀ ਪਲੇਟਫਾਰਮ ਕਾਰਗੁਜ਼ਾਰੀ ਲਈ ਰਾਖਵਾਂ ਹੈ।",
-    email: "ਈਮੇਲ",
-    password: "ਪਾਸਵਰਡ",
-    name: "ਨਾਮ",
-    login: "ਲਾਗ ਇਨ",
-    signup: "ਰਜਿਸਟਰ",
-  });
-}
+Object.assign(dictionary.auth, {
+  loginTitle: "ਕੰਪਨੀ ਪੋਰਟਲ",
+  signupTitle: "ਦਿਲਚਸਪੀ ਦਰਜ ਕਰੋ",
+  description:
+    "ਸੁਰੱਖਿਅਤ ਗਾਹਕ ਅਤੇ ਭਾਗੀਦਾਰ ਪੋਰਟਲ ਭਵਿੱਖ ਦੀ ਪਲੇਟਫਾਰਮ ਕਾਰਗੁਜ਼ਾਰੀ ਲਈ ਰਾਖਵਾਂ ਹੈ।",
+  email: "ਈਮੇਲ",
+  password: "ਪਾਸਵਰਡ",
+  name: "ਨਾਮ",
+  login: "ਲਾਗ ਇਨ",
+  signup: "ਰਜਿਸਟਰ",
+});
 
 Object.assign(dictionary.footer, {
-  summary: "ਕ੍ਰਾਈਸਟਚਰਚ, ਨਿਊਜ਼ੀਲੈਂਡ ਤੋਂ AI, ਰੋਬੋਟਿਕਸ, ਸਾਫਟਵੇਅਰ, ਡਾਟਾ, CAD ਅਤੇ ਇੰਟੈਲੀਜੈਂਟ ਇੰਜੀਨੀਅਰਿੰਗ।",
+  summary:
+    "ਕ੍ਰਾਈਸਟਚਰਚ, ਨਿਊਜ਼ੀਲੈਂਡ ਤੋਂ AI, ਰੋਬੋਟਿਕਸ, ਸਾਫਟਵੇਅਰ, ਡਾਟਾ, CAD ਅਤੇ ਇੰਟੈਲੀਜੈਂਟ ਇੰਜੀਨੀਅਰਿੰਗ।",
   explore: "ਵੇਖੋ",
   locationTitle: "ਸਥਾਨ",
   location: "ਕ੍ਰਾਈਸਟਚਰਚ, ਨਿਊਜ਼ੀਲੈਂਡ",
   rights: "ਸਾਰੇ ਅਧਿਕਾਰ ਰਾਖਵੇਂ ਹਨ।",
 });
 
-export default dictionary as typeof en;
+export default dictionary;

@@ -1,0 +1,93 @@
+diff --git a/components/pages/CareerApplyPage.tsx b/components/pages/CareerApplyPage.tsx
+--- a/components/pages/CareerApplyPage.tsx
++++ b/components/pages/CareerApplyPage.tsx
+@@
+-  const text = labels[locale];
++  const text = labels[locale as keyof typeof labels] ?? labels.en;
+
+diff --git a/components/pages/AuthPage.tsx b/components/pages/AuthPage.tsx
+--- a/components/pages/AuthPage.tsx
++++ b/components/pages/AuthPage.tsx
+@@
+-  const text = labels[locale];
++  const text = labels[locale as keyof typeof labels] ?? labels.en;
+
+diff --git a/components/pages/CareerDetailPage.tsx b/components/pages/CareerDetailPage.tsx
+--- a/components/pages/CareerDetailPage.tsx
++++ b/components/pages/CareerDetailPage.tsx
+@@
+-const fallbackPoints: Record<Locale, string[]> = {
++const fallbackPoints: Partial<Record<Locale, string[]>> = {
+@@
+-const ctaText: Record<
++const ctaText: Partial<Record<
+   Locale,
+   {
+     title: string;
+     description: string;
+     button: string;
+   }
+-> = {
++>> = {
+@@
+-      : fallbackPoints[locale];
++      : (fallbackPoints[locale] ?? fallbackPoints.en ?? []);
+
+-  const cta = ctaText[locale];
++  const cta = ctaText[locale] ?? ctaText.en!;
+
+diff --git a/lib/robotic-hand-content.ts b/lib/robotic-hand-content.ts
+--- a/lib/robotic-hand-content.ts
++++ b/lib/robotic-hand-content.ts
+@@
+-export const roboticHandContent: Record<
++export const roboticHandContent: Partial<Record<
+   Locale,
+   RoboticHandDetailContent
+-> = {
++>> = {
+
+diff --git a/components/pages/RoboticHandPage.tsx b/components/pages/RoboticHandPage.tsx
+--- a/components/pages/RoboticHandPage.tsx
++++ b/components/pages/RoboticHandPage.tsx
+@@
+-  const content = roboticHandContent[locale];
++  const content =
++    roboticHandContent[locale] ?? roboticHandContent.en!;
+
+diff --git a/lib/content-updates.ts b/lib/content-updates.ts
+--- a/lib/content-updates.ts
++++ b/lib/content-updates.ts
+@@
+-const updates: Record<Locale, LocalisedUpdates> = {
++const updates: Partial<Record<Locale, LocalisedUpdates>> = {
+@@
+-      slug: "rag-intelligent-assistants",
++      slug: "agentic-generative-ai-systems",
+@@
+-      slug: "industrial-rag-platform",
++      slug: "industrial-agentic-ai-platform",
+@@
+-      slug: "digital-twin",
++      slug: "engineering-cad",
+@@
+-      slug: "rag-intelligent-assistants",
++      slug: "agentic-generative-ai-systems",
+@@
+-      slug: "industrial-rag-platform",
++      slug: "industrial-agentic-ai-platform",
+@@
+-      slug: "digital-twin",
++      slug: "engineering-cad",
+@@
+-      slug: "rag-intelligent-assistants",
++      slug: "agentic-generative-ai-systems",
+@@
+-      slug: "industrial-rag-platform",
++      slug: "industrial-agentic-ai-platform",
+@@
+-      slug: "digital-twin",
++      slug: "engineering-cad",
+@@
+-  const local = updates[locale];
++  const local = updates[locale] ?? updates.en!;

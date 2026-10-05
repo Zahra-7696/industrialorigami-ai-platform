@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/get-dictionary";
@@ -20,13 +20,13 @@ export function RoboticHandPage({
   dictionary,
   project,
 }: RoboticHandPageProps) {
-  const content = roboticHandContent[locale];
+  const content = roboticHandContent[locale] ?? roboticHandContent.en!;
   const projectLabels = dictionary.projects;
 
   return (
     <main>
       <PageHero
-        eyebrow={`${projectLabels.eyebrow} · ${project.category}`}
+        eyebrow={`${projectLabels.eyebrow} Â· ${project.category}`}
         title={project.title}
         description={project.summary}
       />
@@ -112,7 +112,7 @@ export function RoboticHandPage({
                 key={item}
                 className="light-card rounded-2xl p-5 leading-7 text-slate-600"
               >
-                <span className="mr-3 text-brand-orange">●</span>
+                <span className="mr-3 text-brand-orange">â—</span>
                 {item}
               </div>
             ))}
@@ -244,3 +244,4 @@ export function RoboticHandPage({
     </main>
   );
 }
+

@@ -12,6 +12,8 @@ type HeroProps = {
 };
 
 type HomeContent = Dictionary["home"] & {
+  featuredLabel?: string;
+  featuredDescription?: string;
   servicesDescription?: string;
   projectsEyebrow?: string;
   projectsTitle?: string;
@@ -77,11 +79,13 @@ export function Hero({ locale, dictionary }: HeroProps) {
 
             <div className="glass-panel absolute -bottom-4 left-0 max-w-[15rem] rounded-2xl p-4">
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-brand-orange">
-                {home.featuredLabel}
+                {home.featuredLabel ?? dictionary.projects.eyebrow}
               </p>
 
               <p className="mt-2 text-sm leading-6 text-slate-300">
-                {home.featuredDescription}
+                {home.featuredDescription ??
+                  dictionary.projects.items[0]?.menuDescription ??
+                  dictionary.projects.intro}
               </p>
             </div>
           </div>

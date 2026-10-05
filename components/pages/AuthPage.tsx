@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 import type { Locale } from "@/i18n/config";
 
@@ -29,49 +29,49 @@ const labels = {
       "Backend authentication, database storage, role-based access and email verification will be added in a later phase.",
   },
   fa: {
-    loginTitle: "ورود",
-    signupTitle: "ایجاد حساب",
+    loginTitle: "ÙˆØ±ÙˆØ¯",
+    signupTitle: "Ø§ÛŒØ¬Ø§Ø¯ Ø­Ø³Ø§Ø¨",
     loginIntro:
-      "دسترسی به داشبورد آینده IndustrialOrigami.AI. احراز هویت فعلاً فقط نمونه رابط کاربری است.",
+      "Ø¯Ø³ØªØ±Ø³ÛŒ Ø¨Ù‡ Ø¯Ø§Ø´Ø¨ÙˆØ±Ø¯ Ø¢ÛŒÙ†Ø¯Ù‡ IndustrialOrigami.AI. Ø§Ø­Ø±Ø§Ø² Ù‡ÙˆÛŒØª ÙØ¹Ù„Ø§Ù‹ ÙÙ‚Ø· Ù†Ù…ÙˆÙ†Ù‡ Ø±Ø§Ø¨Ø· Ú©Ø§Ø±Ø¨Ø±ÛŒ Ø§Ø³Øª.",
     signupIntro:
-      "ایجاد حساب برای قابلیت‌های آینده همکاری، داشبورد و ثبت درخواست. این فرم فعلاً فقط نمونه رابط کاربری است.",
-    name: "نام کامل",
-    company: "شرکت یا سازمان",
-    email: "ایمیل",
-    password: "رمز عبور",
-    loginButton: "ورود",
-    signupButton: "ثبت‌نام",
-    noAccount: "حساب ندارید؟",
-    haveAccount: "قبلاً حساب دارید؟",
-    signup: "ثبت‌نام",
-    login: "ورود",
+      "Ø§ÛŒØ¬Ø§Ø¯ Ø­Ø³Ø§Ø¨ Ø¨Ø±Ø§ÛŒ Ù‚Ø§Ø¨Ù„ÛŒØªâ€ŒÙ‡Ø§ÛŒ Ø¢ÛŒÙ†Ø¯Ù‡ Ù‡Ù…Ú©Ø§Ø±ÛŒØŒ Ø¯Ø§Ø´Ø¨ÙˆØ±Ø¯ Ùˆ Ø«Ø¨Øª Ø¯Ø±Ø®ÙˆØ§Ø³Øª. Ø§ÛŒÙ† ÙØ±Ù… ÙØ¹Ù„Ø§Ù‹ ÙÙ‚Ø· Ù†Ù…ÙˆÙ†Ù‡ Ø±Ø§Ø¨Ø· Ú©Ø§Ø±Ø¨Ø±ÛŒ Ø§Ø³Øª.",
+    name: "Ù†Ø§Ù… Ú©Ø§Ù…Ù„",
+    company: "Ø´Ø±Ú©Øª ÛŒØ§ Ø³Ø§Ø²Ù…Ø§Ù†",
+    email: "Ø§ÛŒÙ…ÛŒÙ„",
+    password: "Ø±Ù…Ø² Ø¹Ø¨ÙˆØ±",
+    loginButton: "ÙˆØ±ÙˆØ¯",
+    signupButton: "Ø«Ø¨Øªâ€ŒÙ†Ø§Ù…",
+    noAccount: "Ø­Ø³Ø§Ø¨ Ù†Ø¯Ø§Ø±ÛŒØ¯ØŸ",
+    haveAccount: "Ù‚Ø¨Ù„Ø§Ù‹ Ø­Ø³Ø§Ø¨ Ø¯Ø§Ø±ÛŒØ¯ØŸ",
+    signup: "Ø«Ø¨Øªâ€ŒÙ†Ø§Ù…",
+    login: "ÙˆØ±ÙˆØ¯",
     note:
-      "احراز هویت بک‌اند، ذخیره‌سازی پایگاه داده، نقش‌های کاربری و تأیید ایمیل در مرحله بعدی اضافه می‌شود.",
+      "Ø§Ø­Ø±Ø§Ø² Ù‡ÙˆÛŒØª Ø¨Ú©â€ŒØ§Ù†Ø¯ØŒ Ø°Ø®ÛŒØ±Ù‡â€ŒØ³Ø§Ø²ÛŒ Ù¾Ø§ÛŒÚ¯Ø§Ù‡ Ø¯Ø§Ø¯Ù‡ØŒ Ù†Ù‚Ø´â€ŒÙ‡Ø§ÛŒ Ú©Ø§Ø±Ø¨Ø±ÛŒ Ùˆ ØªØ£ÛŒÛŒØ¯ Ø§ÛŒÙ…ÛŒÙ„ Ø¯Ø± Ù…Ø±Ø­Ù„Ù‡ Ø¨Ø¹Ø¯ÛŒ Ø§Ø¶Ø§ÙÙ‡ Ù…ÛŒâ€ŒØ´ÙˆØ¯.",
   },
   zh: {
-    loginTitle: "登录",
-    signupTitle: "创建账户",
+    loginTitle: "ç™»å½•",
+    signupTitle: "åˆ›å»ºè´¦æˆ·",
     loginIntro:
-      "访问未来的 IndustrialOrigami.AI 仪表板。身份验证目前只是前端原型。",
+      "è®¿é—®æœªæ¥çš„ IndustrialOrigami.AI ä»ªè¡¨æ¿ã€‚èº«ä»½éªŒè¯ç›®å‰åªæ˜¯å‰ç«¯åŽŸåž‹ã€‚",
     signupIntro:
-      "为未来的合作、仪表板和咨询功能创建账户。该表单目前只是前端原型。",
-    name: "姓名",
-    company: "公司或机构",
-    email: "电子邮件",
-    password: "密码",
-    loginButton: "登录",
-    signupButton: "注册",
-    noAccount: "没有账户？",
-    haveAccount: "已有账户？",
-    signup: "注册",
-    login: "登录",
+      "ä¸ºæœªæ¥çš„åˆä½œã€ä»ªè¡¨æ¿å’Œå’¨è¯¢åŠŸèƒ½åˆ›å»ºè´¦æˆ·ã€‚è¯¥è¡¨å•ç›®å‰åªæ˜¯å‰ç«¯åŽŸåž‹ã€‚",
+    name: "å§“å",
+    company: "å…¬å¸æˆ–æœºæž„",
+    email: "ç”µå­é‚®ä»¶",
+    password: "å¯†ç ",
+    loginButton: "ç™»å½•",
+    signupButton: "æ³¨å†Œ",
+    noAccount: "æ²¡æœ‰è´¦æˆ·ï¼Ÿ",
+    haveAccount: "å·²æœ‰è´¦æˆ·ï¼Ÿ",
+    signup: "æ³¨å†Œ",
+    login: "ç™»å½•",
     note:
-      "后端身份验证、数据库存储、基于角色的访问控制和电子邮件验证将在后续阶段添加。",
+      "åŽç«¯èº«ä»½éªŒè¯ã€æ•°æ®åº“å­˜å‚¨ã€åŸºäºŽè§’è‰²çš„è®¿é—®æŽ§åˆ¶å’Œç”µå­é‚®ä»¶éªŒè¯å°†åœ¨åŽç»­é˜¶æ®µæ·»åŠ ã€‚",
   },
 } as const;
 
 export function AuthPage({ locale, mode }: AuthPageProps) {
-  const text = labels[locale];
+  const text = labels[locale as keyof typeof labels] ?? labels.en;
   const isSignup = mode === "signup";
 
   return (
@@ -154,3 +154,4 @@ export function AuthPage({ locale, mode }: AuthPageProps) {
     </main>
   );
 }
+
