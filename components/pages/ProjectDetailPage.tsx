@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import type { Dictionary } from "@/i18n/get-dictionary";
 
 import { PageHero } from "@/components/ui/PageHero";
@@ -10,11 +12,19 @@ type ProjectDetailPageProps = {
   project: ProjectItem;
 };
 
+const projectImages: Record<string, string> = {
+  "robotic-hand": "/projects/intelligent-robotic-hand.png",
+  "industrial-agentic-ai-platform": "/projects/industrial-agentic-ai-platform.png",
+  "predictive-maintenance": "/projects/predictive-maintenance.png",
+  "engineering-cad": "/projects/engineering-cad.png",
+};
+
 export function ProjectDetailPage({
   dictionary,
   project,
 }: ProjectDetailPageProps) {
   const content = dictionary.projects;
+  const image = projectImages[project.slug];
 
   return (
     <main>
@@ -23,6 +33,24 @@ export function ProjectDetailPage({
         title={project.title}
         description={project.summary}
       />
+
+      {image ? (
+        <section className="section-white pt-8 sm:pt-10">
+          <div className="site-container">
+            <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-brand-950 shadow-2xl">
+              <Image
+                src={image}
+                alt={`${project.title} visualisation`}
+                width={1448}
+                height={1086}
+                priority={project.slug === "engineering-cad"}
+                unoptimized
+                className="aspect-[16/8.5] h-auto w-full object-cover"
+              />
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="section-space section-white">
         <div className="site-container grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">

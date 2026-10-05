@@ -15,7 +15,7 @@ This repository serves two linked purposes:
 
 Implemented:
 
-- English, Persian, and Simplified Chinese routes
+- English, Persian, Simplified Chinese, and Punjabi routes
 - right-to-left support for Persian
 - responsive desktop and mobile navigation
 - dropdown menus for Services and Projects
@@ -43,7 +43,7 @@ In progress or planned:
 - PostgreSQL database storage for enquiries and career submissions
 - admin dashboard
 - saved application status tracking
-- RAG-based company knowledge assistant
+- Agentic AI, Generative AI, RAG, LLM, and QA-based company knowledge assistant
 - analytics dashboards
 - automated testing
 - Docker, monitoring, and cloud deployment
@@ -57,8 +57,8 @@ The platform is designed to:
 - present IndustrialOrigami.AI as a professional New Zealand AI, robotics, data, software, and research company
 - explain the company’s technical capabilities and commercial focus
 - showcase the Intelligent Robotic Hand programme
-- present additional AI, software, RAG, predictive-maintenance, and digital-twin concepts
-- support English, Persian, and Simplified Chinese audiences
+- present additional AI, software, Agentic AI, Generative AI, RAG, LLM, QA, predictive-maintenance, and Engineering CAD concepts
+- support English, Persian, Simplified Chinese, and Punjabi audiences
 - provide an accessible and responsive user experience
 - support customer, research, funding, partnership, and career enquiries
 - provide upload workflows for CVs, cover letters, proposals, and other supporting documents
@@ -114,15 +114,27 @@ The platform is designed to:
 
 ### Planned AI and Machine Learning
 
+- Agentic AI and multi-step AI workflows
+- Generative AI
 - Large Language Models
 - Retrieval-Augmented Generation
+- question-answering systems
 - embedding models
-- vector search
+- vector and hybrid search
+- reranking
+- tool and function calling
+- API and MCP-ready integrations
+- agent orchestration and multi-agent workflows
+- memory and state management
+- multimodal inputs
+- structured outputs
+- model routing
 - local LLM support through Ollama
 - Amazon Bedrock in a later cloud phase
-- RAG evaluation and feedback tracking
+- evaluation, tracing, feedback, and observability
+- guardrails and human approval for higher-risk actions
 - grounded answers with source citations
-- multilingual company knowledge assistant
+- multilingual company knowledge and AI assistant
 
 ### Planned DevOps and Infrastructure
 
@@ -166,6 +178,7 @@ The platform is designed to:
 | English | `en` | Left-to-right |
 | Persian | `fa` | Right-to-left |
 | Simplified Chinese | `zh` | Left-to-right |
+| Punjabi | `pa` | Left-to-right |
 
 Translations are stored in:
 
@@ -173,10 +186,11 @@ Translations are stored in:
 i18n/dictionaries/
 ├── en.json
 ├── fa.json
-└── zh.json
+├── zh.json
+└── pa.ts
 ```
 
-Persian pages use RTL layout support.
+Persian pages use RTL layout support. Punjabi uses Gurmukhi script with left-to-right layout.
 
 ---
 
@@ -253,7 +267,7 @@ Home | About | Services | Projects | Careers | Collaborate | Log in | Sign up | 
 /[lang]/services/robotics-and-automation
 /[lang]/services/data-science-and-analytics
 /[lang]/services/software-development
-/[lang]/services/rag-intelligent-assistants
+/[lang]/services/agentic-generative-ai-systems
 /[lang]/services/research-prototyping-technology-consulting
 ```
 
@@ -261,9 +275,9 @@ Home | About | Services | Projects | Careers | Collaborate | Log in | Sign up | 
 
 ```text
 /[lang]/projects/robotic-hand
-/[lang]/projects/industrial-rag-platform
+/[lang]/projects/industrial-agentic-ai-platform
 /[lang]/projects/predictive-maintenance
-/[lang]/projects/digital-twin
+/[lang]/projects/engineering-cad
 ```
 
 ### Career Routes
@@ -296,9 +310,9 @@ Predictive modelling, data preparation, statistical analysis, dashboards, visual
 
 Responsive web platforms, APIs, backend services, relational databases, testing, CI/CD, and cloud-ready architecture.
 
-### RAG and Intelligent Assistants
+### Agentic AI, Generative AI, RAG and LLM Systems
 
-Knowledge assistants grounded in approved organisational documents, retrieval pipelines, source citations, evaluation, and feedback.
+Intelligent AI systems combining agentic workflows, Generative AI, Large Language Models, retrieval and hybrid search, question-answering, tool and API use, source citations, memory, evaluation, guardrails, and human oversight.
 
 ### Research, Prototyping and Technology Consulting
 
@@ -322,17 +336,17 @@ The flagship R&D programme explores a modular robotic hand and forearm platform 
 - deterministic industrial communication
 - staged prototype validation
 
-### Industrial RAG Platform
+### Industrial Agentic AI Platform
 
-A multilingual knowledge-assistant concept using document ingestion, embeddings, vector retrieval, source citations, evaluation, and a chat interface.
+A multilingual AI platform combining Agentic AI, Generative AI, Large Language Models, RAG, question-answering, document ingestion, embeddings, vector and hybrid retrieval, source citations, tool and API integration, memory, evaluation, guardrails, and intelligent workflow automation.
 
 ### Predictive Maintenance
 
 A proposed industrial analytics project using time-series data, anomaly detection, forecasting, model monitoring, and maintenance dashboards.
 
-### Digital Twin
+### Engineering CAD
 
-A research and architecture concept for modelling, monitoring, simulation, and safe evaluation of physical or networked systems.
+An engineering design and prototyping capability using Autodesk Inventor and SolidWorks for parametric 3D modelling, mechanical assemblies, exploded views, engineering drawings, tolerances, fit and interference checking, STEP/STL/DXF workflows, design-for-manufacture, and prototype iteration.
 
 ---
 
@@ -804,7 +818,7 @@ Next.js API Routes
             └── Future object storage
                     │
                     ├── S3 or equivalent
-                    └── RAG document storage
+                    └── AI knowledge, retrieval, and agent data storage
 ```
 
 ---
@@ -858,18 +872,28 @@ Next.js API Routes
 - add audit logs
 - add protected admin routes
 
-### Later: RAG and LLM Assistant
+### Later: Agentic AI, Generative AI, RAG and LLM Systems
 
 - add FastAPI AI service
+- add Agentic AI workflows and orchestration
+- add Generative AI and LLM integration
 - add document ingestion
 - add chunking
 - add embeddings
 - add pgvector
-- add retrieval
+- add vector and hybrid retrieval
+- add reranking
+- add question-answering workflows
+- add tool and function calling
+- add API and MCP-ready integrations
+- add memory and state management
 - add source citations
-- add chatbot interface
+- add chatbot and multimodal interfaces
+- add structured outputs
+- add model routing
 - add feedback
-- add evaluation
+- add evaluation and tracing
+- add guardrails and human approval workflows
 - add local LLM support
 - add Amazon Bedrock integration
 
@@ -982,7 +1006,7 @@ Leads company strategy, partnerships, business development, funding, product dir
 **AI, Software Engineering, and R&D Lead**  
 **PhD in Computer Science, specialising in Artificial Intelligence**
 
-Leads AI/ML research, reinforcement learning, intelligent optimisation, software engineering, RAG, evaluation, cloud and MLOps direction, and technical implementation.
+Leads AI/ML research, reinforcement learning, intelligent optimisation, software engineering, Agentic AI, Generative AI, RAG, LLM systems, evaluation, cloud and MLOps direction, and technical implementation.
 
 ### Lilian
 
@@ -1041,4 +1065,4 @@ All rights are reserved unless a licence is added to the repository.
 
 This website and technology platform were designed and developed by **Zahra Torabi** for IndustrialOrigami.AI.
 
-The project demonstrates multilingual full-stack development, artificial intelligence integration, cloud architecture, DevOps, testing, monitoring, data visualisation, server-side form handling, file upload workflows, and technical product design using technologies including Next.js, React, TypeScript, Node.js, Python, PostgreSQL, Docker, Kubernetes, GitHub Actions, AWS, RAG, and Large Language Models.
+The project demonstrates multilingual full-stack development, artificial intelligence integration, cloud architecture, DevOps, testing, monitoring, data visualisation, server-side form handling, file upload workflows, and technical product design using technologies including Next.js, React, TypeScript, Node.js, Python, PostgreSQL, Docker, Kubernetes, GitHub Actions, AWS, Agentic AI, Generative AI, RAG, question-answering systems, and Large Language Models.

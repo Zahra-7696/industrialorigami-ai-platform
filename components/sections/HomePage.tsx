@@ -15,15 +15,15 @@ const serviceImages: Record<string, string> = {
   "robotics-and-automation": "/home/service-robotics.png",
   "data-science-and-analytics": "/home/service-data-science.png",
   "software-development": "/home/service-software.png",
-  "rag-intelligent-assistants": "/home/service-rag.png",
+  "agentic-generative-ai-systems": "/services/agentic-generative-ai.png",
   "research-prototyping-technology-consulting": "/home/service-research.png",
 };
 
 const projectImages: Record<string, string> = {
   "robotic-hand": "/projects/intelligent-robotic-hand.png",
-  "industrial-rag-platform": "/projects/industrial-rag-platform.png",
+  "industrial-agentic-ai-platform": "/projects/industrial-agentic-ai-platform.png",
   "predictive-maintenance": "/projects/predictive-maintenance.png",
-  "digital-twin": "/projects/digital-twin.png",
+  "engineering-cad": "/projects/engineering-cad.png",
 };
 
 export function HomePage({ locale, dictionary }: HomePageProps) {

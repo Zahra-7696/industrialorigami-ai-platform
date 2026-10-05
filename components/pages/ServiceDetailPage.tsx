@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import type { Dictionary } from "@/i18n/get-dictionary";
 
 import { PageHero } from "@/components/ui/PageHero";
@@ -10,11 +12,20 @@ type ServiceDetailPageProps = {
   service: ServiceItem;
 };
 
+const serviceImages: Record<string, string> = {
+  "robotics-and-automation": "/home/service-robotics.png",
+  "data-science-and-analytics": "/home/service-data-science.png",
+  "software-development": "/home/service-software.png",
+  "agentic-generative-ai-systems": "/services/agentic-generative-ai.png",
+  "research-prototyping-technology-consulting": "/home/service-research.png",
+};
+
 export function ServiceDetailPage({
   dictionary,
   service,
 }: ServiceDetailPageProps) {
   const content = dictionary.services;
+  const image = serviceImages[service.slug];
 
   return (
     <main>
@@ -23,6 +34,24 @@ export function ServiceDetailPage({
         title={service.title}
         description={service.summary}
       />
+
+      {image ? (
+        <section className="section-white pt-8 sm:pt-10">
+          <div className="site-container">
+            <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-brand-950 shadow-2xl">
+              <Image
+                src={image}
+                alt={`${service.title} visualisation`}
+                width={1448}
+                height={1086}
+                priority={service.slug === "agentic-generative-ai-systems"}
+                unoptimized
+                className="aspect-[16/8.5] h-auto w-full object-cover"
+              />
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="section-space section-white">
         <div className="site-container grid gap-12 lg:grid-cols-[1fr_0.75fr]">

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "IndustrialOrigami.AI | AI, Robotics and Intelligent Engineering",
-    "description": "IndustrialOrigami.AI develops practical AI, robotics, software and intelligent engineering solutions in New Zealand."
+    "description": "IndustrialOrigami.AI develops practical AI, robotics, software, data, CAD and intelligent engineering capability in New Zealand."
   },
   "brand": {
     "name": "IndustrialOrigami.AI",
@@ -18,18 +18,16 @@
   "home": {
     "eyebrow": "AI · Robotics · Intelligent Engineering",
     "title": "Shape intelligence. Build practical technology.",
-    "description": "IndustrialOrigami.AI combines artificial intelligence, software, data and mechanical engineering to solve real-world industrial problems.",
+    "description": "IndustrialOrigami.AI combines artificial intelligence, software, data and engineering to solve real-world industrial problems.",
     "servicesCta": "Explore services",
     "projectCta": "View robotic hand",
-    "featuredLabel": "Featured project",
-    "featuredDescription": "A modular robotic hand combining sensing, edge AI, deterministic control and industrial communication.",
     "servicesEyebrow": "Services",
     "servicesTitle": "Five focused capabilities, one integrated team.",
-    "servicesDescription": "Explore our core areas and open each service for detailed capabilities, outputs and suitable engagement types.",
+    "servicesDescription": "Explore core areas spanning engineering, software, data and modern AI systems.",
     "viewAllServices": "View all services",
     "projectsEyebrow": "Projects",
     "projectsTitle": "A portfolio designed to demonstrate real engineering capability.",
-    "projectsDescription": "The robotic hand is our flagship R&D programme. The other projects are structured portfolio and commercialisation concepts that will be developed transparently as evidence grows.",
+    "projectsDescription": "Our work spans robotic systems, agentic AI, predictive analytics and mechanical CAD.",
     "viewProject": "View project",
     "collaborateEyebrow": "Collaborate",
     "collaborateTitle": "Bring us a problem worth solving.",
@@ -42,7 +40,7 @@
     "storyTitle": "From complex ideas to useful systems.",
     "storyParagraphs": [
       "IndustrialOrigami.AI was established to bridge advanced research and practical commercial technology.",
-      "The company is developing an intelligent robotic hand while building wider capability in AI, data science, software engineering and intelligent automation.",
+      "The company is developing an intelligent robotic hand while building wider capability in agentic and generative AI, data science, software engineering, CAD and intelligent automation.",
       "Our method is evidence-led: understand the problem, build a focused prototype, measure performance, learn from users and scale only when the technical and commercial case is credible."
     ],
     "companyEyebrow": "Company profile",
@@ -53,45 +51,42 @@
       },
       {
         "label": "Focus",
-        "value": "AI, robotics, data, software and intelligent engineering"
+        "value": "AI, robotics, data, software, CAD and intelligent engineering"
       },
       {
         "label": "Business model",
         "value": "Professional services, collaborative R&D and proprietary product development"
       },
       {
-        "label": "Ambition",
-        "value": "Locally owned capability with international relevance"
+        "label": "Approach",
+        "value": "Evidence-led technical development with measurable validation"
       }
     ],
     "teamEyebrow": "Team",
     "teamTitle": "Multidisciplinary capability.",
-    "teamDescription": "The founding team combines strategy, AI, software, data science, mechanical design, CAD, fabrication and project engineering.",
-    "emailLabel": "Email",
-    "emailPending": "Add email",
-    "linkedinPending": "Add LinkedIn",
-    "team": {
-      "david": {
+    "teamDescription": "The team combines strategy, AI, software, data science, mechanical design, CAD, fabrication and project engineering.",
+    "team": [
+      {
         "name": "David Ewing",
         "role": "Founder and Managing Director",
-        "description": "David leads strategy, partnerships, funding, product direction, stakeholder engagement and overall company development."
+        "description": "Strategy, partnerships, funding, product direction and company development."
       },
-      "zahra": {
+      {
         "name": "Zahra Torabi",
         "role": "AI, Software Engineering and R&D Lead",
-        "description": "Zahra leads AI and machine learning research, reinforcement learning, intelligent optimisation, software development, RAG, evaluation and technical implementation."
+        "description": "AI/ML research, reinforcement learning, agentic and generative AI, software engineering, evaluation and technical implementation."
       },
-      "lilian": {
+      {
         "name": "Lilian",
         "role": "Data Science and Analytics Lead",
-        "description": "Lilian contributes data preparation, statistical modelling, predictive analytics, visualisation, experimentation and model validation."
+        "description": "Data preparation, statistical modelling, predictive analytics, visualisation, experimentation and validation."
       },
-      "gurwinder": {
+      {
         "name": "Gurwinder",
         "role": "Mechanical and Project Engineering Lead",
-        "description": "Gurwinder brings mechanical engineering, metal fabrication, CAD design and project-engineering experience to prototype development and manufacturing planning."
+        "description": "Mechanical engineering, CAD design, fabrication and project engineering for prototype development."
       }
-    }
+    ]
   },
   "services": {
     "eyebrow": "Services",
@@ -109,13 +104,13 @@
         "menuDescription": "Adaptive manipulation, sensing, control and automation prototypes.",
         "summary": "Research and prototype development for robotic systems, intelligent end-effectors and industrial automation.",
         "overview": [
-          "We help investigate whether a robotic or automated solution is technically and commercially appropriate for a defined workflow.",
-          "Work may include mechanical concepts, sensor selection, control architecture, computer vision, prototype integration and staged validation."
+          "We investigate whether robotic or automated systems are technically and commercially appropriate for defined workflows.",
+          "Engagements may include mechanical concepts, sensing, control architecture, computer vision, prototype integration and staged validation."
         ],
         "capabilities": [
           "Robotic end-effectors",
           "Sensor integration",
-          "Control architecture",
+          "Real-time control architecture",
           "Computer vision",
           "Automation feasibility"
         ],
@@ -139,15 +134,15 @@
         "menuDescription": "Predictive modelling, analytics, dashboards and decision support.",
         "summary": "Data products that help organisations understand operations, identify patterns and support decisions.",
         "overview": [
-          "We structure analytical work around a clear business or operational question rather than producing charts with no decision attached.",
+          "Analytical work is structured around a business or operational decision rather than producing isolated charts.",
           "Projects may include forecasting, classification, statistical analysis, feature engineering, model evaluation and dashboard development."
         ],
         "capabilities": [
           "Predictive modelling",
           "Data preparation",
           "Statistical analysis",
-          "Dashboards and charts",
-          "Operational analytics"
+          "Time-series analytics",
+          "Dashboards and operational reporting"
         ],
         "deliverables": [
           "Data-quality assessment",
@@ -170,14 +165,14 @@
         "summary": "Maintainable web platforms, backend services and digital products built with modern engineering practices.",
         "overview": [
           "We develop software with clear architecture, version control, testing, documentation and deployment pathways.",
-          "The service can cover responsive interfaces, APIs, backend services, relational databases, authentication, dashboards and cloud-ready packaging."
+          "Work can cover responsive interfaces, APIs, backend services, relational databases, authentication, dashboards and cloud-ready packaging."
         ],
         "capabilities": [
-          "React and Next.js",
+          "React, Next.js and TypeScript",
           "Node.js and APIs",
           "Python and FastAPI",
           "PostgreSQL",
-          "Testing and CI/CD"
+          "Testing, CI/CD and deployment"
         ],
         "deliverables": [
           "Requirements and architecture",
@@ -194,33 +189,39 @@
         ]
       },
       {
-        "slug": "rag-intelligent-assistants",
-        "title": "RAG and Intelligent Assistants",
-        "menuDescription": "Grounded knowledge assistants with retrieval, citations and evaluation.",
-        "summary": "Knowledge assistants grounded in approved organisational documents, data and controlled sources.",
+        "slug": "agentic-generative-ai-systems",
+        "title": "Agentic AI, GenAI, RAG & LLM Systems",
+        "menuDescription": "Agentic workflows, grounded RAG, LLMs, multimodal QA and intelligent automation.",
+        "summary": "Production-oriented AI systems combining LLMs, retrieval, tools, memory and governed agent workflows for real business tasks.",
         "overview": [
-          "Retrieval-Augmented Generation can help users find and understand information while reducing unsupported model answers.",
-          "A responsible implementation requires document governance, chunking, embeddings, retrieval, citations, evaluation, feedback and access controls."
+          "Modern AI systems can move beyond single-turn chat toward agents that plan, use tools, retrieve evidence, coordinate specialised steps and maintain state across multi-step work.",
+          "We design grounded retrieval and controlled action pathways using hybrid search, reranking, citations, structured outputs, tool and API integration, memory, multimodal inputs, human approval and access controls.",
+          "Architectures can support interoperable tool and context connections, specialist-agent collaboration, tracing, automated evaluation and human review before wider deployment."
         ],
         "capabilities": [
-          "Document ingestion",
-          "Embeddings and vector retrieval",
-          "Source citations",
-          "Evaluation and feedback",
-          "LLM integration"
+          "LLM and multimodal model integration",
+          "Agentic orchestration and multi-agent handoffs",
+          "RAG with hybrid retrieval, reranking and citations",
+          "Tool/function calling, APIs and MCP-ready connectivity",
+          "Memory and stateful workflows",
+          "QA systems and structured outputs",
+          "Evaluation, tracing, guardrails and human approval",
+          "Model routing and cost-latency optimisation"
         ],
         "deliverables": [
-          "Knowledge-base design",
-          "Ingestion pipeline",
-          "RAG API",
-          "Chat interface",
-          "Evaluation dashboard"
+          "AI and agent architecture",
+          "Knowledge ingestion and retrieval pipeline",
+          "Agent and tool workflows",
+          "Multimodal QA or assistant interface",
+          "Evaluation and observability dashboard",
+          "Security and access-control plan"
         ],
         "fit": [
-          "Company knowledge systems",
-          "Technical documentation",
-          "Research collections",
-          "Customer and employee support"
+          "Enterprise knowledge and technical support",
+          "Engineering and research assistants",
+          "Workflow automation and operations",
+          "Customer and employee service",
+          "Document-heavy QA and compliance"
         ]
       },
       {
@@ -258,7 +259,7 @@
   "projects": {
     "eyebrow": "Projects",
     "title": "Focused programmes with measurable technical goals.",
-    "intro": "Our portfolio combines an active flagship R&D programme with carefully defined technology demonstrations and future commercialisation concepts.",
+    "intro": "Our portfolio combines active R&D with carefully defined technology demonstrations and engineering capabilities.",
     "viewProject": "View project",
     "statusTitle": "Project status",
     "overviewTitle": "Project overview",
@@ -278,14 +279,14 @@
         "overview": [
           "Conventional industrial grippers perform well for repetitive tasks and predictable objects but may be less useful when shape, orientation, fragility or material changes.",
           "The project investigates whether a modular, force-aware and vision-guided hand can provide useful flexibility without becoming impractically complex or expensive.",
-          "Development begins with an index-finger and thumb mechanism before a complete multi-finger system is attempted."
+          "Development can be validated incrementally at finger, thumb, palm and integrated-hand level before committing to a complete system."
         ],
         "technology": [
-          "Approximately fifteen actuators in the full concept",
-          "Jetson edge AI",
-          "ARM real-time control",
+          "Mechanical linkage and tendon concepts",
+          "Edge AI and computer vision",
+          "Real-time control",
           "Force, current, position and tactile sensing",
-          "EtherCAT or another deterministic industrial link"
+          "Deterministic industrial communication"
         ],
         "value": [
           "Flexible industrial handling",
@@ -296,7 +297,7 @@
         "roadmap": [
           {
             "phase": "Phase 1",
-            "title": "Finger and thumb",
+            "title": "Mechanism validation",
             "description": "Validate linkage, force, actuation, sensing, control and safety."
           },
           {
@@ -312,46 +313,50 @@
         ]
       },
       {
-        "slug": "industrial-rag-platform",
-        "title": "Industrial RAG Platform",
-        "menuDescription": "A source-grounded assistant for technical and company knowledge.",
-        "category": "Generative AI",
+        "slug": "industrial-agentic-ai-platform",
+        "title": "Industrial Agentic AI Platform",
+        "menuDescription": "A governed platform combining agents, GenAI, RAG, LLMs, tools and source-grounded QA.",
+        "category": "Agentic and Generative AI",
         "status": "Portfolio architecture and prototype concept",
-        "statusDescription": "This project is presented as a portfolio and future service concept rather than a completed customer deployment.",
-        "summary": "A multilingual knowledge platform that retrieves approved technical documents and produces source-aware answers for employees, customers and engineers.",
+        "statusDescription": "The platform is presented as a structured prototype and future service concept rather than a completed customer deployment.",
+        "summary": "A multilingual industrial AI platform combining source-grounded knowledge retrieval with agentic workflows, tool use, multimodal interaction and evaluated LLM responses.",
         "overview": [
-          "Industrial organisations often store valuable knowledge across manuals, policies, reports, specifications and project documents.",
-          "The platform demonstrates ingestion, chunking, embeddings, vector retrieval, citations, multilingual interaction, evaluation and feedback.",
-          "It is intended to become both a company knowledge assistant and a reusable demonstration of responsible LLM integration."
+          "Industrial organisations often store valuable knowledge across manuals, policies, reports, specifications, databases and project systems.",
+          "The platform combines modern RAG with hybrid retrieval, reranking and citations, then adds agent orchestration so specialised workflows can use tools, call APIs and preserve useful state across multi-step work.",
+          "The architecture is designed for responsible deployment with access controls, structured outputs, human approval where needed, tracing, feedback and evaluation."
         ],
         "technology": [
-          "Next.js chat interface",
-          "FastAPI AI service",
-          "PostgreSQL and pgvector",
-          "Local or cloud LLM integration",
-          "Evaluation and source citation"
+          "Next.js and TypeScript user experience",
+          "FastAPI or Node.js AI and tool services",
+          "PostgreSQL with pgvector or equivalent vector storage",
+          "Hybrid retrieval, metadata filters and reranking",
+          "LLM and multimodal model routing",
+          "Agent orchestration, tool calling and MCP-ready integrations",
+          "Specialist agent collaboration patterns",
+          "Tracing, evaluation, guardrails and source citation"
         ],
         "value": [
-          "Faster access to approved knowledge",
-          "Reduced unsupported AI answers",
-          "Reusable company platform",
-          "Portfolio evidence for RAG and full-stack roles"
+          "Faster access to approved technical knowledge",
+          "Automation of multi-step knowledge workflows",
+          "More transparent answers with citations and evaluation",
+          "Reusable platform for internal and customer-facing AI",
+          "A controlled path from assistants to production agents"
         ],
         "roadmap": [
           {
             "phase": "Phase 1",
-            "title": "Document pipeline",
-            "description": "Build ingestion, chunking, metadata and vector storage."
+            "title": "Knowledge foundation",
+            "description": "Build ingestion, metadata, hybrid retrieval, reranking, permissions and source-aware QA."
           },
           {
             "phase": "Phase 2",
-            "title": "Assistant and citations",
-            "description": "Create retrieval, answer generation and source display."
+            "title": "Agentic workflows",
+            "description": "Add specialised agents, tool and API use, memory, multimodal inputs and approval points."
           },
           {
             "phase": "Phase 3",
-            "title": "Evaluation and access control",
-            "description": "Add quality metrics, feedback, authentication and permissions."
+            "title": "Production evaluation",
+            "description": "Add traces, automated and human evaluation, guardrails, monitoring, cost controls and deployment governance."
           }
         ]
       },
@@ -366,7 +371,7 @@
         "overview": [
           "Unplanned equipment failure can create downtime, cost and safety risk, but useful prediction depends on data quality and a clearly defined failure or degradation signal.",
           "The project demonstrates how sensor histories, maintenance records and operational context can be prepared, modelled and monitored.",
-          "The system will compare practical baselines with more advanced methods rather than assuming that a complex model is automatically better."
+          "The system compares practical baselines with more advanced methods rather than assuming that a complex model is automatically better."
         ],
         "technology": [
           "Time-series data pipelines",
@@ -400,46 +405,50 @@
         ]
       },
       {
-        "slug": "digital-twin",
-        "title": "Digital Twin",
-        "menuDescription": "A simulation and monitoring environment for testing intelligent decisions.",
-        "category": "Simulation and Systems",
-        "status": "Research and architecture concept",
-        "statusDescription": "The digital twin is a future research and demonstration project and is not yet represented as a deployed product.",
-        "summary": "A near-real-time virtual representation of a physical or networked system for simulation, monitoring and safe evaluation of intelligent decisions.",
+        "slug": "engineering-cad",
+        "title": "Engineering CAD",
+        "menuDescription": "3D mechanical design, assemblies, drawings and design-for-manufacture using Autodesk Inventor and SolidWorks.",
+        "category": "Mechanical Engineering and CAD",
+        "status": "Active engineering design capability",
+        "statusDescription": "CAD capability supports robotic mechanisms and prototype development, with models refined as engineering requirements and manufacturing constraints are validated.",
+        "summary": "Parametric 3D CAD for mechanical parts and assemblies, from concept geometry to manufacturing drawings and iterative prototype development.",
         "overview": [
-          "A digital twin can combine system state, historical data, simulation and analytics to help teams explore changes before applying them to a live environment.",
-          "The concept extends earlier research interests in network and intelligent-system optimisation while remaining applicable to industrial systems.",
-          "A credible implementation requires a defined asset, update frequency, simulation fidelity and decision use case."
+          "Engineering CAD converts functional requirements into controlled 3D parts, assemblies and drawings that can be reviewed, manufactured and revised.",
+          "The workflow can cover robotic mechanisms, linkages, housings, brackets, fixtures and other engineered components using Autodesk Inventor and SolidWorks.",
+          "Design reviews consider fit, motion, tolerances, interfaces, materials, fasteners, serviceability and manufacturability before physical prototyping."
         ],
         "technology": [
-          "System-state ingestion",
-          "Simulation model",
-          "Real-time or near-real-time updates",
-          "Scenario testing",
-          "Analytics and visualisation"
+          "Autodesk Inventor",
+          "SolidWorks",
+          "Parametric part and assembly modelling",
+          "Exploded views and assembly documentation",
+          "2D manufacturing drawings and tolerancing",
+          "Motion, interference and fit checks",
+          "STEP, STL and DXF export",
+          "Design-for-manufacture and prototype iteration"
         ],
         "value": [
-          "Safer evaluation of changes",
-          "Improved system understanding",
-          "Training and experimentation",
-          "Support for optimisation and predictive decisions"
+          "Faster iteration before fabrication",
+          "Clearer communication between engineering and manufacturing",
+          "Reduced fit and interference errors",
+          "Reusable design history and controlled revisions",
+          "A stronger path from concept to physical prototype"
         ],
         "roadmap": [
           {
             "phase": "Phase 1",
-            "title": "Use case and model",
-            "description": "Define the physical or networked system, variables and simulation purpose."
+            "title": "Requirements and concept",
+            "description": "Define interfaces, motion, loads, dimensions, materials and an initial parametric concept."
           },
           {
             "phase": "Phase 2",
-            "title": "Data synchronisation",
-            "description": "Connect state data, dashboards and scenario controls."
+            "title": "Detailed assembly",
+            "description": "Develop parts and assemblies, run fit and interference checks, and prepare manufacturing documentation."
           },
           {
             "phase": "Phase 3",
-            "title": "Decision experiments",
-            "description": "Evaluate optimisation, prediction or control strategies before deployment."
+            "title": "Prototype and validation",
+            "description": "Fabricate or print selected parts, test the mechanism, capture issues and feed measured results back into the CAD model."
           }
         ]
       }
@@ -500,7 +509,7 @@
       },
       {
         "label": "Focus",
-        "value": "AI, robotics, software, data and intelligent engineering"
+        "value": "AI, robotics, software, data, CAD and intelligent engineering"
       }
     ],
     "form": {
@@ -516,11 +525,23 @@
       ],
       "message": "Message",
       "submit": "Send enquiry",
-      "note": "This form is currently a visual prototype. Validation, API submission, database storage and notifications will be added in the backend phase."
+      "success": "Thanks. Your enquiry has been received.",
+      "error": "The message could not be sent. Please try again or contact the company directly."
     }
   },
+  "auth": {
+    "loginTitle": "Company portal",
+    "signupTitle": "Register interest",
+    "description": "The secure customer and collaborator portal is reserved for future platform functionality.",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "login": "Sign in",
+    "signup": "Register",
+    "note": "Authentication and persistent account storage are not enabled in this public website release."
+  },
   "footer": {
-    "summary": "AI, robotics, software and intelligent engineering from Christchurch, New Zealand.",
+    "summary": "AI, robotics, software, data, CAD and intelligent engineering from Christchurch, New Zealand.",
     "explore": "Explore",
     "locationTitle": "Location",
     "location": "Christchurch, New Zealand",
