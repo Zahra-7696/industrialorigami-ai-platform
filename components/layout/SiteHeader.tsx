@@ -14,25 +14,31 @@ type SiteHeaderProps = {
   locale: Locale;
   dictionary: Dictionary;
 };
-{/*
-const authLabels: Record<Locale, { login: string; signup: string }> = {
+
+const rmlNavigation: Record<
+  Locale,
+  { title: string; description: string }
+> = {
   en: {
-    login: "Log in",
-    signup: "Sign up",
+    title: "RML Lab",
+    description: "Live research, modelling and engineering workspace.",
   },
   fa: {
-    login: "ورود",
-    signup: "ثبت‌نام",
+    title: "آزمایشگاه RML",
+    description: "محیط زنده پژوهش، مدل‌سازی و مهندسی.",
   },
   zh: {
-    login: "登录",
-    signup: "注册",
+    title: "RML 实验室",
+    description: "实时研究、建模与工程工作空间。",
+  },
+  pa: {
+    title: "RML ਲੈਬ",
+    description: "ਲਾਈਵ ਖੋਜ, ਮਾਡਲਿੰਗ ਅਤੇ ਇੰਜੀਨੀਅਰਿੰਗ ਵਰਕਸਪੇਸ।",
   },
 };
-*/}
+
 export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
- {/* const auth = authLabels[locale];*/}
 
   const serviceItems = dictionary.services.items.map((item) => ({
     href: `/${locale}/services/${item.slug}`,
@@ -40,11 +46,20 @@ export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
     description: item.menuDescription,
   }));
 
-  const projectItems = dictionary.projects.items.map((item) => ({
-    href: `/${locale}/projects/${item.slug}`,
-    title: item.title,
-    description: item.menuDescription,
-  }));
+  const projectItems = [
+    ...dictionary.projects.items.map((item) => ({
+      href: `/${locale}/projects/${item.slug}`,
+      title: item.title,
+      description: item.menuDescription,
+      external: false,
+    })),
+    {
+      href: "https://rml.industrialorigami.ai/",
+      title: rmlNavigation[locale].title,
+      description: rmlNavigation[locale].description,
+      external: true,
+    },
+  ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-brand-950/96 text-white backdrop-blur-xl">
@@ -117,24 +132,6 @@ export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
         </nav>
 
         <div className="flex shrink-0 items-center gap-3">
-           {/*<div className="hidden items-center gap-2 lg:flex">*/}
-           {/*
-            <div className="flex items-center gap-2"> 
-            <Link
-              href={`/${locale}/login`}
-              className="rounded-full border border-white/25 px-4 py-2 text-xs font-black text-slate-100 transition hover:border-brand-gold hover:text-brand-gold"
-            >
-              {auth.login}
-            </Link>
-
-            <Link
-              href={`/${locale}/signup`}
-              className="rounded-full bg-brand-orange px-4 py-2 text-xs font-black text-brand-950 transition hover:bg-brand-gold"
-            >
-              {auth.signup}
-            </Link>
-          </div>
-          */}
           <LanguageSwitcher currentLocale={locale} />
 
           <button
@@ -196,16 +193,29 @@ export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
                 {dictionary.navigation.projects}
               </summary>
               <div className="grid gap-1 border-t border-white/10 p-2">
-                {projectItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/8"
-                  >
-                    {item.title}
-                  </Link>
-                ))}
+                {projectItems.map((item) =>
+                  item.external ? (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={() => setMobileOpen(false)}
+                      className="rounded-lg border-t border-white/10 px-3 py-2 text-sm font-bold text-brand-gold hover:bg-white/8"
+                    >
+                      {item.title} ↗
+                    </a>
+                  ) : (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/8"
+                    >
+                      {item.title}
+                    </Link>
+                  ),
+                )}
               </div>
             </details>
 
@@ -224,24 +234,6 @@ export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
             >
               {dictionary.navigation.collaborate}
             </Link>
-            {/*
-            <div className="mt-3 grid grid-cols-2 gap-3 border-t border-white/10 pt-4">
-              <Link
-                href={`/${locale}/login`}
-                onClick={() => setMobileOpen(false)}
-                className="rounded-xl border border-white/20 px-4 py-3 text-center text-sm font-black text-white"
-              >
-                {auth.login}
-              </Link>
-              <Link
-                href={`/${locale}/signup`}
-                onClick={() => setMobileOpen(false)}
-                className="rounded-xl bg-brand-orange px-4 py-3 text-center text-sm font-black text-brand-950"
-              >
-                {auth.signup}
-              </Link>
-            </div>
-            */}
           </div>
         </nav>
       ) : null}

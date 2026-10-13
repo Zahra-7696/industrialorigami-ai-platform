@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/get-dictionary";
@@ -15,6 +15,40 @@ type RoboticHandPageProps = {
   project: ProjectItem;
 };
 
+const rmlCopy: Record<
+  Locale,
+  { eyebrow: string; title: string; description: string; button: string }
+> = {
+  en: {
+    eyebrow: "Related live workspace",
+    title: "Explore the RML Lab",
+    description:
+      "View related research, modelling, simulation and engineering development in the live RML environment.",
+    button: "Open RML Lab",
+  },
+  fa: {
+    eyebrow: "محیط زنده مرتبط",
+    title: "آزمایشگاه RML را ببینید",
+    description:
+      "پژوهش، مدل‌سازی، شبیه‌سازی و توسعه مهندسی مرتبط را در محیط زنده RML مشاهده کنید.",
+    button: "باز کردن RML",
+  },
+  zh: {
+    eyebrow: "相关实时工作空间",
+    title: "探索 RML 实验室",
+    description:
+      "在实时 RML 环境中查看相关研究、建模、仿真和工程开发工作。",
+    button: "打开 RML 实验室",
+  },
+  pa: {
+    eyebrow: "ਸੰਬੰਧਿਤ ਲਾਈਵ ਵਰਕਸਪੇਸ",
+    title: "RML ਲੈਬ ਵੇਖੋ",
+    description:
+      "ਲਾਈਵ RML ਵਾਤਾਵਰਣ ਵਿੱਚ ਸੰਬੰਧਿਤ ਖੋਜ, ਮਾਡਲਿੰਗ, ਸਿਮੂਲੇਸ਼ਨ ਅਤੇ ਇੰਜੀਨੀਅਰਿੰਗ ਵਿਕਾਸ ਵੇਖੋ।",
+    button: "RML ਲੈਬ ਖੋਲ੍ਹੋ",
+  },
+};
+
 export function RoboticHandPage({
   locale,
   dictionary,
@@ -22,11 +56,12 @@ export function RoboticHandPage({
 }: RoboticHandPageProps) {
   const content = roboticHandContent[locale] ?? roboticHandContent.en!;
   const projectLabels = dictionary.projects;
+  const rml = rmlCopy[locale];
 
   return (
     <main>
       <PageHero
-        eyebrow={`${projectLabels.eyebrow} Â· ${project.category}`}
+        eyebrow={`${projectLabels.eyebrow} · ${project.category}`}
         title={project.title}
         description={project.summary}
       />
@@ -72,18 +107,18 @@ export function RoboticHandPage({
                 key={image.src}
                 className="light-card overflow-hidden rounded-[2rem]"
               >
-          <div className="flex min-h-[320px] items-center justify-center bg-brand-900 p-4 sm:min-h-[420px]">
-              <Image
-              src={image.src}
-              alt={image.alt}
-              width={image.width}
-              height={image.height}
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              loading={index === 0 ? "eager" : "lazy"}
-              unoptimized
-              className="h-auto max-h-[430px] w-full object-contain"
-              />
-            </div>
+                <div className="flex min-h-[320px] items-center justify-center bg-brand-900 p-4 sm:min-h-[420px]">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={image.width}
+                    height={image.height}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    unoptimized
+                    className="h-auto max-h-[430px] w-full object-contain"
+                  />
+                </div>
 
                 <figcaption className="p-6 leading-7 text-slate-600">
                   {image.caption}
@@ -91,8 +126,6 @@ export function RoboticHandPage({
               </figure>
             ))}
           </div>
-
-          
         </div>
       </section>
 
@@ -112,7 +145,7 @@ export function RoboticHandPage({
                 key={item}
                 className="light-card rounded-2xl p-5 leading-7 text-slate-600"
               >
-                <span className="mr-3 text-brand-orange">â—</span>
+                <span className="mr-3 text-brand-orange">●</span>
                 {item}
               </div>
             ))}
@@ -214,6 +247,28 @@ export function RoboticHandPage({
         </div>
       </section>
 
+      <section className="section-space-sm section-white">
+        <div className="site-container">
+          <div className="warm-panel rounded-[2rem] p-8 sm:p-10">
+            <div className="grid items-center gap-7 lg:grid-cols-[1fr_auto]">
+              <div>
+                <p className="page-eyebrow">{rml.eyebrow}</p>
+                <h2 className="section-title mt-4">{rml.title}</h2>
+                <p className="section-copy mt-5">{rml.description}</p>
+              </div>
+              <a
+                href="https://rml.industrialorigami.ai/"
+                target="_blank"
+                rel="noreferrer"
+                className="button-primary justify-center whitespace-nowrap text-center"
+              >
+                {rml.button} ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-space section-soft border-t border-slate-200">
         <div className="site-container">
           <SectionHeading
@@ -244,4 +299,3 @@ export function RoboticHandPage({
     </main>
   );
 }
-

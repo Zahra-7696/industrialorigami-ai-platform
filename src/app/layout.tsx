@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://industrialorigami.ai"),
   title: "IndustrialOrigami.AI",
   description:
     "AI, machine learning, robotics, software and intelligent engineering from New Zealand.",

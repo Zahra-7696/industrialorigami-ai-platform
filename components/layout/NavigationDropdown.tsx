@@ -7,6 +7,7 @@ type DropdownItem = {
   href: string;
   title: string;
   description?: string;
+  external?: boolean;
 };
 
 type NavigationDropdownProps = {
@@ -74,24 +75,45 @@ export function NavigationDropdown({
           role="menu"
           className="dropdown-panel absolute left-1/2 top-[calc(100%-0.35rem)] z-50 w-[24rem] -translate-x-1/2 rounded-2xl p-2"
         >
-          {items.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              role="menuitem"
-              onClick={() => setOpen(false)}
-              className="block rounded-xl px-4 py-3 transition hover:bg-brand-paper"
-            >
-              <span className="block font-black text-brand-900">
-                {item.title}
-              </span>
-              {item.description ? (
-                <span className="mt-1 block text-xs leading-5 text-slate-500">
-                  {item.description}
+          {items.map((item) =>
+            item.external ? (
+              <a
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                role="menuitem"
+                onClick={() => setOpen(false)}
+                className="block rounded-xl border-t border-slate-200 px-4 py-3 transition hover:bg-brand-paper"
+              >
+                <span className="block font-black text-brand-900">
+                  {item.title} ↗
                 </span>
-              ) : null}
-            </Link>
-          ))}
+                {item.description ? (
+                  <span className="mt-1 block text-xs leading-5 text-slate-500">
+                    {item.description}
+                  </span>
+                ) : null}
+              </a>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                role="menuitem"
+                onClick={() => setOpen(false)}
+                className="block rounded-xl px-4 py-3 transition hover:bg-brand-paper"
+              >
+                <span className="block font-black text-brand-900">
+                  {item.title}
+                </span>
+                {item.description ? (
+                  <span className="mt-1 block text-xs leading-5 text-slate-500">
+                    {item.description}
+                  </span>
+                ) : null}
+              </Link>
+            ),
+          )}
         </div>
       ) : null}
     </div>
