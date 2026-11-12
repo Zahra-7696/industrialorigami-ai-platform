@@ -223,7 +223,7 @@ i18n/dictionaries/
 ├── en.json
 ├── fa.json
 ├── zh.json
-└── pa.ts
+└── pa.json
 ```
 
 Persian pages use RTL layout support. Punjabi uses Gurmukhi script with left-to-right layout.

@@ -192,17 +192,17 @@
         "slug": "agentic-generative-ai-systems",
         "title": "Agentic AI, GenAI, RAG & LLM Systems",
         "menuDescription": "Agentic workflows, grounded RAG, LLMs, multimodal QA and intelligent automation.",
-        "summary": "Production-oriented AI systems combining LLMs, retrieval, tools, memory and governed agent workflows for real business tasks.",
+        "summary": "Production-oriented AI systems that combine LLMs, retrieval, tools, memory and governed agent workflows for real business tasks.",
         "overview": [
-          "Modern AI systems can move beyond single-turn chat toward agents that plan, use tools, retrieve evidence, coordinate specialised steps and maintain state across multi-step work.",
-          "We design grounded retrieval and controlled action pathways using hybrid search, reranking, citations, structured outputs, tool and API integration, memory, multimodal inputs, human approval and access controls.",
-          "Architectures can support interoperable tool and context connections, specialist-agent collaboration, tracing, automated evaluation and human review before wider deployment."
+          "Modern generative AI systems are moving beyond single-turn chat toward agents that can plan, use tools, retrieve evidence, coordinate specialists and maintain state across multi-step work.",
+          "We design systems around grounded retrieval and controlled actions: hybrid search, reranking, citations, structured outputs, tool and API integration, memory, multimodal inputs, human approval and access controls.",
+          "Current architectures can also use open interoperability patterns such as MCP for tool and context connections and A2A-style agent collaboration, with tracing and evaluation used to test reliability before wider deployment."
         ],
         "capabilities": [
           "LLM and multimodal model integration",
           "Agentic orchestration and multi-agent handoffs",
           "RAG with hybrid retrieval, reranking and citations",
-          "Tool/function calling, APIs and MCP-ready connectivity",
+          "Tool and function calling, APIs and MCP connectivity",
           "Memory and stateful workflows",
           "QA systems and structured outputs",
           "Evaluation, tracing, guardrails and human approval",
@@ -316,14 +316,14 @@
         "slug": "industrial-agentic-ai-platform",
         "title": "Industrial Agentic AI Platform",
         "menuDescription": "A governed platform combining agents, GenAI, RAG, LLMs, tools and source-grounded QA.",
-        "category": "Agentic and Generative AI",
+        "category": "Agentic & Generative AI",
         "status": "Portfolio architecture and prototype concept",
-        "statusDescription": "The platform is presented as a structured prototype and future service concept rather than a completed customer deployment.",
-        "summary": "A multilingual industrial AI platform combining source-grounded knowledge retrieval with agentic workflows, tool use, multimodal interaction and evaluated LLM responses.",
+        "statusDescription": "This project is presented as a portfolio and future service concept rather than a completed customer deployment.",
+        "summary": "A multilingual industrial AI platform that combines source-grounded knowledge retrieval with agentic workflows, tool use, multimodal interaction and evaluated LLM responses.",
         "overview": [
           "Industrial organisations often store valuable knowledge across manuals, policies, reports, specifications, databases and project systems.",
-          "The platform combines modern RAG with hybrid retrieval, reranking and citations, then adds agent orchestration so specialised workflows can use tools, call APIs and preserve useful state across multi-step work.",
-          "The architecture is designed for responsible deployment with access controls, structured outputs, human approval where needed, tracing, feedback and evaluation."
+          "The platform combines modern RAG with hybrid retrieval, reranking and citations, then adds agentic orchestration so specialised agents can use tools, call APIs, coordinate tasks and preserve useful state across multi-step work.",
+          "The architecture is designed for responsible deployment with access controls, structured outputs, human approval where needed, tracing, feedback and evaluation rather than treating a fluent model response as proof of correctness."
         ],
         "technology": [
           "Next.js and TypeScript user experience",
@@ -332,7 +332,7 @@
           "Hybrid retrieval, metadata filters and reranking",
           "LLM and multimodal model routing",
           "Agent orchestration, tool calling and MCP-ready integrations",
-          "Specialist agent collaboration patterns",
+          "A2A-ready patterns for specialist agent collaboration",
           "Tracing, evaluation, guardrails and source citation"
         ],
         "value": [
@@ -340,7 +340,7 @@
           "Automation of multi-step knowledge workflows",
           "More transparent answers with citations and evaluation",
           "Reusable platform for internal and customer-facing AI",
-          "A controlled path from assistants to production agents"
+          "A controlled path from assistant prototypes to production agents"
         ],
         "roadmap": [
           {
@@ -408,9 +408,9 @@
         "slug": "engineering-cad",
         "title": "Engineering CAD",
         "menuDescription": "3D mechanical design, assemblies, drawings and design-for-manufacture using Autodesk Inventor and SolidWorks.",
-        "category": "Mechanical Engineering and CAD",
+        "category": "Mechanical Engineering & CAD",
         "status": "Active engineering design capability",
-        "statusDescription": "CAD capability supports robotic mechanisms and prototype development, with models refined as engineering requirements and manufacturing constraints are validated.",
+        "statusDescription": "CAD capability supports robotic-hand, mechanism and prototype development, with models refined as engineering requirements and manufacturing constraints are validated.",
         "summary": "Parametric 3D CAD for mechanical parts and assemblies, from concept geometry to manufacturing drawings and iterative prototype development.",
         "overview": [
           "Engineering CAD converts functional requirements into controlled 3D parts, assemblies and drawings that can be reviewed, manufactured and revised.",
@@ -424,7 +424,7 @@
           "Exploded views and assembly documentation",
           "2D manufacturing drawings and tolerancing",
           "Motion, interference and fit checks",
-          "STEP, STL and DXF export",
+          "STEP, STL and DXF export for fabrication and 3D printing",
           "Design-for-manufacture and prototype iteration"
         ],
         "value": [
