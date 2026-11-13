@@ -18,6 +18,8 @@ const serviceImages: Record<string, string> = {
   "software-development": "/home/service-software.png",
   "agentic-generative-ai-systems": "/services/agentic-generative-ai.png",
   "research-prototyping-technology-consulting": "/home/service-research.png",
+  "agricultural-research-and-partnerships":
+    "https://images.unsplash.com/photo-1692369584496-3216a88f94c1?auto=format&fit=crop&fm=jpg&q=82&w=1600",
 };
 
 export function ServiceDetailPage({
@@ -44,7 +46,10 @@ export function ServiceDetailPage({
                 alt={`${service.title} visualisation`}
                 width={1448}
                 height={1086}
-                priority={service.slug === "agentic-generative-ai-systems"}
+                priority={
+                  service.slug === "agentic-generative-ai-systems" ||
+                  service.slug === "agricultural-research-and-partnerships"
+                }
                 unoptimized
                 className="aspect-[16/8.5] h-auto w-full object-cover"
               />

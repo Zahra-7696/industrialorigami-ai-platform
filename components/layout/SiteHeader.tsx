@@ -15,28 +15,6 @@ type SiteHeaderProps = {
   dictionary: Dictionary;
 };
 
-const rmlNavigation: Record<
-  Locale,
-  { title: string; description: string }
-> = {
-  en: {
-    title: "RML Lab",
-    description: "Live research, modelling and engineering workspace.",
-  },
-  fa: {
-    title: "آزمایشگاه RML",
-    description: "محیط زنده پژوهش، مدل‌سازی و مهندسی.",
-  },
-  zh: {
-    title: "RML 实验室",
-    description: "实时研究、建模与工程工作空间。",
-  },
-  pa: {
-    title: "RML ਲੈਬ",
-    description: "ਲਾਈਵ ਖੋਜ, ਮਾਡਲਿੰਗ ਅਤੇ ਇੰਜੀਨੀਅਰਿੰਗ ਵਰਕਸਪੇਸ।",
-  },
-};
-
 export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -46,20 +24,11 @@ export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
     description: item.menuDescription,
   }));
 
-  const projectItems = [
-    ...dictionary.projects.items.map((item) => ({
-      href: `/${locale}/projects/${item.slug}`,
-      title: item.title,
-      description: item.menuDescription,
-      external: false,
-    })),
-    {
-      href: "https://rml.industrialorigami.ai/",
-      title: rmlNavigation[locale].title,
-      description: rmlNavigation[locale].description,
-      external: true,
-    },
-  ];
+  const projectItems = dictionary.projects.items.map((item) => ({
+    href: `/${locale}/projects/${item.slug}`,
+    title: item.title,
+    description: item.menuDescription,
+  }));
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-brand-950/96 text-white backdrop-blur-xl">
@@ -200,29 +169,16 @@ export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
                 {dictionary.navigation.projects}
               </summary>
               <div className="grid gap-1 border-t border-white/10 p-2">
-                {projectItems.map((item) =>
-                  item.external ? (
-                    <a
-                      key={item.href}
-                      href={item.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      onClick={() => setMobileOpen(false)}
-                      className="rounded-lg border-t border-white/10 px-3 py-2 text-sm font-bold text-brand-gold hover:bg-white/8"
-                    >
-                      {item.title} ↗
-                    </a>
-                  ) : (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/8"
-                    >
-                      {item.title}
-                    </Link>
-                  ),
-                )}
+                {projectItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/8"
+                  >
+                    {item.title}
+                  </Link>
+                ))}
               </div>
             </details>
 

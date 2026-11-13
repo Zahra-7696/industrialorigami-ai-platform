@@ -18,6 +18,7 @@ export const projectSlugs = [
   "industrial-agentic-ai-platform",
   "predictive-maintenance",
   "engineering-cad",
+  "agriculture-industry-research-projects",
 ] as const;
 
 export type ProjectSlug = (typeof projectSlugs)[number];

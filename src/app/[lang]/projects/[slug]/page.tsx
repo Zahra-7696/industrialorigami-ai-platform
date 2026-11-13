@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 
+import { AgricultureProjectsPage } from "@/components/pages/AgricultureProjectsPage";
 import { ProjectDetailPage } from "@/components/pages/ProjectDetailPage";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
@@ -31,6 +32,15 @@ export default async function Page({ params }: PageProps) {
 
   if (!project) {
     notFound();
+  }
+
+  if (slug === "agriculture-industry-research-projects") {
+    return (
+      <AgricultureProjectsPage
+        dictionary={dictionary}
+        project={project}
+      />
+    );
   }
 
   return (

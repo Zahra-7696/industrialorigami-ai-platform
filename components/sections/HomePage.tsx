@@ -17,6 +17,8 @@ const serviceImages: Record<string, string> = {
   "software-development": "/home/service-software.png",
   "agentic-generative-ai-systems": "/services/agentic-generative-ai.png",
   "research-prototyping-technology-consulting": "/home/service-research.png",
+  "agricultural-research-and-partnerships":
+    "https://images.unsplash.com/photo-1692369584496-3216a88f94c1?auto=format&fit=crop&fm=jpg&q=82&w=1600",
 };
 
 const projectImages: Record<string, string> = {
@@ -24,6 +26,8 @@ const projectImages: Record<string, string> = {
   "industrial-agentic-ai-platform": "/projects/industrial-agentic-ai-platform.png",
   "predictive-maintenance": "/projects/predictive-maintenance.png",
   "engineering-cad": "/projects/engineering-cad.png",
+  "agriculture-industry-research-projects":
+    "https://images.unsplash.com/photo-1781816927227-34b5fbef5c6c?auto=format&fit=crop&fm=jpg&q=82&w=1600",
 };
 
 export function HomePage({ locale, dictionary }: HomePageProps) {
@@ -146,7 +150,7 @@ export function HomePage({ locale, dictionary }: HomePageProps) {
             centered
           />
 
-          <div className="mt-11 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-11 grid gap-6 sm:grid-cols-2 xl:grid-cols-5">
             {dictionary.projects.items.map((project) => (
               <Link
                 key={project.slug}

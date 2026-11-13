@@ -23,11 +23,18 @@ function flatten(value, path = "", out = new Map()) {
   return out;
 }
 
-// Identity strings, slugs and very short labels are legitimately the same in every language.
 function needsTranslation(key, value) {
   if (typeof value !== "string") return false;
   if (/(^|\.)slug$/.test(key)) return false;
   return value.trim().split(/\s+/).length >= 3;
+}
+
+const mojibakeMarkers = [
+  "Ã", "Â", "Ø", "Ù", "Û", "å", "æ", "ç", "ä", "é", "è", "ð", "â", "ï¿½",
+];
+
+function hasMojibake(value) {
+  return mojibakeMarkers.some((marker) => value.includes(marker));
 }
 
 const en = flatten(load("en"));
@@ -43,8 +50,17 @@ for (const locale of locales) {
       problems.push(`array length ${other.get(key)} (en has ${value}): ${key}`);
     }
   }
+
   for (const key of other.keys()) {
     if (!en.has(key)) problems.push(`extra: ${key}`);
+  }
+
+  const mojibake = [...other]
+    .filter(([, value]) => typeof value === "string" && hasMojibake(value))
+    .map(([key]) => key);
+
+  for (const key of mojibake) {
+    problems.push(`mojibake: ${key}`);
   }
 
   const untranslated = [...en]
@@ -57,10 +73,18 @@ for (const locale of locales) {
     bySection[section] = (bySection[section] ?? 0) + 1;
   }
 
-  console.log(`\n${locale}: ${problems.length} structure problem(s), ${untranslated.length} string(s) identical to English`);
-  if (untranslated.length) console.log(`  by section: ${JSON.stringify(bySection)}`);
+  console.log(
+    `\n${locale}: ${problems.length} structure/encoding problem(s), ${untranslated.length} string(s) identical to English`,
+  );
+
+  if (untranslated.length) {
+    console.log(`  by section: ${JSON.stringify(bySection)}`);
+  }
+
   for (const problem of problems) console.log(`  ERROR ${problem}`);
-  if (verbose) for (const key of untranslated) console.log(`  untranslated: ${key}`);
+  if (verbose) {
+    for (const key of untranslated) console.log(`  untranslated: ${key}`);
+  }
 
   errors += problems.length;
   if (strict) errors += untranslated.length;
@@ -70,4 +94,5 @@ if (errors) {
   console.error(`\nDictionary check failed with ${errors} problem(s).`);
   process.exit(1);
 }
-console.log("\nDictionary structure check passed.");
+
+console.log("\nDictionary structure and encoding check passed.");

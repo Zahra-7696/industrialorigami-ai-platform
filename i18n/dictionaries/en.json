@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "IndustrialOrigami.AI | AI, Robotics and Intelligent Engineering",
-    "description": "IndustrialOrigami.AI develops practical AI, robotics, software, data, CAD and intelligent engineering capability in New Zealand."
+    "description": "IndustrialOrigami.AI develops practical AI, robotics, software, data, mechanical and CAD engineering, agricultural research and environmental analytics capability in New Zealand."
   },
   "brand": {
     "name": "IndustrialOrigami.AI",
@@ -19,16 +19,16 @@
   "home": {
     "eyebrow": "AI · Robotics · Intelligent Engineering",
     "title": "Shape intelligence. Build practical technology.",
-    "description": "IndustrialOrigami.AI combines artificial intelligence, software, data and engineering to solve real-world industrial problems.",
+    "description": "IndustrialOrigami.AI combines artificial intelligence, robotics, software, data, mechanical and CAD engineering, and agricultural and environmental research to solve real-world industrial, engineering and research problems.",
     "servicesCta": "Explore services",
     "projectCta": "View robotic hand",
     "servicesEyebrow": "Services",
     "servicesTitle": "Six focused capabilities, one integrated team.",
-    "servicesDescription": "Explore core areas spanning engineering, software, data and modern AI systems.",
+    "servicesDescription": "Explore capabilities spanning AI, robotics, software, data, mechanical and CAD engineering, agriculture and environmental research.",
     "viewAllServices": "View all services",
     "projectsEyebrow": "Projects",
     "projectsTitle": "A portfolio designed to demonstrate real engineering capability.",
-    "projectsDescription": "Our work spans robotic systems, agentic AI, predictive analytics and mechanical CAD.",
+    "projectsDescription": "Our work spans robotic systems, agentic AI, predictive analytics, mechanical CAD, agriculture, water and environmental research.",
     "viewProject": "View project",
     "collaborateEyebrow": "Collaborate",
     "collaborateTitle": "Bring us a problem worth solving.",
@@ -537,8 +537,162 @@
             "description": "Fabricate or print selected parts, test the mechanism, capture issues and feed measured results back into the CAD model."
           }
         ]
+      },
+      {
+        "slug": "agriculture-industry-research-projects",
+        "title": "Agriculture Industry & Research Projects",
+        "menuDescription": "Applied AI, analytics and decision-support work for agriculture, water, biofuel and environmental resource management.",
+        "category": "Agriculture & Environmental Research",
+        "status": "Selected prior applied project experience",
+        "statusDescription": "These case studies describe prior technical project experience contributed by the team. They are presented as evidence of capability and do not imply current IndustrialOrigami.AI client engagements.",
+        "summary": "Three applied projects covering irrigation-water quality forecasting, algae biofuel-yield prediction and optimisation, and water-resource, groundwater and operational analytics.",
+        "overview": [
+          "This portfolio brings together earlier applied work using machine learning, optimisation, data engineering and business intelligence in agriculture and environmental settings.",
+          "The projects are separated from current IndustrialOrigami.AI research so visitors can distinguish completed prior experience from current company programmes."
+        ],
+        "technology": [
+          "Python, Pandas and NumPy",
+          "Scikit-learn and SVM",
+          "TensorFlow/Keras",
+          "Genetic algorithms and MATLAB",
+          "SQL and data pipelines",
+          "Power BI and Microsoft Excel"
+        ],
+        "value": [
+          "Water-quality risk forecasting",
+          "Biofuel-yield prediction and optimisation",
+          "Groundwater and licence monitoring",
+          "Operational and budget reporting",
+          "Reusable agriculture and environmental analytics experience"
+        ],
+        "roadmap": [
+          {
+            "phase": "Case study 1",
+            "title": "Irrigation water quality",
+            "description": "Forecast acidification risk from historical experimental and survey observations."
+          },
+          {
+            "phase": "Case study 2",
+            "title": "Algae biofuel yield",
+            "description": "Predict continuous yield and search operating conditions with neural networks and a genetic algorithm."
+          },
+          {
+            "phase": "Case study 3",
+            "title": "Water-resource analytics",
+            "description": "Analyse well licences, permitted use, operational records and budget performance."
+          }
+        ]
       }
-    ]
+    ],
+    "agricultureProjects": {
+      "eyebrow": "Agriculture & Environmental Research",
+      "title": "Agriculture Industry & Research Projects",
+      "intro": "Selected prior applied projects in agriculture, water and environmental analytics, covering prediction, optimisation and operational decision support.",
+      "evidenceNoteTitle": "Evidence and attribution note",
+      "evidenceNote": "These are prior technical projects contributed by the team, not current IndustrialOrigami.AI client engagements. Public metrics are stated conservatively from the available project summaries. Where an older narrative conflicts with a clearly defined metric summary, the lower and better-defined figure is used.",
+      "caseStudyLabel": "Case study",
+      "challengeTitle": "Industry challenge",
+      "approachTitle": "Technical approach",
+      "evaluationTitle": "Evaluation",
+      "productionTitle": "Production perspective",
+      "technologyTitle": "Technology",
+      "caseStudies": [
+        {
+          "slug": "irrigation-water-quality-ph-forecasting",
+          "domain": "Agriculture · Water quality",
+          "image": "https://images.unsplash.com/photo-1781816927227-34b5fbef5c6c?auto=format&fit=crop&fm=jpg&q=82&w=1600",
+          "imageAlt": "Agricultural fields and irrigation infrastructure viewed from above",
+          "title": "Irrigation Water Quality & pH Forecasting",
+          "subtitle": "SVM classification for acidification risk after fertiliser application",
+          "summary": "Built a supervised machine-learning workflow from historical agricultural and environmental observations to estimate whether new irrigation-water samples were likely to become acidic.",
+          "challenge": "An agriculture company observed that irrigation water could become more acidic after particular chemical fertilisers were applied, affecting how much land could be cultivated. Historical experimental and survey data were available and the task was to predict acidification risk for new samples.",
+          "approach": [
+            "Cleaned historical data with Python, Pandas and SQL; checked missing values, inconsistent records, distributions, outliers and feature-target relationships.",
+            "Used mean or median imputation according to distribution, reviewed outliers with IQR or z-score methods without automatically deleting plausible environmental extremes, and applied feature selection including Chi-square where appropriate.",
+            "Normalised inputs, compared SVM with Random Forest and other candidate models, and used K-fold cross-validation to test stability beyond a single train/test split."
+          ],
+          "evaluation": [
+            "Approximately 89% accuracy in the conservative project summary.",
+            "Precision 0.88, Recall 0.87, F1-Score 0.88 and ROC-AUC 0.91.",
+            "Confusion-matrix analysis, train/test evaluation, cross-validation and stability checks were used to reduce overfitting risk."
+          ],
+          "production": "If productionised today, preprocessing and the model would be packaged together behind FastAPI or Flask, versioned with MLflow, containerised with Docker, tested through CI/CD and monitored for data and model drift.",
+          "technologies": [
+            "Python",
+            "Scikit-learn",
+            "Pandas",
+            "NumPy",
+            "SQL",
+            "SVM",
+            "Random Forest",
+            "K-fold CV"
+          ]
+        },
+        {
+          "slug": "algae-biofuel-yield-optimisation",
+          "domain": "Agriculture · Biofuel",
+          "image": "https://images.unsplash.com/photo-1793261958982-98a7ac71e7ac?auto=format&fit=crop&fm=jpg&q=82&w=1600",
+          "imageAlt": "Green algae visible in water",
+          "title": "Algae Biofuel Yield Prediction & Optimisation",
+          "subtitle": "Neural-network prediction with genetic-algorithm optimisation",
+          "summary": "Developed a model to predict biofuel yield from algae experiments and then search for operating conditions that could improve expected yield.",
+          "challenge": "The agriculture company wanted to extract fuel from a specific alga and had laboratory data describing materials and experimental conditions. The goal was both to predict continuous fuel yield and to identify promising operating conditions.",
+          "approach": [
+            "Cleaned the laboratory dataset and applied min-max scaling before neural-network training.",
+            "Used a neural network because the relationship between experimental variables and yield was strongly nonlinear.",
+            "Used a Genetic Algorithm with selection, crossover and mutation to search input combinations, separating prediction from optimisation: the neural network estimated expected yield while the GA searched for better conditions.",
+            "Compared the approach with a fuzzy-logic alternative."
+          ],
+          "evaluation": [
+            "Evaluated as a regression problem using MSE, RMSE and train-validation loss trends.",
+            "The neural-network approach produced lower RMSE than the fuzzy-logic comparison recorded for the project.",
+            "The public page avoids a classification-style accuracy claim for continuous yield because MSE/RMSE are the more meaningful metrics."
+          ],
+          "production": "A modern production version would preserve the preprocessing pipeline, track experiments and versions, expose the predictor as a service, and place optimisation runs behind controlled parameter bounds and reproducible experiment records.",
+          "technologies": [
+            "Python",
+            "TensorFlow/Keras",
+            "Pandas",
+            "NumPy",
+            "MATLAB",
+            "Genetic Algorithm",
+            "SQL",
+            "Jupyter"
+          ]
+        },
+        {
+          "slug": "water-resource-groundwater-operational-analytics",
+          "domain": "Environment · Resource management",
+          "image": "https://images.unsplash.com/vector-1780991636139-063be953af51?auto=format&fit=crop&fm=jpg&q=82&w=1600",
+          "imageAlt": "Illustration of a water well, underground aquifer and water infrastructure",
+          "title": "Water Resource, Groundwater & Operational Analytics",
+          "subtitle": "Well-licence, water-use, operational and budget decision support",
+          "summary": "Built analytics and visualisation workflows for farmland and groundwater management, operational reporting and budget analysis.",
+          "challenge": "Management needed a clearer view of well licences, expiry dates, well depth, permitted water use, fines, operational records and budget performance across data held in databases, Excel workbooks and CSV files.",
+          "approach": [
+            "Combined database, Excel and CSV sources; cleaned missing values, duplicates and inconsistent formats; standardised fields and calculated licence status and remaining validity.",
+            "Aggregated operational data into daily and weekly summaries and validated it with range checks, duplicate checks and consistency rules.",
+            "Built Excel and Power BI reporting to highlight licences nearing expiry, water-use limits, operational issues and budget-versus-actual spending."
+          ],
+          "evaluation": [
+            "Data-quality checks focused on missingness, duplicates, ranges and consistent field formats.",
+            "Daily and weekly aggregation was reconciled against source data before reporting.",
+            "Dashboards were structured around management decisions rather than isolated visualisations."
+          ],
+          "production": "The workflow can be extended into scheduled ETL/ELT jobs, governed reporting datasets, automated licence-expiry alerts and monitored dashboards while preserving traceability back to source records.",
+          "technologies": [
+            "Python",
+            "SQL",
+            "Power BI",
+            "Microsoft Excel",
+            "Pandas",
+            "NumPy",
+            "CSV",
+            "Data validation"
+          ]
+        }
+      ]
+    }
   },
   "research": {
     "eyebrow": "Research",
