@@ -12,6 +12,7 @@
     "about": "About",
     "services": "Services",
     "projects": "Projects",
+    "research": "Research",
     "careers": "Careers",
     "collaborate": "Collaborate"
   },
@@ -22,7 +23,7 @@
     "servicesCta": "Explore services",
     "projectCta": "View robotic hand",
     "servicesEyebrow": "Services",
-    "servicesTitle": "Five focused capabilities, one integrated team.",
+    "servicesTitle": "Six focused capabilities, one integrated team.",
     "servicesDescription": "Explore core areas spanning engineering, software, data and modern AI systems.",
     "viewAllServices": "View all services",
     "projectsEyebrow": "Projects",
@@ -60,8 +61,21 @@
       {
         "label": "Approach",
         "value": "Evidence-led technical development with measurable validation"
+      },
+      {
+        "label": "Legal entity",
+        "value": "Industrial Origami Limited, New Zealand company number 9124172"
+      },
+      {
+        "label": "Registered activity",
+        "value": "Agricultural research activities (ANZSIC M691005), as recorded by the New Zealand Companies Office"
+      },
+      {
+        "label": "Employer accreditation",
+        "value": "Planned. Not yet granted."
       }
     ],
+    "registrationLinkLabel": "View the Companies Office record",
     "teamEyebrow": "Team",
     "teamTitle": "Multidisciplinary capability.",
     "teamDescription": "The team combines strategy, AI, software, data science, mechanical design, CAD, fabrication and project engineering.",
@@ -253,6 +267,36 @@
           "Innovation programmes",
           "Organisations exploring new technology"
         ]
+      },
+      {
+        "slug": "agricultural-research-and-partnerships",
+        "title": "Agricultural Research and Partnerships",
+        "menuDescription": "Scoping agricultural research questions with partners, using sensing, data and robotics.",
+        "summary": "Early-stage work to define bounded agricultural research questions and the data, sensing and prototype methods needed to test them, together with research and industry partners.",
+        "overview": [
+          "Industrial Origami Limited is registered in New Zealand for agricultural research activities. We are building this area carefully, starting with well-defined questions rather than broad claims.",
+          "Engagements begin by defining the process, the measurements, the data and the partners needed, so that each research question can be tested in stages."
+        ],
+        "capabilities": [
+          "Research question scoping",
+          "Data and measurement design",
+          "Sensing and prototype feasibility",
+          "Machine-learning modelling",
+          "Partnership development"
+        ],
+        "deliverables": [
+          "Research brief",
+          "Measurement and data plan",
+          "Prototype or modelling plan",
+          "Staged evidence plan",
+          "Partner and funding pathway outline"
+        ],
+        "fit": [
+          "Agricultural researchers",
+          "Growers and industry groups",
+          "Universities and research institutes",
+          "Technology and funding partners"
+        ]
       }
     ]
   },
@@ -267,6 +311,48 @@
     "valueTitle": "Potential value",
     "roadmapEyebrow": "Roadmap",
     "roadmapTitle": "A staged route to evidence.",
+    "roboticHandResearch": {
+      "researchEyebrow": "Research approach",
+      "researchTitle": "The research gap and how we address it",
+      "gapParagraphs": [
+        "Most robotic grippers are designed for a known object and task. Hands that adapt to varied objects are mechanically complex, need many sensors and are difficult to control reliably.",
+        "Our question is how much adaptability can be achieved with a small, modular hand before cost, complexity and control effort outweigh the benefit."
+      ],
+      "methodsTitle": "Methods",
+      "methods": [
+        "Human hand motion capture to understand joint relationships and grasp types",
+        "Simulation and CAD of a two-finger and thumb demonstrator before building",
+        "Force, position and tactile sensing on each joint",
+        "Layered control: vision and grasp policy on an edge computer, deterministic motor loops on a real-time controller",
+        "Staged tests at joint, finger and hand level against a defined object set"
+      ],
+      "baselineTitle": "Design targets (not results)",
+      "baselineNote": "These are planning targets for the first demonstrator. None has been validated yet.",
+      "baseline": [
+        "Demonstrator scope: two fingers and a thumb",
+        "Motor control loops at about 1 kHz",
+        "Tactile sensing at about 500 Hz",
+        "Vision and grasp policy at about 30 Hz on an NVIDIA Jetson edge computer",
+        "CAN FD communication between controllers",
+        "Operation in a guarded laboratory test cell"
+      ],
+      "notYetTitle": "Not yet demonstrated",
+      "notYet": [
+        "Fingertip force and payload targets",
+        "Grasp success across a defined object set",
+        "Long-duration reliability and repeatability",
+        "Safe operation beside people"
+      ],
+      "outputsTitle": "Outputs we intend to share",
+      "outputs": [
+        "Test protocols and object sets",
+        "Measured results, including failures",
+        "Design notes for each validated sub-system"
+      ],
+      "outputsNote": "Subject to partner and intellectual-property agreements.",
+      "safetyTitle": "Safety",
+      "safety": "All testing will take place in a guarded laboratory cell. Use alongside people has not been established and would need a separate safety assessment."
+    },
     "items": [
       {
         "slug": "robotic-hand",
@@ -453,6 +539,80 @@
         ]
       }
     ]
+  },
+  "research": {
+    "eyebrow": "Research",
+    "title": "Research and partnerships",
+    "intro": "We are an early-stage New Zealand company carrying out applied research in robotics, AI and data, and developing agricultural research directions with partners. This page sets out what is under way, what is still a concept, and how to work with us.",
+    "statusEyebrow": "Status",
+    "statusTitle": "What is under way and what is not",
+    "statusItems": [
+      {
+        "label": "Active research",
+        "value": "Intelligent robotic hand: research and staged prototype development."
+      },
+      {
+        "label": "Agricultural research",
+        "value": "Directions are being scoped. No agricultural research project is active yet."
+      },
+      {
+        "label": "Registered activity",
+        "value": "Agricultural research activities (ANZSIC M691005), as recorded by the New Zealand Companies Office."
+      },
+      {
+        "label": "Employer accreditation",
+        "value": "Planned. Not yet granted."
+      }
+    ],
+    "handEyebrow": "Active research",
+    "handTitle": "Intelligent robotic hand",
+    "handDescription": "Our most developed research programme investigates whether a sensor-rich, vision-guided hand can adapt its grasp across different objects. Performance figures on the project page are design targets, not validated results.",
+    "handCta": "View the robotic hand research",
+    "conceptsEyebrow": "Concepts",
+    "conceptsTitle": "Agricultural research concepts",
+    "conceptsDescription": "These are ideas we are exploring, not active projects. For each, the process, data, measures and partners still have to be defined before any research starts.",
+    "concepts": [
+      {
+        "title": "Machine learning for algae-to-fuel processes",
+        "description": "Whether modelling can help understand and improve process performance. The process, data and measures are not yet defined."
+      },
+      {
+        "title": "Fertiliser quantity prediction",
+        "description": "Whether data can support better estimates of fertiliser quantity. The outcome, units and data sources are not yet defined."
+      },
+      {
+        "title": "Agricultural robotics",
+        "description": "Whether sensing and handling methods from our robotic-hand work can be applied to a defined agricultural task. The task is not yet chosen."
+      }
+    ],
+    "methodEyebrow": "Method",
+    "methodTitle": "How we run research",
+    "methodSteps": [
+      {
+        "title": "Define",
+        "description": "A single bounded question, with the gap in current knowledge stated."
+      },
+      {
+        "title": "Baseline",
+        "description": "Record what is already known and what current methods achieve."
+      },
+      {
+        "title": "Measure",
+        "description": "Agree measures and data before experiments begin."
+      },
+      {
+        "title": "Test in stages",
+        "description": "Validate small sub-systems first and report what was and was not demonstrated."
+      },
+      {
+        "title": "Share",
+        "description": "Publish approved, non-confidential results."
+      }
+    ],
+    "partnersEyebrow": "Partnerships",
+    "partnersTitle": "Work with us",
+    "partnersDescription": "We welcome conversations with agricultural researchers, universities, growers, industry groups and funders. Completing a staged research programme needs external support, so funding and investment discussions are welcome too. We name partners only with their agreement, and no partnership is announced on this page.",
+    "partnersCta": "Start a conversation"
   },
   "careers": {
     "eyebrow": "Careers",

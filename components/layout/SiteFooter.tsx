@@ -27,6 +27,10 @@ export function SiteFooter({
       label: dictionary.navigation.projects,
     },
     {
+      href: `/${locale}/research`,
+      label: dictionary.navigation.research,
+    },
+    {
       href: `/${locale}/careers`,
       label: dictionary.navigation.careers,
     },
