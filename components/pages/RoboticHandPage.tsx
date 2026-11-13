@@ -57,6 +57,7 @@ export function RoboticHandPage({
   const content = roboticHandContent[locale] ?? roboticHandContent.en!;
   const projectLabels = dictionary.projects;
   const rml = rmlCopy[locale];
+  const research = projectLabels.roboticHandResearch;
 
   return (
     <main>
@@ -93,6 +94,78 @@ export function RoboticHandPage({
       </section>
 
       <section className="section-space section-soft border-y border-slate-200">
+        <div className="site-container">
+          <SectionHeading
+            eyebrow={research.researchEyebrow}
+            title={research.researchTitle}
+          />
+
+          <div className="mt-6 max-w-3xl space-y-5 leading-8 text-slate-600">
+            {research.gapParagraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            <div className="light-card rounded-[2rem] p-7">
+              <h3 className="text-xl font-black text-brand-900">
+                {research.methodsTitle}
+              </h3>
+              <ul className="mt-4 list-disc space-y-2 pl-5 leading-7 text-slate-600">
+                {research.methods.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="light-card rounded-[2rem] p-7">
+              <h3 className="text-xl font-black text-brand-900">
+                {research.baselineTitle}
+              </h3>
+              <p className="mt-3 text-sm font-bold text-brand-orange">
+                {research.baselineNote}
+              </p>
+              <ul className="mt-4 list-disc space-y-2 pl-5 leading-7 text-slate-600">
+                {research.baseline.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="warm-panel rounded-[2rem] p-7">
+              <h3 className="text-xl font-black text-brand-900">
+                {research.notYetTitle}
+              </h3>
+              <ul className="mt-4 list-disc space-y-2 pl-5 leading-7 text-slate-600">
+                {research.notYet.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="light-card rounded-[2rem] p-7">
+              <h3 className="text-xl font-black text-brand-900">
+                {research.outputsTitle}
+              </h3>
+              <ul className="mt-4 list-disc space-y-2 pl-5 leading-7 text-slate-600">
+                {research.outputs.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <p className="mt-3 text-sm text-slate-500">
+                {research.outputsNote}
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-8 max-w-3xl leading-7 text-slate-600">
+            <strong className="text-brand-900">{research.safetyTitle}: </strong>
+            {research.safety}
+          </p>
+        </div>
+      </section>
+
+      <section className="section-space section-white">
         <div className="site-container">
           <SectionHeading
             eyebrow={content.galleryEyebrow}

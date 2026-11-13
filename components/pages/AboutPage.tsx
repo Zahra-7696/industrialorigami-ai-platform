@@ -53,6 +53,15 @@ export function AboutPage({ dictionary }: AboutPageProps) {
                 </div>
               ))}
             </dl>
+
+            <a
+              href="https://app.companiesoffice.govt.nz/co/9124172"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-6 inline-block text-sm font-bold text-brand-700 underline hover:text-brand-orange"
+            >
+              {content.registrationLinkLabel} ↗
+            </a>
           </aside>
         </div>
       </section>

@@ -88,7 +88,7 @@ export function HomePage({ locale, dictionary }: HomePageProps) {
             centered
           />
 
-          <div className="mt-11 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
+          <div className="mt-11 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {dictionary.services.items.map((service, index) => (
               <Link
                 key={service.slug}

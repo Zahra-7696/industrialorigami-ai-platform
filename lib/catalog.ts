@@ -4,6 +4,7 @@ export const serviceSlugs = [
   "software-development",
   "agentic-generative-ai-systems",
   "research-prototyping-technology-consulting",
+  "agricultural-research-and-partnerships",
 ] as const;
 
 export type ServiceSlug = (typeof serviceSlugs)[number];

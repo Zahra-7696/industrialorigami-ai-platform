@@ -12,6 +12,7 @@
     "about": "关于我们",
     "services": "服务",
     "projects": "项目",
+    "research": "研究",
     "careers": "职业机会",
     "collaborate": "合作"
   },
@@ -22,7 +23,7 @@
     "servicesCta": "探索服务",
     "projectCta": "查看机器人手",
     "servicesEyebrow": "服务",
-    "servicesTitle": "五项专注能力，一个综合团队。",
+    "servicesTitle": "六项专注能力，一个综合团队。",
     "servicesDescription": "探索工程、软件、数据与现代人工智能系统能力。",
     "viewAllServices": "查看全部服务",
     "projectsEyebrow": "项目",
@@ -60,8 +61,21 @@
       {
         "label": "Approach",
         "value": "Evidence-led technical development with measurable validation"
+      },
+      {
+        "label": "法律实体",
+        "value": "Industrial Origami Limited，新西兰公司编号 9124172"
+      },
+      {
+        "label": "登记活动",
+        "value": "农业研究活动（ANZSIC M691005），以新西兰公司注册处记录为准"
+      },
+      {
+        "label": "雇主认证",
+        "value": "计划中，尚未获得。"
       }
     ],
+    "registrationLinkLabel": "查看公司注册处记录",
     "teamEyebrow": "团队",
     "teamTitle": "跨学科能力。",
     "teamDescription": "团队结合战略、人工智能、软件、数据科学、机械设计、CAD 与项目工程。",
@@ -253,6 +267,36 @@
           "Innovation programmes",
           "Organisations exploring new technology"
         ]
+      },
+      {
+        "slug": "agricultural-research-and-partnerships",
+        "title": "农业研究与合作",
+        "menuDescription": "与合作伙伴一起界定农业研究问题，运用传感、数据和机器人技术。",
+        "summary": "与研究和产业合作伙伴一起，界定范围明确的农业研究问题，以及检验这些问题所需的数据、传感和原型方法，属于早期阶段工作。",
+        "overview": [
+          "Industrial Origami Limited 在新西兰登记的活动范围包括农业研究。我们谨慎地发展这一领域，从界定清晰的问题入手，而不是作宽泛的声明。",
+          "合作从界定流程、测量、数据和所需合作伙伴开始，使每个研究问题都能分阶段检验。"
+        ],
+        "capabilities": [
+          "研究问题界定",
+          "数据与测量设计",
+          "传感与原型可行性",
+          "机器学习建模",
+          "合作关系发展"
+        ],
+        "deliverables": [
+          "研究简报",
+          "测量与数据计划",
+          "原型或建模计划",
+          "分阶段证据计划",
+          "合作伙伴与资金路径概要"
+        ],
+        "fit": [
+          "农业研究人员",
+          "种植者与行业团体",
+          "大学与研究机构",
+          "技术与资金合作伙伴"
+        ]
       }
     ]
   },
@@ -267,6 +311,48 @@
     "valueTitle": "潜在价值",
     "roadmapEyebrow": "路线图",
     "roadmapTitle": "分阶段验证路径。",
+    "roboticHandResearch": {
+      "researchEyebrow": "研究方法",
+      "researchTitle": "研究空白及我们的应对方式",
+      "gapParagraphs": [
+        "大多数机器人夹爪是为已知的物体和任务设计的。能适应多种物体的手在机械上较为复杂，需要大量传感器，并且难以可靠地控制。",
+        "我们的问题是：在成本、复杂度和控制难度超过收益之前，一只小型模块化的手能实现多大程度的适应性。"
+      ],
+      "methodsTitle": "方法",
+      "methods": [
+        "通过人手动作捕捉了解关节关系和抓取类型",
+        "在制作之前，对两指加拇指的演示机构进行仿真和 CAD 设计",
+        "每个关节的力、位置和触觉传感",
+        "分层控制：视觉和抓取策略运行在边缘计算机上，确定性电机回路运行在实时控制器上",
+        "针对既定物体集，在关节、手指和整手层面分阶段测试"
+      ],
+      "baselineTitle": "设计目标（不是结果）",
+      "baselineNote": "这些是第一台演示样机的规划目标，目前都尚未验证。",
+      "baseline": [
+        "演示样机范围：两根手指和一个拇指",
+        "电机控制回路约 1 kHz",
+        "触觉传感约 500 Hz",
+        "视觉与抓取策略在 NVIDIA Jetson 边缘计算机上约 30 Hz",
+        "控制器之间采用 CAN FD 通信",
+        "在有防护的实验室测试单元中运行"
+      ],
+      "notYetTitle": "尚未证明",
+      "notYet": [
+        "指尖力和负载目标",
+        "在既定物体集上的抓取成功率",
+        "长时间运行的可靠性和重复性",
+        "在人员旁边安全运行"
+      ],
+      "outputsTitle": "我们打算分享的成果",
+      "outputs": [
+        "测试规程和物体集",
+        "实测结果，包括失败案例",
+        "每个已验证子系统的设计说明"
+      ],
+      "outputsNote": "须经合作伙伴和知识产权协议许可。",
+      "safetyTitle": "安全",
+      "safety": "所有测试都在有防护的实验室单元内进行。尚未确立与人员共处时的使用安全性，需要另行进行安全评估。"
+    },
     "items": [
       {
         "slug": "robotic-hand",
@@ -453,6 +539,80 @@
         ]
       }
     ]
+  },
+  "research": {
+    "eyebrow": "研究",
+    "title": "研究与合作",
+    "intro": "我们是一家处于早期阶段的新西兰公司，开展机器人、人工智能和数据方面的应用研究，并与合作伙伴一起发展农业研究方向。本页说明哪些工作正在进行，哪些仍只是构想，以及如何与我们合作。",
+    "statusEyebrow": "状态",
+    "statusTitle": "哪些在进行，哪些尚未开始",
+    "statusItems": [
+      {
+        "label": "进行中的研究",
+        "value": "智能机器人手：研究与分阶段原型开发。"
+      },
+      {
+        "label": "农业研究",
+        "value": "方向正在界定中。目前没有正在进行的农业研究项目。"
+      },
+      {
+        "label": "登记活动",
+        "value": "农业研究活动（ANZSIC M691005），以新西兰公司注册处记录为准。"
+      },
+      {
+        "label": "雇主认证",
+        "value": "计划中，尚未获得。"
+      }
+    ],
+    "handEyebrow": "进行中的研究",
+    "handTitle": "智能机器人手",
+    "handDescription": "我们最成熟的研究项目探讨：一只传感丰富、由视觉引导的手，能否针对不同物体调整抓取方式。项目页面上的性能数字是设计目标，不是已验证的结果。",
+    "handCta": "查看机器人手研究",
+    "conceptsEyebrow": "构想",
+    "conceptsTitle": "农业研究构想",
+    "conceptsDescription": "这些是我们正在探索的想法，不是进行中的项目。每一项在开始研究之前，都必须先界定流程、数据、衡量指标和合作伙伴。",
+    "concepts": [
+      {
+        "title": "用于藻类制燃料过程的机器学习",
+        "description": "建模能否帮助理解并改进过程性能。过程、数据和衡量指标尚未界定。"
+      },
+      {
+        "title": "肥料用量预测",
+        "description": "数据能否支持对肥料用量作出更好的估算。结果、单位和数据来源尚未界定。"
+      },
+      {
+        "title": "农业机器人",
+        "description": "我们机器人手工作中的传感和操作方法，能否应用于某项明确的农业任务。该任务尚未选定。"
+      }
+    ],
+    "methodEyebrow": "方法",
+    "methodTitle": "我们如何开展研究",
+    "methodSteps": [
+      {
+        "title": "界定",
+        "description": "提出一个范围明确的问题，并说明现有知识的空白。"
+      },
+      {
+        "title": "基线",
+        "description": "记录已知内容以及现有方法能够达到的水平。"
+      },
+      {
+        "title": "测量",
+        "description": "在实验开始前就衡量指标和数据达成一致。"
+      },
+      {
+        "title": "分阶段测试",
+        "description": "先验证小型子系统，并如实报告哪些已得到证明、哪些没有。"
+      },
+      {
+        "title": "分享",
+        "description": "发布经批准的非机密成果。"
+      }
+    ],
+    "partnersEyebrow": "合作",
+    "partnersTitle": "与我们合作",
+    "partnersDescription": "欢迎与农业研究人员、大学、种植者、行业团体和资助方交流。完成分阶段研究计划需要外部支持，因此也欢迎关于资金和投资的讨论。我们只在合作伙伴同意后才公布其名称，本页面没有公布任何合作关系。",
+    "partnersCta": "开始交流"
   },
   "careers": {
     "eyebrow": "职业机会",

@@ -117,6 +117,13 @@ export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
           />
 
           <Link
+            href={`/${locale}/research`}
+            className="text-sm font-bold text-slate-200 transition hover:text-brand-gold"
+          >
+            {dictionary.navigation.research}
+          </Link>
+
+          <Link
             href={`/${locale}/careers`}
             className="text-sm font-bold text-slate-200 transition hover:text-brand-gold"
           >
@@ -218,6 +225,14 @@ export function SiteHeader({ locale, dictionary }: SiteHeaderProps) {
                 )}
               </div>
             </details>
+
+            <Link
+              href={`/${locale}/research`}
+              onClick={() => setMobileOpen(false)}
+              className="rounded-xl px-4 py-3 font-bold text-slate-100 hover:bg-white/8"
+            >
+              {dictionary.navigation.research}
+            </Link>
 
             <Link
               href={`/${locale}/careers`}
