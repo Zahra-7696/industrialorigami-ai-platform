@@ -14,13 +14,6 @@ export const teamProfiles = [
     linkedin: "https://www.linkedin.com/in/zahra-s-torabi-6a3b90a1/",
   },
   {
-    id: "lilian",
-    image: "/team/lilian.jpg",
-    degree: "Master of Data Science",
-    email: "lillian00lee@gmail.com",
-    linkedin: " https://www.linkedin.com/in/lillian-lee-data-analyst",
-  },
-  {
     id: "gurwinder",
     image: "/team/gurwinder.jpg",
     degree: "Bachelor of Mechanical Engineering",
