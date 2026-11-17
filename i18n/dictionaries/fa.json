@@ -36,71 +36,82 @@
   },
   "about": {
     "eyebrow": "درباره IndustrialOrigami.AI",
-    "title": "یک شرکت نیوزیلندی برای فناوری عمیق کاربردی.",
-    "intro": "ما هوش مصنوعی، داده، نرم‌افزار و مهندسی را برای ساخت فناوری مسئولانه و دارای ارزش واقعی ترکیب می‌کنیم.",
-    "storyTitle": "از ایده پیچیده تا سامانه کاربردی.",
+    "title": "یک شرکت نیوزیلندی در حوزه فناوری‌های پیشرفته کاربردی",
+    "intro": "ما هوش مصنوعی، داده، نرم‌افزار و مهندسی را برای ساخت فناوری مسئولانه با ارزش واقعی و قابل اندازه‌گیری ترکیب می‌کنیم.",
+    "storyTitle": "تبدیل ایده‌های پیچیده به سامانه‌های کاربردی",
     "storyParagraphs": [
-      "IndustrialOrigami.AI was established to bridge advanced research and practical commercial technology.",
-      "The company is developing an intelligent robotic hand while building wider capability in agentic and generative AI, data science, software engineering, CAD and intelligent automation.",
-      "Our method is evidence-led: understand the problem, build a focused prototype, measure performance, learn from users and scale only when the technical and commercial case is credible."
+      "IndustrialOrigami.AI برای ایجاد پیوند میان پژوهش پیشرفته و فناوری تجاری کاربردی شکل گرفته است.",
+      "شرکت در حال توسعه یک دست رباتیک هوشمند است و هم‌زمان توانمندی خود را در هوش مصنوعی عامل‌محور و مولد، علم داده، مهندسی نرم‌افزار، CAD و اتوماسیون هوشمند گسترش می‌دهد.",
+      "روش ما مبتنی بر شواهد است: مسئله را می‌فهمیم، نمونه‌ای متمرکز می‌سازیم، عملکرد را اندازه‌گیری می‌کنیم، از کاربران می‌آموزیم و تنها زمانی مقیاس می‌دهیم که توجیه فنی و تجاری معتبر باشد."
     ],
-    "companyEyebrow": "معرفی شرکت",
+    "companyEyebrow": "مشخصات شرکت",
     "companyFacts": [
       {
-        "label": "Location",
-        "value": "Christchurch, New Zealand"
+        "label": "مکان",
+        "value": "کرایست‌چرچ، نیوزیلند"
       },
       {
-        "label": "Focus",
-        "value": "AI, robotics, data, software, CAD and intelligent engineering"
+        "label": "حوزه فعالیت",
+        "value": "هوش مصنوعی، رباتیک، داده، نرم‌افزار، CAD و مهندسی هوشمند"
       },
       {
-        "label": "Business model",
-        "value": "Professional services, collaborative R&D and proprietary product development"
+        "label": "مدل کسب‌وکار",
+        "value": "خدمات حرفه‌ای، تحقیق‌وتوسعه مشارکتی و توسعه محصولات اختصاصی"
       },
       {
-        "label": "Approach",
-        "value": "Evidence-led technical development with measurable validation"
+        "label": "رویکرد",
+        "value": "توسعه فنی مبتنی بر شواهد همراه با اعتبارسنجی قابل اندازه‌گیری"
       },
       {
-        "label": "نهاد قانونی",
-        "value": "Industrial Origami Limited، شرکت ثبت‌شده در نیوزیلند با شماره 9124172"
+        "label": "شخصیت حقوقی",
+        "value": "Industrial Origami Limited، شرکت نیوزیلندی با شماره 9124172"
       },
       {
         "label": "فعالیت ثبت‌شده",
-        "value": "فعالیت‌های پژوهش کشاورزی (ANZSIC M691005) طبق ثبت در اداره شرکت‌های نیوزیلند"
+        "value": "فعالیت‌های پژوهش کشاورزی (ANZSIC M691005)، مطابق ثبت اداره شرکت‌های نیوزیلند"
       },
       {
-        "label": "اعتباربخشی کارفرما",
-        "value": "در برنامه است. هنوز دریافت نشده است."
+        "label": "اعتبار کارفرمایی",
+        "value": "برنامه‌ریزی شده است؛ هنوز اعطا نشده است."
       }
     ],
-    "registrationLinkLabel": "مشاهده سابقه شرکت در اداره شرکت‌های نیوزیلند",
+    "registrationLinkLabel": "مشاهده سابقه در اداره شرکت‌های نیوزیلند",
     "teamEyebrow": "تیم",
-    "teamTitle": "توانمندی میان‌رشته‌ای.",
-    "teamDescription": "تیم ما راهبرد، هوش مصنوعی، نرم‌افزار، علم داده، طراحی مکانیکی، CAD و مهندسی پروژه را ترکیب می‌کند.",
+    "teamTitle": "توانمندی چندرشته‌ای",
+    "teamDescription": "تیم ما راهبرد، هوش مصنوعی، نرم‌افزار، علم داده، طراحی مکانیکی، CAD، ساخت و مهندسی پروژه را ترکیب می‌کند.",
     "team": [
       {
         "name": "David Ewing",
-        "role": "Founder and Managing Director",
-        "description": "Strategy, partnerships, funding, product direction and company development."
+        "role": "بنیان‌گذار و مدیرعامل",
+        "description": "راهبرد، مشارکت‌ها، تأمین مالی، جهت‌گیری محصول و توسعه شرکت.",
+        "degree": "کارشناسی ارشد علم داده"
       },
       {
         "name": "Zahra Torabi",
-        "role": "AI, Software Engineering and R&D Lead",
-        "description": "AI/ML research, reinforcement learning, agentic and generative AI, software engineering, evaluation and technical implementation."
+        "role": "مسئول هوش مصنوعی، مهندسی نرم‌افزار و تحقیق‌وتوسعه",
+        "description": "پژوهش AI/ML، یادگیری تقویتی، هوش مصنوعی عامل‌محور و مولد، مهندسی نرم‌افزار، ارزیابی و پیاده‌سازی فنی.",
+        "degree": "دکتری علوم کامپیوتر (هوش مصنوعی)"
       },
       {
         "name": "Lilian",
-        "role": "Data Science and Analytics Lead",
-        "description": "Data preparation, statistical modelling, predictive analytics, visualisation, experimentation and validation."
+        "role": "مسئول علم داده و تحلیل",
+        "description": "آماده‌سازی داده، مدل‌سازی آماری، تحلیل پیش‌بینانه، مصورسازی، آزمایش و اعتبارسنجی.",
+        "degree": "کارشناسی ارشد علم داده"
       },
       {
         "name": "Gurwinder",
-        "role": "Mechanical and Project Engineering Lead",
-        "description": "Mechanical engineering, CAD design, fabrication and project engineering for prototype development."
+        "role": "مسئول مهندسی مکانیک و پروژه",
+        "description": "مهندسی مکانیک، طراحی CAD، ساخت و مهندسی پروژه برای توسعه نمونه‌های اولیه.",
+        "degree": "کارشناسی مهندسی مکانیک"
       }
-    ]
+    ],
+    "contactLabels": {
+      "email": "ایمیل",
+      "emailUnavailable": "ایمیل در دسترس نیست",
+      "linkedin": "لینکدین",
+      "linkedinUnavailable": "لینکدین در دسترس نیست",
+      "profilePhotoAlt": "عکس پروفایل"
+    }
   },
   "services": {
     "eyebrow": "خدمات",
@@ -115,91 +126,91 @@
       {
         "slug": "robotics-and-automation",
         "title": "رباتیک و اتوماسیون",
-        "menuDescription": "دست‌کاری تطبیقی، حسگر، کنترل و نمونه‌های اتوماسیون.",
-        "summary": "Research and prototype development for robotic systems, intelligent end-effectors and industrial automation.",
+        "menuDescription": "دست‌کاری تطبیقی، حسگری، کنترل و نمونه‌های اولیه اتوماسیون.",
+        "summary": "پژوهش و توسعه نمونه اولیه برای سامانه‌های رباتیک، اندافکتورهای هوشمند و اتوماسیون صنعتی.",
         "overview": [
-          "We investigate whether robotic or automated systems are technically and commercially appropriate for defined workflows.",
-          "Engagements may include mechanical concepts, sensing, control architecture, computer vision, prototype integration and staged validation."
+          "بررسی می‌کنیم که آیا سامانه‌های رباتیک یا خودکار برای یک گردش‌کار مشخص از نظر فنی و تجاری مناسب هستند یا نه.",
+          "همکاری می‌تواند شامل مفاهیم مکانیکی، حسگری، معماری کنترل، بینایی ماشین، یکپارچه‌سازی نمونه اولیه و اعتبارسنجی مرحله‌ای باشد."
         ],
         "capabilities": [
-          "Robotic end-effectors",
-          "Sensor integration",
-          "Real-time control architecture",
-          "Computer vision",
-          "Automation feasibility"
+          "اندافکتورهای رباتیک",
+          "یکپارچه‌سازی حسگر",
+          "معماری کنترل بلادرنگ",
+          "بینایی ماشین",
+          "امکان‌سنجی اتوماسیون"
         ],
         "deliverables": [
-          "Technical requirements",
-          "Prototype architecture",
-          "Control and sensing plan",
-          "Test framework",
-          "Pilot recommendation"
+          "نیازمندی‌های فنی",
+          "معماری نمونه اولیه",
+          "برنامه کنترل و حسگری",
+          "چارچوب آزمون",
+          "پیشنهاد پایلوت"
         ],
         "fit": [
-          "Manufacturing and engineering businesses",
-          "Research laboratories",
-          "Automation integrators",
-          "Education and training providers"
+          "کسب‌وکارهای تولیدی و مهندسی",
+          "آزمایشگاه‌های پژوهشی",
+          "یکپارچه‌سازان اتوماسیون",
+          "ارائه‌دهندگان آموزش و مهارت‌آموزی"
         ]
       },
       {
         "slug": "data-science-and-analytics",
         "title": "علم داده و تحلیل",
         "menuDescription": "مدل‌سازی پیش‌بینانه، تحلیل، داشبورد و پشتیبانی تصمیم.",
-        "summary": "Data products that help organisations understand operations, identify patterns and support decisions.",
+        "summary": "محصولات داده‌ای برای درک بهتر عملیات، شناسایی الگوها و پشتیبانی از تصمیم‌گیری.",
         "overview": [
-          "Analytical work is structured around a business or operational decision rather than producing isolated charts.",
-          "Projects may include forecasting, classification, statistical analysis, feature engineering, model evaluation and dashboard development."
+          "کار تحلیلی را حول یک تصمیم تجاری یا عملیاتی مشخص طراحی می‌کنیم، نه صرفاً تولید نمودارهای جداگانه.",
+          "پروژه‌ها می‌توانند شامل پیش‌بینی، طبقه‌بندی، تحلیل آماری، مهندسی ویژگی، ارزیابی مدل و توسعه داشبورد باشند."
         ],
         "capabilities": [
-          "Predictive modelling",
-          "Data preparation",
-          "Statistical analysis",
-          "Time-series analytics",
-          "Dashboards and operational reporting"
+          "مدل‌سازی پیش‌بینانه",
+          "آماده‌سازی داده",
+          "تحلیل آماری",
+          "تحلیل سری زمانی",
+          "داشبورد و گزارش‌دهی عملیاتی"
         ],
         "deliverables": [
-          "Data-quality assessment",
-          "Analytical model",
-          "Evaluation report",
-          "Interactive dashboard",
-          "Deployment recommendation"
+          "ارزیابی کیفیت داده",
+          "مدل تحلیلی",
+          "گزارش ارزیابی",
+          "داشبورد تعاملی",
+          "پیشنهاد استقرار"
         ],
         "fit": [
-          "Operational teams",
-          "Agriculture and infrastructure",
-          "Technology organisations",
-          "Research and innovation projects"
+          "تیم‌های عملیاتی",
+          "کشاورزی و زیرساخت",
+          "سازمان‌های فناوری",
+          "پروژه‌های پژوهش و نوآوری"
         ]
       },
       {
         "slug": "software-development",
         "title": "توسعه نرم‌افزار",
-        "menuDescription": "پلتفرم فول‌استک، API، پایگاه داده، آزمون و سامانه ابری.",
-        "summary": "Maintainable web platforms, backend services and digital products built with modern engineering practices.",
+        "menuDescription": "پلتفرم‌های فول‌استک، API، پایگاه داده، آزمون و سامانه‌های آماده استقرار ابری.",
+        "summary": "پلتفرم‌های وب، خدمات بک‌اند و محصولات دیجیتال قابل نگهداری با شیوه‌های مدرن مهندسی.",
         "overview": [
-          "We develop software with clear architecture, version control, testing, documentation and deployment pathways.",
-          "Work can cover responsive interfaces, APIs, backend services, relational databases, authentication, dashboards and cloud-ready packaging."
+          "نرم‌افزار را با معماری روشن، کنترل نسخه، آزمون، مستندسازی و مسیر استقرار مشخص توسعه می‌دهیم.",
+          "کار می‌تواند شامل رابط‌های واکنش‌گرا، API، خدمات بک‌اند، پایگاه داده رابطه‌ای، احراز هویت، داشبورد و بسته‌بندی آماده ابر باشد."
         ],
         "capabilities": [
-          "React, Next.js and TypeScript",
-          "Node.js and APIs",
-          "Python and FastAPI",
+          "React، Next.js و TypeScript",
+          "Node.js و APIها",
+          "Python و FastAPI",
           "PostgreSQL",
-          "Testing, CI/CD and deployment"
+          "آزمون، CI/CD و استقرار"
         ],
         "deliverables": [
-          "Requirements and architecture",
-          "Frontend application",
-          "Backend API",
-          "Database schema",
-          "Automated test and deployment pipeline"
+          "نیازمندی‌ها و معماری",
+          "برنامه فرانت‌اند",
+          "API بک‌اند",
+          "طرح پایگاه داده",
+          "خط لوله خودکار آزمون و استقرار"
         ],
         "fit": [
-          "Startups and SMEs",
-          "Research commercialisation",
-          "Internal business tools",
-          "AI-enabled products"
+          "استارتاپ‌ها و کسب‌وکارهای کوچک و متوسط",
+          "تجاری‌سازی پژوهش",
+          "ابزارهای داخلی کسب‌وکار",
+          "محصولات مجهز به هوش مصنوعی"
         ]
       },
       {
@@ -241,31 +252,31 @@
       {
         "slug": "research-prototyping-technology-consulting",
         "title": "پژوهش، نمونه‌سازی و مشاوره فناوری",
-        "menuDescription": "امکان‌سنجی، نمونه اولیه، اعتبارسنجی، تأمین مالی و تجاری‌سازی.",
-        "summary": "Structured support for technical uncertainty, early product concepts and research-to-market development.",
+        "menuDescription": "امکان‌سنجی، نمونه اولیه، اعتبارسنجی، تأمین مالی و پشتیبانی تجاری‌سازی.",
+        "summary": "پشتیبانی ساختاریافته برای عدم‌قطعیت فنی، مفاهیم اولیه محصول و مسیر پژوهش تا بازار.",
         "overview": [
-          "Early-stage technology work needs a defensible question, a staged plan and measurable evidence.",
-          "We support feasibility analysis, architecture, prototype planning, validation metrics, technical writing, funding preparation and commercialisation pathways."
+          "کار فناوری در مراحل اولیه به یک پرسش قابل دفاع، برنامه مرحله‌ای و شواهد قابل اندازه‌گیری نیاز دارد.",
+          "در تحلیل امکان‌سنجی، معماری، برنامه‌ریزی نمونه اولیه، شاخص‌های اعتبارسنجی، نگارش فنی، آماده‌سازی برای تأمین مالی و مسیر تجاری‌سازی کمک می‌کنیم."
         ],
         "capabilities": [
-          "Feasibility studies",
-          "Prototype planning",
-          "Technical architecture",
-          "Validation metrics",
-          "Funding and commercialisation support"
+          "مطالعات امکان‌سنجی",
+          "برنامه‌ریزی نمونه اولیه",
+          "معماری فنی",
+          "شاخص‌های اعتبارسنجی",
+          "پشتیبانی تأمین مالی و تجاری‌سازی"
         ],
         "deliverables": [
-          "Feasibility report",
-          "R&D work programme",
-          "Prototype specification",
-          "Risk register",
-          "Funding or investment package"
+          "گزارش امکان‌سنجی",
+          "برنامه تحقیق‌وتوسعه",
+          "مشخصات نمونه اولیه",
+          "ثبت ریسک",
+          "بسته تأمین مالی یا سرمایه‌گذاری"
         ],
         "fit": [
-          "Early-stage ventures",
-          "Research teams",
-          "Innovation programmes",
-          "Organisations exploring new technology"
+          "کسب‌وکارهای نوپا",
+          "تیم‌های پژوهشی",
+          "برنامه‌های نوآوری",
+          "سازمان‌های در حال بررسی فناوری جدید"
         ]
       },
       {
@@ -357,44 +368,44 @@
       {
         "slug": "robotic-hand",
         "title": "دست رباتیک هوشمند",
-        "menuDescription": "Sensing, edge AI and deterministic control for adaptive manipulation.",
+        "menuDescription": "حسگری، هوش مصنوعی لبه و کنترل قطعی برای دست‌کاری تطبیقی.",
         "category": "رباتیک و هوش مصنوعی",
-        "status": "Research and prototype development",
-        "statusDescription": "The concept and system architecture are being developed through staged technical and commercial validation.",
-        "summary": "A modular robotic hand and forearm platform combining mechanical engineering, sensing, real-time control, computer vision and edge AI.",
+        "status": "پژوهش و توسعه نمونه اولیه",
+        "statusDescription": "مفهوم و معماری سامانه از طریق اعتبارسنجی فنی و تجاری مرحله‌ای در حال توسعه است.",
+        "summary": "پلتفرم ماژولار دست و ساعد رباتیک که مهندسی مکانیک، حسگری، کنترل بلادرنگ، بینایی ماشین و هوش مصنوعی لبه را ترکیب می‌کند.",
         "overview": [
-          "Conventional industrial grippers perform well for repetitive tasks and predictable objects but may be less useful when shape, orientation, fragility or material changes.",
-          "The project investigates whether a modular, force-aware and vision-guided hand can provide useful flexibility without becoming impractically complex or expensive.",
-          "Development can be validated incrementally at finger, thumb, palm and integrated-hand level before committing to a complete system."
+          "گریپرهای صنعتی متداول برای وظایف تکراری و اجسام قابل پیش‌بینی بسیار مناسب‌اند، اما در برابر تغییر شکل، جهت، شکنندگی یا جنس جسم انعطاف کمتری دارند.",
+          "این پروژه بررسی می‌کند که آیا یک دست ماژولار، حساس به نیرو و هدایت‌شده با بینایی می‌تواند بدون پیچیدگی یا هزینه غیرعملی، انعطاف مفیدی ایجاد کند.",
+          "توسعه می‌تواند پیش از ساخت سامانه کامل، در سطح انگشت، شست، کف دست و دست یکپارچه به‌صورت مرحله‌ای اعتبارسنجی شود."
         ],
         "technology": [
-          "Mechanical linkage and tendon concepts",
-          "Edge AI and computer vision",
-          "Real-time control",
-          "Force, current, position and tactile sensing",
-          "Deterministic industrial communication"
+          "مفاهیم لینک مکانیکی و تاندونی",
+          "هوش مصنوعی لبه و بینایی ماشین",
+          "کنترل بلادرنگ",
+          "حسگری نیرو، جریان، موقعیت و لمس",
+          "ارتباط صنعتی قطعی"
         ],
         "value": [
-          "Flexible industrial handling",
-          "Research and education platform",
-          "Locally developed intellectual property",
-          "Integration opportunity for automation partners"
+          "جابجایی صنعتی انعطاف‌پذیر",
+          "پلتفرم پژوهش و آموزش",
+          "مالکیت فکری توسعه‌یافته در داخل",
+          "فرصت یکپارچه‌سازی برای شرکای اتوماسیون"
         ],
         "roadmap": [
           {
-            "phase": "Phase 1",
-            "title": "Mechanism validation",
-            "description": "Validate linkage, force, actuation, sensing, control and safety."
+            "phase": "مرحله ۱",
+            "title": "اعتبارسنجی مکانیزم",
+            "description": "اعتبارسنجی لینک، نیرو، عملگر، حسگری، کنترل و ایمنی."
           },
           {
-            "phase": "Phase 2",
-            "title": "Integrated hand",
-            "description": "Combine multiple digits, perception, planning and industrial communication."
+            "phase": "مرحله ۲",
+            "title": "دست یکپارچه",
+            "description": "ترکیب چند انگشت، ادراک، برنامه‌ریزی و ارتباط صنعتی."
           },
           {
-            "phase": "Phase 3",
-            "title": "Industry pilot",
-            "description": "Test a narrow application and quantify performance, cost and value."
+            "phase": "مرحله ۳",
+            "title": "پایلوت صنعتی",
+            "description": "آزمون یک کاربرد محدود و اندازه‌گیری عملکرد، هزینه و ارزش."
           }
         ]
       },
@@ -449,44 +460,44 @@
       {
         "slug": "predictive-maintenance",
         "title": "نگهداری و تعمیرات پیش‌بینانه",
-        "menuDescription": "Machine-learning signals for equipment risk and maintenance planning.",
+        "menuDescription": "سیگنال‌های یادگیری ماشین برای ریسک تجهیزات و برنامه‌ریزی تعمیرات.",
         "category": "یادگیری ماشین",
-        "status": "Proposed portfolio and industry-discovery project",
-        "statusDescription": "The project requires a suitable equipment dataset and industry partner before performance claims can be made.",
-        "summary": "A data and machine-learning system for identifying abnormal equipment behaviour and supporting maintenance decisions.",
+        "status": "پروژه پیشنهادی پورتفولیو و کشف نیاز صنعتی",
+        "statusDescription": "این مفهوم بر روش تحلیلی و معماری استقرار تمرکز دارد و به‌عنوان استقرار تولیدی برای مشتری معرفی نمی‌شود.",
+        "summary": "سامانه داده و یادگیری ماشین برای شناسایی رفتار غیرعادی تجهیزات و پشتیبانی از تصمیم‌های نگهداری.",
         "overview": [
-          "Unplanned equipment failure can create downtime, cost and safety risk, but useful prediction depends on data quality and a clearly defined failure or degradation signal.",
-          "The project demonstrates how sensor histories, maintenance records and operational context can be prepared, modelled and monitored.",
-          "The system compares practical baselines with more advanced methods rather than assuming that a complex model is automatically better."
+          "خرابی تجهیزات می‌تواند با توقف تولید، هزینه تعمیر و ریسک ایمنی همراه باشد؛ اما تعویض زودهنگام قطعات نیز هزینه‌بر است.",
+          "هدف، ترکیب داده‌های حسگر، سابقه تعمیرات و زمینه عملیاتی برای شناسایی رفتار غیرعادی و اولویت‌بندی بررسی است.",
+          "یک پایلوت معتبر باید معیار پایه، عدم‌قطعیت، هزینه هشدار اشتباه و تغییر رفتار تجهیزات در طول زمان را اندازه‌گیری کند."
         ],
         "technology": [
-          "Time-series data pipelines",
-          "Anomaly detection",
-          "Classification and forecasting",
-          "Model monitoring",
-          "Maintenance dashboard"
+          "مهندسی ویژگی سری زمانی",
+          "تشخیص ناهنجاری",
+          "مدل‌های طبقه‌بندی و رگرسیون",
+          "مهندسی داده",
+          "پایش مدل"
         ],
         "value": [
-          "Earlier indication of equipment problems",
-          "Evidence-based maintenance prioritisation",
-          "Reduced avoidable downtime",
-          "Reusable industrial analytics capability"
+          "کاهش توقف برنامه‌ریزی‌نشده",
+          "اولویت‌بندی بهتر تعمیرات",
+          "استفاده مؤثرتر از تیم‌های مهندسی",
+          "شناسایی زودهنگام ریسک عملیاتی"
         ],
         "roadmap": [
           {
-            "phase": "Phase 1",
-            "title": "Data and failure definition",
-            "description": "Assess sensor coverage, labels, maintenance history and business value."
+            "phase": "مرحله ۱",
+            "title": "پایه داده",
+            "description": "بررسی داده حسگر و تعمیرات، کیفیت برچسب و شاخص پایه."
           },
           {
-            "phase": "Phase 2",
-            "title": "Model and dashboard",
-            "description": "Develop baselines, evaluation and operational visualisation."
+            "phase": "مرحله ۲",
+            "title": "مدل پایلوت",
+            "description": "مقایسه رویکردهای ناهنجاری، طبقه‌بندی یا پیش‌بینی و اعتبارسنجی عملکرد."
           },
           {
-            "phase": "Phase 3",
-            "title": "Pilot monitoring",
-            "description": "Validate alerts, drift, false positives and maintenance usefulness."
+            "phase": "مرحله ۳",
+            "title": "پایش عملیاتی",
+            "description": "تعریف گردش هشدار، پایش drift و مسیر بازآموزی کنترل‌شده."
           }
         ]
       },
@@ -785,80 +796,147 @@
         "title": "فرصت‌های آینده و شبکه استعدادها",
         "summary": "اگر تجربه شما می‌تواند از فعالیت‌های آینده ما در هوش مصنوعی، نرم‌افزار، رباتیک، سامانه‌های نهفته، الکترونیک، ساخت، محصول یا فعالیت‌های تجاری پشتیبانی کند، با ما در ارتباط باشید."
       }
+    },
+    "detail": {
+      "points": [
+        "تجربه در هوش مصنوعی، نرم‌افزار، رباتیک، داده، پژوهش، مهندسی، محصول یا فعالیت تجاری.",
+        "علاقه به توسعه فناوری کاربردی برای مسائل واقعی صنعتی.",
+        "توانایی کار در محیط یک شرکت نوپا و پژوهش‌محور.",
+        "ارتباط روشن، کنجکاوی، مسئولیت‌پذیری و تمایل به یادگیری."
+      ],
+      "ctaTitle": "مایل به همکاری با ما هستید؟",
+      "ctaDescription": "فرم اعلام علاقه‌مندی را ارسال کنید و رزومه، نامه پوششی یا مدارک پشتیبان خود را پیوست کنید.",
+      "ctaButton": "ارسال اعلام علاقه‌مندی"
+    },
+    "application": {
+      "title": "فرصت‌های آینده و شبکه استعدادها",
+      "intro": "برای فرصت‌های آینده در حوزه‌های فنی، پژوهشی، مهندسی، نرم‌افزار، داده، هوش مصنوعی، رباتیک، محصول یا فعالیت تجاری اعلام علاقه‌مندی کنید.",
+      "formTitle": "فرم اعلام علاقه‌مندی",
+      "name": "نام کامل",
+      "email": "ایمیل",
+      "phone": "شماره تماس",
+      "address": "آدرس",
+      "addressHelp": "آدرس را وارد کنید. اگر پیشنهاد نقشه در دسترس نبود، آدرس را دستی بنویسید.",
+      "interest": "نوع علاقه‌مندی",
+      "workRight": "وضعیت حق کار در نیوزیلند",
+      "message": "پیام کوتاه",
+      "cv": "بارگذاری رزومه",
+      "coverLetter": "بارگذاری نامه پوششی",
+      "additionalFile": "فایل تکمیلی",
+      "submit": "ارسال اعلام علاقه‌مندی",
+      "sending": "در حال ارسال...",
+      "note": "این فرم در حال حاضر درخواست را به ایمیل شرکت ارسال می‌کند. ذخیره‌سازی پایگاه داده در مرحله بعد افزوده می‌شود.",
+      "fileHelp": "فرمت‌های مجاز: PDF، DOC، DOCX. حداکثر حجم هر فایل: ۱۰ مگابایت.",
+      "success": "اعلام علاقه‌مندی شما با موفقیت ارسال شد.",
+      "error": "هنگام ارسال درخواست مشکلی رخ داد.",
+      "interestOptions": [
+        "هوش مصنوعی / یادگیری ماشین",
+        "توسعه نرم‌افزار",
+        "رباتیک و اتوماسیون",
+        "علم داده و تحلیل",
+        "مهندسی مکانیک / پروژه",
+        "پژوهش و نمونه‌سازی",
+        "توسعه کسب‌وکار / مشارکت‌ها",
+        "کارآموزی یا فرصت فارغ‌التحصیلان",
+        "سایر"
+      ],
+      "workRightOptions": [
+        "شهروند نیوزیلند",
+        "مقیم نیوزیلند",
+        "ویزای اقامت دائم",
+        "ویزای کار کارفرمای معتبر",
+        "ویزای کار پس از تحصیل",
+        "ویزای کار آزاد",
+        "ویزای دانشجویی",
+        "ویزای بازدید",
+        "نیازمند حمایت ویزا",
+        "سایر"
+      ]
     }
   },
   "collaborate": {
     "eyebrow": "همکاری",
     "title": "با IndustrialOrigami.AI همکاری کنید.",
-    "intro": "از گفت‌وگو درباره مسائل صنعتی، پژوهش، پایلوت، تأمین مالی، سرمایه‌گذاری و همکاری فنی استقبال می‌کنیم.",
-    "pathwaysTitle": "روش‌های همکاری",
-    "pathwaysDescription": "مسیر متناسب با سازمان یا ایده خود را انتخاب کنید.",
+    "intro": "از گفت‌وگوهای جدی درباره مسائل صنعتی، پژوهش، پایلوت، تأمین مالی، سرمایه‌گذاری و مشارکت‌های فنی استقبال می‌کنیم.",
+    "pathwaysTitle": "راه‌های همکاری",
+    "pathwaysDescription": "مسیری را انتخاب کنید که با سازمان یا ایده شما بیشترین هم‌خوانی را دارد.",
     "pathways": [
       {
-        "title": "Industry projects",
-        "description": "Explore a business problem, feasibility study, prototype or pilot."
+        "title": "پروژه‌های صنعتی",
+        "description": "بررسی یک مسئله کسب‌وکار، مطالعه امکان‌سنجی، نمونه اولیه یا پایلوت."
       },
       {
-        "title": "Research partnerships",
-        "description": "Develop joint R&D, validation, student or institutional collaboration."
+        "title": "مشارکت پژوهشی",
+        "description": "توسعه مشترک تحقیق‌وتوسعه، اعتبارسنجی، همکاری دانشجویی یا سازمانی."
       },
       {
-        "title": "Funding and investment",
-        "description": "Discuss grants, incubation, seed capital and commercialisation support."
+        "title": "تأمین مالی و سرمایه‌گذاری",
+        "description": "گفت‌وگو درباره گرنت، شتاب‌دهی، سرمایه اولیه و پشتیبانی تجاری‌سازی."
       },
       {
-        "title": "Technical contribution",
-        "description": "Contribute specialist engineering, software, manufacturing or advisory capability."
+        "title": "مشارکت فنی",
+        "description": "ارائه تخصص مهندسی، نرم‌افزار، ساخت یا مشاوره تخصصی."
       }
     ],
     "detailsTitle": "اطلاعات تماس",
     "details": [
       {
-        "label": "Location",
-        "value": "Christchurch, New Zealand"
+        "label": "مکان",
+        "value": "کرایست‌چرچ، نیوزیلند"
       },
       {
-        "label": "Company",
+        "label": "شرکت",
         "value": "IndustrialOrigami.AI"
       },
       {
-        "label": "Focus",
-        "value": "AI, robotics, software, data, CAD and intelligent engineering"
+        "label": "تمرکز",
+        "value": "هوش مصنوعی، رباتیک، نرم‌افزار، داده، CAD، کشاورزی و مهندسی هوشمند"
       }
     ],
     "form": {
-      "name": "Name",
-      "email": "Email",
-      "interest": "Area of interest",
+      "name": "نام",
+      "email": "ایمیل",
+      "interest": "حوزه مورد علاقه",
       "options": [
-        "Industry project",
-        "Research partnership",
-        "Funding or investment",
-        "Technical collaboration",
-        "Career expression of interest"
+        "پروژه صنعتی",
+        "مشارکت پژوهشی",
+        "تأمین مالی یا سرمایه‌گذاری",
+        "همکاری فنی",
+        "اعلام علاقه‌مندی برای فرصت شغلی"
       ],
-      "message": "Message",
-      "submit": "Send enquiry",
-      "success": "Thanks. Your enquiry has been received.",
-      "error": "The message could not be sent. Please try again or contact the company directly."
+      "message": "پیام",
+      "submit": "ارسال درخواست",
+      "success": "سپاسگزاریم. درخواست شما دریافت شد.",
+      "error": "پیام ارسال نشد. لطفاً دوباره تلاش کنید یا مستقیماً با شرکت تماس بگیرید.",
+      "attachmentLabel": "پیوست فایل",
+      "attachmentHelp": "اختیاری. فرمت‌های مجاز: PDF، DOC، DOCX، TXT، PNG، JPG. حداکثر حجم: ۱۰ مگابایت.",
+      "sending": "در حال ارسال...",
+      "sendingMessage": "در حال ارسال درخواست شما..."
     }
   },
   "auth": {
-    "loginTitle": "پرتال شرکت",
+    "loginTitle": "ورود به پرتال شرکت",
     "signupTitle": "ثبت علاقه‌مندی",
-    "description": "پرتال امن مشتریان و همکاران برای قابلیت‌های آینده در نظر گرفته شده است.",
+    "description": "پرتال امن مشتریان و همکاران برای قابلیت‌های آینده پلتفرم در نظر گرفته شده است.",
     "email": "ایمیل",
     "password": "رمز عبور",
     "name": "نام",
     "login": "ورود",
-    "signup": "ثبت",
-    "note": "احراز هویت و ذخیره دائمی حساب در این نسخه عمومی فعال نیست."
+    "signup": "ثبت‌نام",
+    "note": "احراز هویت و ذخیره‌سازی دائمی حساب در نسخه عمومی فعلی فعال نیست.",
+    "loginIntro": "به داشبورد آینده IndustrialOrigami.AI دسترسی پیدا کنید. احراز هویت در حال حاضر فقط یک نمونه رابط کاربری است.",
+    "signupIntro": "برای قابلیت‌های آینده همکاری، داشبورد و ثبت درخواست حساب ایجاد کنید. این فرم فعلاً نمونه رابط کاربری است.",
+    "company": "شرکت یا سازمان",
+    "loginButton": "ورود",
+    "signupButton": "ثبت‌نام",
+    "noAccount": "حساب ندارید؟",
+    "haveAccount": "قبلاً حساب دارید؟"
   },
   "footer": {
-    "summary": "هوش مصنوعی، رباتیک، نرم‌افزار، داده، CAD و مهندسی هوشمند از کرایست‌چرچ نیوزیلند.",
-    "explore": "دسترسی سریع",
-    "locationTitle": "موقعیت",
+    "summary": "هوش مصنوعی، رباتیک، نرم‌افزار، داده، CAD، پژوهش کشاورزی و مهندسی هوشمند از کرایست‌چرچ، نیوزیلند.",
+    "explore": "بخش‌ها",
+    "locationTitle": "مکان",
     "location": "کرایست‌چرچ، نیوزیلند",
-    "rights": "تمام حقوق محفوظ است."
+    "rights": "همه حقوق محفوظ است."
   }
 }

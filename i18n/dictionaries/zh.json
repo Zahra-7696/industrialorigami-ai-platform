@@ -36,71 +36,82 @@
   },
   "about": {
     "eyebrow": "关于 IndustrialOrigami.AI",
-    "title": "一家面向实用深科技的新西兰公司。",
-    "intro": "我们融合人工智能、数据、软件与工程，创造负责任且具有现实价值的技术。",
-    "storyTitle": "从复杂理念到实用系统。",
+    "title": "一家来自新西兰的应用深科技公司",
+    "intro": "我们将人工智能、数据、软件与工程结合，开发负责任且具有可衡量现实价值的技术。",
+    "storyTitle": "把复杂想法转化为实用系统",
     "storyParagraphs": [
-      "IndustrialOrigami.AI was established to bridge advanced research and practical commercial technology.",
-      "The company is developing an intelligent robotic hand while building wider capability in agentic and generative AI, data science, software engineering, CAD and intelligent automation.",
-      "Our method is evidence-led: understand the problem, build a focused prototype, measure performance, learn from users and scale only when the technical and commercial case is credible."
+      "IndustrialOrigami.AI 致力于连接前沿研究与实用商业技术。",
+      "公司正在开发智能机器人手，同时建设智能体与生成式 AI、数据科学、软件工程、CAD 和智能自动化等能力。",
+      "我们采用以证据为导向的方法：理解问题、构建聚焦原型、测量性能、从用户反馈中学习，并只在技术与商业依据可信时扩大规模。"
     ],
-    "companyEyebrow": "公司简介",
+    "companyEyebrow": "公司概况",
     "companyFacts": [
       {
-        "label": "Location",
-        "value": "Christchurch, New Zealand"
+        "label": "地点",
+        "value": "新西兰基督城"
       },
       {
-        "label": "Focus",
-        "value": "AI, robotics, data, software, CAD and intelligent engineering"
+        "label": "重点领域",
+        "value": "人工智能、机器人、数据、软件、CAD 与智能工程"
       },
       {
-        "label": "Business model",
-        "value": "Professional services, collaborative R&D and proprietary product development"
+        "label": "商业模式",
+        "value": "专业服务、协作式研发与自有产品开发"
       },
       {
-        "label": "Approach",
-        "value": "Evidence-led technical development with measurable validation"
+        "label": "方法",
+        "value": "以证据为导向、可量化验证的技术开发"
       },
       {
         "label": "法律实体",
         "value": "Industrial Origami Limited，新西兰公司编号 9124172"
       },
       {
-        "label": "登记活动",
-        "value": "农业研究活动（ANZSIC M691005），以新西兰公司注册处记录为准"
+        "label": "注册活动",
+        "value": "农业研究活动（ANZSIC M691005），按新西兰公司办公室记录"
       },
       {
         "label": "雇主认证",
-        "value": "计划中，尚未获得。"
+        "value": "已规划，尚未获批。"
       }
     ],
-    "registrationLinkLabel": "查看公司注册处记录",
+    "registrationLinkLabel": "查看新西兰公司办公室记录",
     "teamEyebrow": "团队",
-    "teamTitle": "跨学科能力。",
-    "teamDescription": "团队结合战略、人工智能、软件、数据科学、机械设计、CAD 与项目工程。",
+    "teamTitle": "多学科能力",
+    "teamDescription": "团队结合战略、人工智能、软件、数据科学、机械设计、CAD、制造与项目工程。",
     "team": [
       {
         "name": "David Ewing",
-        "role": "Founder and Managing Director",
-        "description": "Strategy, partnerships, funding, product direction and company development."
+        "role": "创始人兼董事总经理",
+        "description": "负责战略、合作伙伴、融资、产品方向与公司发展。",
+        "degree": "数据科学硕士"
       },
       {
         "name": "Zahra Torabi",
-        "role": "AI, Software Engineering and R&D Lead",
-        "description": "AI/ML research, reinforcement learning, agentic and generative AI, software engineering, evaluation and technical implementation."
+        "role": "人工智能、软件工程与研发负责人",
+        "description": "负责 AI/ML 研究、强化学习、智能体与生成式 AI、软件工程、评估与技术实施。",
+        "degree": "计算机科学博士（人工智能）"
       },
       {
         "name": "Lilian",
-        "role": "Data Science and Analytics Lead",
-        "description": "Data preparation, statistical modelling, predictive analytics, visualisation, experimentation and validation."
+        "role": "数据科学与分析负责人",
+        "description": "负责数据准备、统计建模、预测分析、可视化、实验与验证。",
+        "degree": "数据科学硕士"
       },
       {
         "name": "Gurwinder",
-        "role": "Mechanical and Project Engineering Lead",
-        "description": "Mechanical engineering, CAD design, fabrication and project engineering for prototype development."
+        "role": "机械与项目工程负责人",
+        "description": "负责机械工程、CAD 设计、制造以及原型开发中的项目工程。",
+        "degree": "机械工程学士"
       }
-    ]
+    ],
+    "contactLabels": {
+      "email": "电子邮件",
+      "emailUnavailable": "电子邮件暂不可用",
+      "linkedin": "LinkedIn",
+      "linkedinUnavailable": "LinkedIn 暂不可用",
+      "profilePhotoAlt": "个人照片"
+    }
   },
   "services": {
     "eyebrow": "服务",
@@ -115,91 +126,91 @@
       {
         "slug": "robotics-and-automation",
         "title": "机器人与自动化",
-        "menuDescription": "自适应操作、传感、控制和自动化原型。",
-        "summary": "Research and prototype development for robotic systems, intelligent end-effectors and industrial automation.",
+        "menuDescription": "自适应操作、传感、控制与自动化原型。",
+        "summary": "面向机器人系统、智能末端执行器与工业自动化的研究和原型开发。",
         "overview": [
-          "We investigate whether robotic or automated systems are technically and commercially appropriate for defined workflows.",
-          "Engagements may include mechanical concepts, sensing, control architecture, computer vision, prototype integration and staged validation."
+          "我们评估机器人或自动化系统是否适合特定工作流程，并同时考虑技术与商业可行性。",
+          "合作可涵盖机械概念、传感、控制架构、计算机视觉、原型集成与分阶段验证。"
         ],
         "capabilities": [
-          "Robotic end-effectors",
-          "Sensor integration",
-          "Real-time control architecture",
-          "Computer vision",
-          "Automation feasibility"
+          "机器人末端执行器",
+          "传感器集成",
+          "实时控制架构",
+          "计算机视觉",
+          "自动化可行性评估"
         ],
         "deliverables": [
-          "Technical requirements",
-          "Prototype architecture",
-          "Control and sensing plan",
-          "Test framework",
-          "Pilot recommendation"
+          "技术需求",
+          "原型架构",
+          "控制与传感方案",
+          "测试框架",
+          "试点建议"
         ],
         "fit": [
-          "Manufacturing and engineering businesses",
-          "Research laboratories",
-          "Automation integrators",
-          "Education and training providers"
+          "制造与工程企业",
+          "研究实验室",
+          "自动化集成商",
+          "教育与培训机构"
         ]
       },
       {
         "slug": "data-science-and-analytics",
         "title": "数据科学与分析",
-        "menuDescription": "预测建模、分析、仪表板和决策支持。",
-        "summary": "Data products that help organisations understand operations, identify patterns and support decisions.",
+        "menuDescription": "预测建模、分析、仪表板与决策支持。",
+        "summary": "帮助组织理解运营、识别模式并支持决策的数据产品。",
         "overview": [
-          "Analytical work is structured around a business or operational decision rather than producing isolated charts.",
-          "Projects may include forecasting, classification, statistical analysis, feature engineering, model evaluation and dashboard development."
+          "分析工作围绕明确的业务或运营决策组织，而不是单纯制作孤立图表。",
+          "项目可包括预测、分类、统计分析、特征工程、模型评估和仪表板开发。"
         ],
         "capabilities": [
-          "Predictive modelling",
-          "Data preparation",
-          "Statistical analysis",
-          "Time-series analytics",
-          "Dashboards and operational reporting"
+          "预测建模",
+          "数据准备",
+          "统计分析",
+          "时间序列分析",
+          "仪表板与运营报告"
         ],
         "deliverables": [
-          "Data-quality assessment",
-          "Analytical model",
-          "Evaluation report",
-          "Interactive dashboard",
-          "Deployment recommendation"
+          "数据质量评估",
+          "分析模型",
+          "评估报告",
+          "交互式仪表板",
+          "部署建议"
         ],
         "fit": [
-          "Operational teams",
-          "Agriculture and infrastructure",
-          "Technology organisations",
-          "Research and innovation projects"
+          "运营团队",
+          "农业与基础设施",
+          "科技组织",
+          "研究与创新项目"
         ]
       },
       {
         "slug": "software-development",
         "title": "软件开发",
-        "menuDescription": "全栈平台、API、数据库、测试和云就绪系统。",
-        "summary": "Maintainable web platforms, backend services and digital products built with modern engineering practices.",
+        "menuDescription": "全栈平台、API、数据库、测试与云就绪系统。",
+        "summary": "采用现代工程实践构建可维护的 Web 平台、后端服务与数字产品。",
         "overview": [
-          "We develop software with clear architecture, version control, testing, documentation and deployment pathways.",
-          "Work can cover responsive interfaces, APIs, backend services, relational databases, authentication, dashboards and cloud-ready packaging."
+          "我们使用清晰架构、版本控制、测试、文档和明确部署路径开发软件。",
+          "工作可覆盖响应式界面、API、后端服务、关系数据库、身份验证、仪表板与云就绪打包。"
         ],
         "capabilities": [
-          "React, Next.js and TypeScript",
-          "Node.js and APIs",
-          "Python and FastAPI",
+          "React、Next.js 与 TypeScript",
+          "Node.js 与 API",
+          "Python 与 FastAPI",
           "PostgreSQL",
-          "Testing, CI/CD and deployment"
+          "测试、CI/CD 与部署"
         ],
         "deliverables": [
-          "Requirements and architecture",
-          "Frontend application",
-          "Backend API",
-          "Database schema",
-          "Automated test and deployment pipeline"
+          "需求与架构",
+          "前端应用",
+          "后端 API",
+          "数据库模式",
+          "自动化测试与部署流水线"
         ],
         "fit": [
-          "Startups and SMEs",
-          "Research commercialisation",
-          "Internal business tools",
-          "AI-enabled products"
+          "初创企业和中小企业",
+          "科研成果商业化",
+          "内部业务工具",
+          "AI 驱动产品"
         ]
       },
       {
@@ -240,32 +251,32 @@
       },
       {
         "slug": "research-prototyping-technology-consulting",
-        "title": "研究、原型与技术咨询",
-        "menuDescription": "可行性、原型、验证、融资和商业化支持。",
-        "summary": "Structured support for technical uncertainty, early product concepts and research-to-market development.",
+        "title": "研究、原型开发与技术咨询",
+        "menuDescription": "可行性研究、原型、验证、融资与商业化支持。",
+        "summary": "为技术不确定性、早期产品概念及科研成果市场化提供结构化支持。",
         "overview": [
-          "Early-stage technology work needs a defensible question, a staged plan and measurable evidence.",
-          "We support feasibility analysis, architecture, prototype planning, validation metrics, technical writing, funding preparation and commercialisation pathways."
+          "早期技术工作需要可辩护的问题、分阶段计划和可量化证据。",
+          "我们支持可行性分析、架构、原型规划、验证指标、技术写作、融资准备和商业化路径。"
         ],
         "capabilities": [
-          "Feasibility studies",
-          "Prototype planning",
-          "Technical architecture",
-          "Validation metrics",
-          "Funding and commercialisation support"
+          "可行性研究",
+          "原型规划",
+          "技术架构",
+          "验证指标",
+          "融资与商业化支持"
         ],
         "deliverables": [
-          "Feasibility report",
-          "R&D work programme",
-          "Prototype specification",
-          "Risk register",
-          "Funding or investment package"
+          "可行性报告",
+          "研发工作计划",
+          "原型规格",
+          "风险登记表",
+          "融资或投资材料"
         ],
         "fit": [
-          "Early-stage ventures",
-          "Research teams",
-          "Innovation programmes",
-          "Organisations exploring new technology"
+          "早期企业",
+          "研究团队",
+          "创新项目",
+          "探索新技术的组织"
         ]
       },
       {
@@ -357,44 +368,44 @@
       {
         "slug": "robotic-hand",
         "title": "智能机器人手",
-        "menuDescription": "Sensing, edge AI and deterministic control for adaptive manipulation.",
+        "menuDescription": "用于自适应操作的传感、边缘 AI 与确定性控制。",
         "category": "机器人与人工智能",
-        "status": "Research and prototype development",
-        "statusDescription": "The concept and system architecture are being developed through staged technical and commercial validation.",
-        "summary": "A modular robotic hand and forearm platform combining mechanical engineering, sensing, real-time control, computer vision and edge AI.",
+        "status": "研究与原型开发",
+        "statusDescription": "项目概念与系统架构正通过分阶段技术与商业验证逐步开发。",
+        "summary": "一个模块化机器人手与前臂平台，结合机械工程、传感、实时控制、计算机视觉与边缘 AI。",
         "overview": [
-          "Conventional industrial grippers perform well for repetitive tasks and predictable objects but may be less useful when shape, orientation, fragility or material changes.",
-          "The project investigates whether a modular, force-aware and vision-guided hand can provide useful flexibility without becoming impractically complex or expensive.",
-          "Development can be validated incrementally at finger, thumb, palm and integrated-hand level before committing to a complete system."
+          "传统工业夹具适合重复任务和可预测物体，但当形状、方向、易碎性或材料发生变化时灵活性有限。",
+          "本项目研究模块化、力感知、视觉引导的机器人手能否在不过度增加复杂度和成本的情况下提供有价值的灵活性。",
+          "在构建完整系统前，可分别在手指、拇指、手掌和集成手层面逐步验证。"
         ],
         "technology": [
-          "Mechanical linkage and tendon concepts",
-          "Edge AI and computer vision",
-          "Real-time control",
-          "Force, current, position and tactile sensing",
-          "Deterministic industrial communication"
+          "机械连杆与腱驱动概念",
+          "边缘 AI 与计算机视觉",
+          "实时控制",
+          "力、电流、位置与触觉传感",
+          "确定性工业通信"
         ],
         "value": [
-          "Flexible industrial handling",
-          "Research and education platform",
-          "Locally developed intellectual property",
-          "Integration opportunity for automation partners"
+          "灵活工业搬运",
+          "科研与教育平台",
+          "本地开发知识产权",
+          "为自动化合作伙伴提供集成机会"
         ],
         "roadmap": [
           {
-            "phase": "Phase 1",
-            "title": "Mechanism validation",
-            "description": "Validate linkage, force, actuation, sensing, control and safety."
+            "phase": "阶段 1",
+            "title": "机构验证",
+            "description": "验证连杆、力、驱动、传感、控制与安全。"
           },
           {
-            "phase": "Phase 2",
-            "title": "Integrated hand",
-            "description": "Combine multiple digits, perception, planning and industrial communication."
+            "phase": "阶段 2",
+            "title": "集成机器人手",
+            "description": "整合多指、感知、规划与工业通信。"
           },
           {
-            "phase": "Phase 3",
-            "title": "Industry pilot",
-            "description": "Test a narrow application and quantify performance, cost and value."
+            "phase": "阶段 3",
+            "title": "行业试点",
+            "description": "测试一个明确应用并量化性能、成本与价值。"
           }
         ]
       },
@@ -449,44 +460,44 @@
       {
         "slug": "predictive-maintenance",
         "title": "预测性维护",
-        "menuDescription": "Machine-learning signals for equipment risk and maintenance planning.",
+        "menuDescription": "利用机器学习信号支持设备风险评估与维护规划。",
         "category": "机器学习",
-        "status": "Proposed portfolio and industry-discovery project",
-        "statusDescription": "The project requires a suitable equipment dataset and industry partner before performance claims can be made.",
-        "summary": "A data and machine-learning system for identifying abnormal equipment behaviour and supporting maintenance decisions.",
+        "status": "拟议的作品集与行业需求探索项目",
+        "statusDescription": "该概念重点展示分析方法与部署架构，并不声称是已完成的客户生产部署。",
+        "summary": "利用数据和机器学习识别异常设备行为并支持维护决策的系统。",
         "overview": [
-          "Unplanned equipment failure can create downtime, cost and safety risk, but useful prediction depends on data quality and a clearly defined failure or degradation signal.",
-          "The project demonstrates how sensor histories, maintenance records and operational context can be prepared, modelled and monitored.",
-          "The system compares practical baselines with more advanced methods rather than assuming that a complex model is automatically better."
+          "设备故障可能导致停机、维修成本和安全风险，而过早更换部件同样会增加成本。",
+          "目标是结合传感器数据、维护历史和运行背景，识别异常行为并确定检查优先级。",
+          "可信的试点应测量基线、模型不确定性、误报成本以及设备行为随时间的变化。"
         ],
         "technology": [
-          "Time-series data pipelines",
-          "Anomaly detection",
-          "Classification and forecasting",
-          "Model monitoring",
-          "Maintenance dashboard"
+          "时间序列特征工程",
+          "异常检测",
+          "分类与回归模型",
+          "数据工程",
+          "模型监控"
         ],
         "value": [
-          "Earlier indication of equipment problems",
-          "Evidence-based maintenance prioritisation",
-          "Reduced avoidable downtime",
-          "Reusable industrial analytics capability"
+          "减少计划外停机",
+          "更合理的维护优先级",
+          "更有效利用工程团队",
+          "更早识别运营风险"
         ],
         "roadmap": [
           {
-            "phase": "Phase 1",
-            "title": "Data and failure definition",
-            "description": "Assess sensor coverage, labels, maintenance history and business value."
+            "phase": "阶段 1",
+            "title": "数据基础",
+            "description": "检查传感器和维护数据、标签质量及基线指标。"
           },
           {
-            "phase": "Phase 2",
-            "title": "Model and dashboard",
-            "description": "Develop baselines, evaluation and operational visualisation."
+            "phase": "阶段 2",
+            "title": "试点模型",
+            "description": "比较异常检测、分类或预测方法并验证性能。"
           },
           {
-            "phase": "Phase 3",
-            "title": "Pilot monitoring",
-            "description": "Validate alerts, drift, false positives and maintenance usefulness."
+            "phase": "阶段 3",
+            "title": "运营监控",
+            "description": "定义告警流程、漂移监控及受控再训练路径。"
           }
         ]
       },
@@ -785,78 +796,145 @@
         "title": "未来机会与人才网络",
         "summary": "如果您的经验能够支持未来的人工智能、软件、机器人、嵌入式系统、电子、制造、产品或商业工作，欢迎与我们联系。"
       }
+    },
+    "detail": {
+      "points": [
+        "具备人工智能、软件、机器人、数据、研究、工程、产品或商业方面的经验。",
+        "对解决真实工业问题的实用技术开发感兴趣。",
+        "能够适应早期、研究驱动型公司的工作环境。",
+        "沟通清晰、好奇、可靠并愿意持续学习。"
+      ],
+      "ctaTitle": "有兴趣与我们一起工作吗？",
+      "ctaDescription": "提交意向申请，并附上简历、求职信或其他支持材料。",
+      "ctaButton": "提交意向申请"
+    },
+    "application": {
+      "title": "未来机会与人才网络",
+      "intro": "提交意向申请，关注未来技术、研究、工程、软件、数据、人工智能、机器人、产品或商业机会。",
+      "formTitle": "意向申请表",
+      "name": "姓名",
+      "email": "电子邮件",
+      "phone": "电话号码",
+      "address": "地址",
+      "addressHelp": "开始输入地址。如果地图建议不可用，请手动填写完整地址。",
+      "interest": "兴趣方向",
+      "workRight": "在新西兰工作的权利",
+      "message": "简短留言",
+      "cv": "上传简历",
+      "coverLetter": "上传求职信",
+      "additionalFile": "其他附件",
+      "submit": "提交意向申请",
+      "sending": "正在发送...",
+      "note": "该表单目前会把申请发送到公司邮箱。数据库存储将在后续阶段加入。",
+      "fileHelp": "接受 PDF、DOC、DOCX。每个文件最大 10 MB。",
+      "success": "您的意向申请已成功发送。",
+      "error": "发送申请时出现问题。",
+      "interestOptions": [
+        "人工智能 / 机器学习",
+        "软件开发",
+        "机器人与自动化",
+        "数据科学与分析",
+        "机械 / 项目工程",
+        "研究与原型开发",
+        "业务发展 / 合作伙伴",
+        "实习或毕业生机会",
+        "其他"
+      ],
+      "workRightOptions": [
+        "新西兰公民",
+        "新西兰居民",
+        "永久居民签证",
+        "认证雇主工作签证",
+        "毕业后工作签证",
+        "开放工作签证",
+        "学生签证",
+        "访问签证",
+        "需要签证担保",
+        "其他"
+      ]
     }
   },
   "collaborate": {
     "eyebrow": "合作",
-    "title": "与 IndustrialOrigami.AI 合作。",
-    "intro": "我们欢迎有关产业问题、研究、试点、融资、投资和技术合作的务实交流。",
+    "title": "与 IndustrialOrigami.AI 合作",
+    "intro": "我们欢迎围绕行业问题、研究、试点、融资、投资和技术合作开展务实交流。",
     "pathwaysTitle": "合作方式",
-    "pathwaysDescription": "选择最适合您的组织或想法的方式。",
+    "pathwaysDescription": "选择最符合您的组织或想法的合作路径。",
     "pathways": [
       {
-        "title": "Industry projects",
-        "description": "Explore a business problem, feasibility study, prototype or pilot."
+        "title": "行业项目",
+        "description": "探索业务问题、可行性研究、原型或试点。"
       },
       {
-        "title": "Research partnerships",
-        "description": "Develop joint R&D, validation, student or institutional collaboration."
+        "title": "研究合作",
+        "description": "开展联合研发、验证、学生项目或机构合作。"
       },
       {
-        "title": "Funding and investment",
-        "description": "Discuss grants, incubation, seed capital and commercialisation support."
+        "title": "融资与投资",
+        "description": "讨论资助、孵化、种子资本和商业化支持。"
       },
       {
-        "title": "Technical contribution",
-        "description": "Contribute specialist engineering, software, manufacturing or advisory capability."
+        "title": "技术贡献",
+        "description": "提供专业工程、软件、制造或顾问能力。"
       }
     ],
     "detailsTitle": "联系方式",
     "details": [
       {
-        "label": "Location",
-        "value": "Christchurch, New Zealand"
+        "label": "地点",
+        "value": "新西兰基督城"
       },
       {
-        "label": "Company",
+        "label": "公司",
         "value": "IndustrialOrigami.AI"
       },
       {
-        "label": "Focus",
-        "value": "AI, robotics, software, data, CAD and intelligent engineering"
+        "label": "重点",
+        "value": "人工智能、机器人、软件、数据、CAD、农业与智能工程"
       }
     ],
     "form": {
-      "name": "Name",
-      "email": "Email",
-      "interest": "Area of interest",
+      "name": "姓名",
+      "email": "电子邮件",
+      "interest": "感兴趣的领域",
       "options": [
-        "Industry project",
-        "Research partnership",
-        "Funding or investment",
-        "Technical collaboration",
-        "Career expression of interest"
+        "行业项目",
+        "研究合作",
+        "融资或投资",
+        "技术合作",
+        "职业机会意向"
       ],
-      "message": "Message",
-      "submit": "Send enquiry",
-      "success": "Thanks. Your enquiry has been received.",
-      "error": "The message could not be sent. Please try again or contact the company directly."
+      "message": "留言",
+      "submit": "发送咨询",
+      "success": "谢谢，您的咨询已收到。",
+      "error": "消息未能发送。请重试或直接联系公司。",
+      "attachmentLabel": "添加附件",
+      "attachmentHelp": "可选。接受 PDF、DOC、DOCX、TXT、PNG、JPG。最大文件大小：10 MB。",
+      "sending": "正在发送...",
+      "sendingMessage": "正在发送您的咨询..."
     }
   },
   "auth": {
     "loginTitle": "公司门户",
-    "signupTitle": "登记兴趣",
-    "description": "安全的客户和合作伙伴门户预留给未来平台功能。",
+    "signupTitle": "登记意向",
+    "description": "安全的客户与合作伙伴门户预留给未来平台功能。",
     "email": "电子邮件",
     "password": "密码",
     "name": "姓名",
     "login": "登录",
-    "signup": "登记",
-    "note": "此公开版本尚未启用身份验证和永久账户存储。"
+    "signup": "注册",
+    "note": "当前公开网站版本尚未启用身份验证和持久账户存储。",
+    "loginIntro": "访问未来的 IndustrialOrigami.AI 仪表板。目前身份验证仅为前端原型。",
+    "signupIntro": "为未来的合作、仪表板和咨询功能创建账户。当前表单仅为前端原型。",
+    "company": "公司或机构",
+    "loginButton": "登录",
+    "signupButton": "注册",
+    "noAccount": "还没有账户？",
+    "haveAccount": "已经有账户？"
   },
   "footer": {
-    "summary": "来自新西兰基督城的人工智能、机器人、软件、数据、CAD 与智能工程。",
-    "explore": "探索",
+    "summary": "来自新西兰基督城的人工智能、机器人、软件、数据、CAD、农业研究与智能工程。",
+    "explore": "浏览",
     "locationTitle": "地点",
     "location": "新西兰基督城",
     "rights": "保留所有权利。"

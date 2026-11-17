@@ -31,13 +31,11 @@ export function CollaboratePage({
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    if (!formRef.current) {
-      return;
-    }
+    if (!formRef.current) return;
 
     setSubmitState({
       status: "loading",
-      message: "Sending your enquiry...",
+      message: content.form.sendingMessage,
     });
 
     try {
@@ -48,32 +46,20 @@ export function CollaboratePage({
         body: formData,
       });
 
-      const result = (await response.json()) as {
-        ok?: boolean;
-        message?: string;
-      };
-
-      if (!response.ok || !result.ok) {
-        throw new Error(
-          result.message ?? "The form could not be sent.",
-        );
+      if (!response.ok) {
+        throw new Error(content.form.error);
       }
 
       formRef.current.reset();
 
       setSubmitState({
         status: "success",
-        message:
-          result.message ??
-          "Your enquiry has been sent successfully.",
+        message: content.form.success,
       });
-    } catch (error) {
+    } catch {
       setSubmitState({
         status: "error",
-        message:
-          error instanceof Error
-            ? error.message
-            : "Something went wrong while sending the form.",
+        message: content.form.error,
       });
     }
   }
@@ -103,7 +89,6 @@ export function CollaboratePage({
                 <h2 className="text-xl font-black text-brand-900">
                   {pathway.title}
                 </h2>
-
                 <p className="mt-3 text-sm leading-7 text-slate-600">
                   {pathway.description}
                 </p>
@@ -127,7 +112,6 @@ export function CollaboratePage({
                   <p className="text-sm font-black text-brand-orange">
                     {detail.label}
                   </p>
-
                   <p className="mt-2 leading-7 text-slate-600">
                     {detail.value}
                   </p>
@@ -189,17 +173,15 @@ export function CollaboratePage({
             </label>
 
             <label className="mt-5 grid gap-2 text-sm font-bold text-brand-900">
-              Attach file
+              {content.form.attachmentLabel}
               <input
                 type="file"
                 name="attachment"
                 accept=".pdf,.doc,.docx,.txt,.png,.jpg,.jpeg"
                 className="rounded-xl border border-dashed border-slate-300 bg-white px-4 py-3 text-sm text-slate-600 file:mr-4 file:rounded-lg file:border-0 file:bg-brand-900 file:px-4 file:py-2 file:text-sm file:font-bold file:text-white hover:border-brand-orange"
               />
-
               <span className="text-xs font-normal leading-6 text-slate-500">
-                Optional. Accepted files: PDF, DOC, DOCX, TXT, PNG, JPG.
-                Maximum size: 10 MB.
+                {content.form.attachmentHelp}
               </span>
             </label>
 
@@ -209,7 +191,7 @@ export function CollaboratePage({
               className="button-primary mt-6 disabled:cursor-not-allowed disabled:opacity-60"
             >
               {submitState.status === "loading"
-                ? "Sending..."
+                ? content.form.sending
                 : content.form.submit}
             </button>
 
@@ -228,8 +210,6 @@ export function CollaboratePage({
                 {submitState.message}
               </p>
             ) : null}
-
-            
           </form>
         </div>
       </section>

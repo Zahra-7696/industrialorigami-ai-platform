@@ -120,7 +120,7 @@ export const roboticHandContent: Partial<Record<
       {
         title: "Actuators and motor drivers",
         description:
-          "The complete concept may use approximately fifteen actuators, with each joint requiring suitable drive electronics and current protection.",
+          "The complete concept may support up to 20 actuator modules, with each joint requiring suitable drive electronics and current protection.",
       },
       {
         title: "Position and force sensing",
@@ -285,7 +285,7 @@ export const roboticHandContent: Partial<Record<
       {
         title: "محرک‌ها و درایورهای موتور",
         description:
-          "طرح کامل می‌تواند حدود پانزده محرک داشته باشد و هر مفصل به درایو و حفاظت جریان نیاز دارد.",
+          "طرح کامل می‌تواند تا ۲۰ ماژول محرک را پشتیبانی کند و هر مفصل به درایو مناسب و حفاظت جریان نیاز دارد.",
       },
       {
         title: "حسگر موقعیت و نیرو",
@@ -450,7 +450,7 @@ export const roboticHandContent: Partial<Record<
       {
         title: "执行器与电机驱动器",
         description:
-          "完整概念可能使用约十五个执行器，每个关节需要驱动电子设备和电流保护。",
+          "完整概念可支持最多 20 个执行器模块，每个关节都需要合适的驱动电子设备和电流保护。",
       },
       {
         title: "位置与力传感",
@@ -549,5 +549,170 @@ export const roboticHandContent: Partial<Record<
     roadmapEyebrow: "开发路线图",
     roadmapTitle: "从研究到行业试点的分阶段路径",
   },
+  pa: {
+    statusLabel: "ਮੌਜੂਦਾ ਪ੍ਰੋਜੈਕਟ ਸਥਿਤੀ",
+    statusDescription:
+      "ਪ੍ਰੋਜੈਕਟ ਇਸ ਵੇਲੇ ਖੋਜ, ਆਰਕੀਟੈਕਚਰ ਅਤੇ ਪੜਾਅਵਾਰ ਪ੍ਰੋਟੋਟਾਈਪ ਵਿਕਾਸ ਵਿੱਚ ਹੈ। ਹੇਠਾਂ ਦਿੱਤੀਆਂ ਤਸਵੀਰਾਂ ਸ਼ੁਰੂਆਤੀ sensing ਅਤੇ motion-capture ਪ੍ਰਯੋਗ ਦਿਖਾਉਂਦੀਆਂ ਹਨ, ਅੰਤਿਮ robotic-hand ਉਤਪਾਦ ਨਹੀਂ।",
+    overviewTitle: "ਪ੍ਰੋਜੈਕਟ ਕੀ ਹੈ",
+    overviewParagraphs: [
+      "Intelligent Robotic Hand ਇੱਕ ਮੋਡਿਊਲਰ robotic manipulation platform ਹੈ ਜੋ ਮਕੈਨਿਕਲ ਡਿਜ਼ਾਈਨ, sensing, deterministic motor control, computer vision ਅਤੇ edge AI ਨੂੰ ਜੋੜਨ ਲਈ ਤਿਆਰ ਕੀਤਾ ਗਿਆ ਹੈ।",
+      "ਮੁੱਖ ਖੋਜ ਸਵਾਲ ਇਹ ਹੈ ਕਿ ਕੀ ਹੱਥ ਵੱਖ-ਵੱਖ ਆਕਾਰ, ਦਿਸ਼ਾ, ਭਾਰ ਅਤੇ ਨਾਜ਼ੁਕੀ ਵਾਲੀਆਂ ਵਸਤੂਆਂ ਲਈ ਆਪਣੀ grasp ਨੂੰ ਬਿਨਾਂ ਹਰ ਉਂਗਲੀ ਦੀ ਹਿਲਚਲ ਵੱਖਰੇ ਤੌਰ 'ਤੇ program ਕੀਤੇ ਅਨੁਕੂਲ ਕਰ ਸਕਦਾ ਹੈ।",
+      "ਵਿਕਾਸ ਮਾਪਯੋਗ sub-systems ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ, ਜਿਵੇਂ human-hand motion capture, index-finger ਅਤੇ thumb mechanism, force ਅਤੇ position sensing, ਅਤੇ real-time motor control। ਇਹ ਨਤੀਜੇ ਪੂਰੇ multi-finger prototype ਦੇ ਡਿਜ਼ਾਈਨ ਨੂੰ ਜਾਣਕਾਰੀ ਦੇਣਗੇ।",
+    ],
+    galleryEyebrow: "ਵਿਕਾਸ ਦੇ ਸਬੂਤ",
+    galleryTitle: "ਹੱਥ sensing ਅਤੇ motion-capture ਪ੍ਰਯੋਗ",
+    galleryDescription:
+      "ਇਹ ਤਸਵੀਰਾਂ ਮਨੁੱਖੀ ਹੱਥ ਦੀ ਹਿਲਚਲ, joint relationships ਅਤੇ sensor input ਨੂੰ ਸਮਝਣ ਲਈ ਕੀਤੇ ਸ਼ੁਰੂਆਤੀ ਕੰਮ ਨੂੰ ਦਿਖਾਉਂਦੀਆਂ ਹਨ, ਇਸ ਤੋਂ ਪਹਿਲਾਂ ਕਿ ਇਹ ਵਿਹਾਰ robotic mechanism ਵਿੱਚ ਤਬਦੀਲ ਕੀਤੇ ਜਾਣ।",
+    galleryNote:
+      "ਇਹ ਤਸਵੀਰਾਂ experimental sensing ਅਤੇ motion-capture ਕੰਮ ਦਾ ਦਸਤਾਵੇਜ਼ ਹਨ। ਇਨ੍ਹਾਂ ਨੂੰ ਅੰਤਿਮ robotic-hand prototype ਦੀਆਂ ਤਸਵੀਰਾਂ ਵਜੋਂ ਪੇਸ਼ ਨਹੀਂ ਕਰਨਾ ਚਾਹੀਦਾ।",
+    gallery: [
+      {
+        src: "/projects/robotic-hand/hand-sensor.jpeg",
+        alt: "motion-capture ਪ੍ਰਯੋਗ ਦੌਰਾਨ ਮਨੁੱਖੀ ਹੱਥ ਨਾਲ ਜੁੜਿਆ sensor equipment",
+        caption:
+          "ਹੱਥ ਦੀ ਹਿਲਚਲ capture ਕਰਨ ਅਤੇ finger actions ਨੂੰ control data ਵਜੋਂ ਦਰਸਾਉਣ ਲਈ sensor-based ਪ੍ਰਯੋਗ।",
+        width: 474,
+        height: 437,
+      },
+      {
+        src: "/projects/robotic-hand/hand-motion-capture.jpeg",
+        alt: "tracked hand joints ਅਤੇ skeletal hand models ਦਿਖਾਉਂਦੀ computer display",
+        caption:
+          "hand kinematics ਨੂੰ visualise ਕਰਨ ਅਤੇ modelling/control ਲਈ motion data ਤਿਆਰ ਕਰਨ ਵਾਸਤੇ digital joint tracking।",
+        width: 469,
+        height: 460,
+      },
+    ],
+    usefulnessEyebrow: "ਸੰਭਾਵੀ ਮੁੱਲ",
+    usefulnessTitle: "ਇੰਟੈਲੀਜੈਂਟ robotic hand ਕਿਉਂ ਲਾਭਦਾਇਕ ਹੋ ਸਕਦਾ ਹੈ",
+    usefulnessDescription:
+      "ਰਵਾਇਤੀ grippers ਅਨੁਮਾਨਯੋਗ ਵਸਤੂ ਅਤੇ ਕੰਮ ਲਈ ਬਹੁਤ ਵਧੀਆ ਹਨ। Sensor-rich adaptive hand ਉਹਥੇ ਮੁੱਲ ਪੈਦਾ ਕਰ ਸਕਦਾ ਹੈ ਜਿੱਥੇ products, positions ਜਾਂ handling requirements ਬਦਲਦੇ ਹਨ।",
+    usefulness: [
+      "ਵੱਖ-ਵੱਖ ਆਕਾਰ ਅਤੇ ਮਾਪ ਵਾਲੀਆਂ ਵਸਤੂਆਂ ਦੀ ਲਚਕੀਲੀ handling",
+      "ਨਾਜ਼ੁਕ ਜਾਂ deformable items ਲਈ force-aware grasping",
+      "packaging, sorting, assembly ਅਤੇ logistics automation",
+      "robotics, control ਅਤੇ machine learning ਵਿੱਚ ਖੋਜ ਅਤੇ ਸਿੱਖਿਆ",
+      "automation integrators ਲਈ reusable end-effector platform",
+      "ਭਵਿੱਖੀ assistive-technology ਖੋਜ, safety, clinical ਅਤੇ regulatory validation ਦੇ ਅਧੀਨ",
+    ],
+    architectureEyebrow: "ਤਕਨਾਲੋਜੀ ਸਟੈਕ",
+    architectureTitle: "ਇੱਕ control system ਵਜੋਂ ਇਕੱਠੇ ਕੰਮ ਕਰਦਾ hardware ਅਤੇ software",
+    architectureDescription:
+      "ਆਰਕੀਟੈਕਚਰ high-level perception ਅਤੇ planning ਨੂੰ time-critical local motor control ਤੋਂ ਵੱਖ ਕਰਦਾ ਹੈ। ਇਸ ਨਾਲ deterministic response ਅਤੇ safety ਨੂੰ ਕਾਇਮ ਰੱਖਦੇ ਹੋਏ advanced AI processing ਸੰਭਵ ਹੁੰਦੀ ਹੈ।",
+    hardwareTitle: "ਹਾਰਡਵੇਅਰ",
+    hardware: [
+      {
+        title: "NVIDIA Jetson edge computer",
+        description:
+          "computer vision, neural-network inference, grasp planning ਅਤੇ high-level ROS 2 coordination ਚਲਾਉਂਦਾ ਹੈ।",
+      },
+      {
+        title: "ARM real-time controller",
+        description:
+          "STM32H7, Teensy-class ਜਾਂ ਸਮਾਨ controller deterministic motor loops, sensor acquisition ਅਤੇ local safety logic ਚਲਾਉਂਦਾ ਹੈ।",
+      },
+      {
+        title: "Actuators ਅਤੇ motor drivers",
+        description:
+          "ਪੂਰਾ ਸੰਕਲਪ 20 ਤੱਕ actuator modules ਨੂੰ support ਕਰ ਸਕਦਾ ਹੈ, ਅਤੇ ਹਰ joint ਲਈ ਢੁੱਕਵੇਂ drive electronics ਅਤੇ current protection ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ।",
+      },
+      {
+        title: "Position ਅਤੇ force sensing",
+        description:
+          "Encoders, Hall sensors ਜਾਂ potentiometers position feedback ਦਿੰਦੇ ਹਨ, ਜਦਕਿ current, pressure, force ਜਾਂ tactile sensors controlled contact ਨੂੰ ਸਹਾਇਤਾ ਦਿੰਦੇ ਹਨ।",
+      },
+      {
+        title: "External analogue acquisition",
+        description:
+          "ADS1115, ADS1015 ਜਾਂ MCP3008 ਵਰਗਾ ADC hardware analogue force, flex ਅਤੇ pressure signals acquire ਕਰ ਸਕਦਾ ਹੈ।",
+      },
+      {
+        title: "Industrial communication ਅਤੇ safety",
+        description:
+          "EtherCAT ਜਾਂ ਹੋਰ validated deterministic link commands ਅਤੇ feedback transfer ਕਰਦਾ ਹੈ, watchdogs, limits ਅਤੇ emergency-stop behaviour ਦੇ ਨਾਲ।",
+      },
+    ],
+    softwareTitle: "ਸਾਫਟਵੇਅਰ",
+    software: [
+      {
+        title: "Linux, CUDA ਅਤੇ TensorRT",
+        description:
+          "Jetson software stack edge 'ਤੇ computer vision ਅਤੇ neural-network inference ਨੂੰ accelerate ਕਰਦਾ ਹੈ।",
+      },
+      {
+        title: "Python, C++ ਅਤੇ OpenCV",
+        description:
+          "image processing, perception, data preparation, testing ਅਤੇ application-level control ਲਈ ਵਰਤੇ ਜਾਂਦੇ ਹਨ।",
+      },
+      {
+        title: "PyTorch ਅਤੇ model optimisation",
+        description:
+          "perception ਅਤੇ learning models ਨੂੰ train ਜਾਂ integrate ਕਰਨ ਅਤੇ edge deployment ਲਈ optimise ਕਰਨ ਨੂੰ ਸਹਾਇਤਾ ਦਿੰਦਾ ਹੈ।",
+      },
+      {
+        title: "ROS 2",
+        description:
+          "vision, grasp planning, hand control, telemetry, logging ਅਤੇ system integration ਲਈ modular nodes ਦਿੰਦਾ ਹੈ।",
+      },
+      {
+        title: "FreeRTOS ਜਾਂ bare-metal firmware",
+        description:
+          "ARM controller 'ਤੇ local motor-control tasks, sensor sampling, fault handling ਅਤੇ watchdog logic ਚਲਾਉਂਦਾ ਹੈ।",
+      },
+      {
+        title: "PID ਅਤੇ adaptive control",
+        description:
+          "ਸਵਤੰਤਰ high-frequency control loops joint position, velocity ਜਾਂ force ਨੂੰ regulate ਕਰਦੇ ਹਨ, ਭਵਿੱਖ ਵਿੱਚ learning-based adaptation ਦੀ ਸੰਭਾਵਨਾ ਨਾਲ।",
+      },
+    ],
+    workflowEyebrow: "ਕੰਟਰੋਲ ਵਰਕਫ਼ਲੋ",
+    workflowTitle: "ਸਿਸਟਮ ਕਿਵੇਂ ਕੰਮ ਕਰਨ ਲਈ ਤਿਆਰ ਕੀਤਾ ਗਿਆ ਹੈ",
+    workflowDescription:
+      "ਇੱਕ grasp command perception, planning, deterministic control ਅਤੇ sensor feedback ਦੀ coordinated sequence ਵਿੱਚ ਬਦਲਦਾ ਹੈ।",
+    workflow: [
+      {
+        title: "ਦੇਖਣਾ",
+        description:
+          "Cameras ਅਤੇ sensors object, hand state ਅਤੇ operating environment capture ਕਰਦੇ ਹਨ।",
+      },
+      {
+        title: "ਸਮਝਣਾ",
+        description:
+          "Jetson object pose, relevant features ਅਤੇ ਢੁੱਕਵੇਂ grasp type ਦਾ ਅੰਦਾਜ਼ਾ ਲਗਾਉਂਦਾ ਹੈ।",
+      },
+      {
+        title: "ਯੋਜਨਾ",
+        description:
+          "High-level controller target joint positions, forces ਜਾਂ hand synergies ਤਿਆਰ ਕਰਦਾ ਹੈ।",
+      },
+      {
+        title: "ਕੰਟਰੋਲ",
+        description:
+          "ARM controller deterministic rate 'ਤੇ motor commands ਚਲਾਉਂਦਾ ਅਤੇ limits enforce ਕਰਦਾ ਹੈ।",
+      },
+      {
+        title: "ਅਨੁਕੂਲਤਾ",
+        description:
+          "Position, current, force ਅਤੇ tactile feedback grasp ਨੂੰ refine ਕਰਦੇ ਹਨ ਜਾਂ safe stop trigger ਕਰਦੇ ਹਨ।",
+      },
+    ],
+    evaluationEyebrow: "ਪ੍ਰਮਾਣਿਕਤਾ",
+    evaluationTitle: "ਪ੍ਰੋਟੋਟਾਈਪ ਦਾ ਮੁਲਾਂਕਣ ਕਿਵੇਂ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
+    evaluationDescription:
+      "ਸਫਲਤਾ ਨੂੰ ਸਿਰਫ਼ ਦਿਖਾਵਟੀ demo ਦੀ ਬਜਾਏ ਮਾਪਯੋਗ engineering evidence ਨਾਲ ਸਾਬਤ ਕੀਤਾ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ।",
+    metrics: [
+      "ਪਰਿਭਾਸ਼ਿਤ object test set 'ਤੇ grasp success rate",
+      "Position ਅਤੇ force-control error",
+      "ਨਾਜ਼ੁਕ objects 'ਤੇ maximum contact force",
+      "Response latency ਅਤੇ ਪੂਰਾ grasp cycle time",
+      "Communication timing, jitter ਅਤੇ packet-loss behaviour",
+      "Fault detection ਅਤੇ recovery performance",
+      "ਦੁਹਰਾਏ trials ਵਿੱਚ repeatability",
+      "Energy consumption, payload ਅਤੇ actuator temperature",
+    ],
+    roadmapEyebrow: "ਵਿਕਾਸ ਰੋਡਮੈਪ",
+    roadmapTitle: "ਖੋਜ ਤੋਂ industry pilot ਤੱਕ ਪੜਾਅਵਾਰ ਰਸਤਾ",
+  },
+
 };
 

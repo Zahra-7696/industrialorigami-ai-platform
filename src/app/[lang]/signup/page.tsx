@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 
 import { AuthPage } from "@/components/pages/AuthPage";
 import { isLocale, type Locale } from "@/i18n/config";
+import { getDictionary } from "@/i18n/get-dictionary";
 
 type PageProps = {
   params: Promise<{ lang: string }>;
@@ -15,6 +16,13 @@ export default async function Page({ params }: PageProps) {
   }
 
   const locale: Locale = lang;
+  const dictionary = getDictionary(locale);
 
-  return <AuthPage locale={locale} mode="signup" />;
+  return (
+    <AuthPage
+      locale={locale}
+      dictionary={dictionary}
+      mode="signup"
+    />
+  );
 }

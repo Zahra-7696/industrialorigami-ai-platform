@@ -83,24 +83,35 @@
       {
         "name": "David Ewing",
         "role": "Founder and Managing Director",
-        "description": "Strategy, partnerships, funding, product direction and company development."
+        "description": "Strategy, partnerships, funding, product direction and company development.",
+        "degree": "Master's in Data Science"
       },
       {
         "name": "Zahra Torabi",
         "role": "AI, Software Engineering and R&D Lead",
-        "description": "AI/ML research, reinforcement learning, agentic and generative AI, software engineering, evaluation and technical implementation."
+        "description": "AI/ML research, reinforcement learning, agentic and generative AI, software engineering, evaluation and technical implementation.",
+        "degree": "PhD in Computer Science (Artificial Intelligence)"
       },
       {
         "name": "Lilian",
         "role": "Data Science and Analytics Lead",
-        "description": "Data preparation, statistical modelling, predictive analytics, visualisation, experimentation and validation."
+        "description": "Data preparation, statistical modelling, predictive analytics, visualisation, experimentation and validation.",
+        "degree": "Master of Data Science"
       },
       {
         "name": "Gurwinder",
         "role": "Mechanical and Project Engineering Lead",
-        "description": "Mechanical engineering, CAD design, fabrication and project engineering for prototype development."
+        "description": "Mechanical engineering, CAD design, fabrication and project engineering for prototype development.",
+        "degree": "Bachelor of Mechanical Engineering"
       }
-    ]
+    ],
+    "contactLabels": {
+      "email": "Email",
+      "emailUnavailable": "Email unavailable",
+      "linkedin": "LinkedIn",
+      "linkedinUnavailable": "LinkedIn unavailable",
+      "profilePhotoAlt": "profile photograph"
+    }
   },
   "services": {
     "eyebrow": "Services",
@@ -785,6 +796,62 @@
         "title": "Future Opportunities and Talent Network",
         "summary": "Connect with us if your experience may support future AI, software, robotics, embedded systems, electronics, manufacturing, product or commercial work."
       }
+    },
+    "detail": {
+      "points": [
+        "AI, software, robotics, data, research, engineering, product or commercial experience.",
+        "Interest in practical technology development for real-world industrial problems.",
+        "Ability to work in an early-stage, research-driven company environment.",
+        "Clear communication, curiosity, reliability and willingness to learn."
+      ],
+      "ctaTitle": "Interested in working with us?",
+      "ctaDescription": "Submit your expression of interest and attach your CV, cover letter or supporting documents.",
+      "ctaButton": "Submit expression of interest"
+    },
+    "application": {
+      "title": "Future Opportunities and Talent Network",
+      "intro": "Submit your expression of interest for future technical, research, engineering, software, data, AI, robotics, product or commercial opportunities.",
+      "formTitle": "Expression of interest form",
+      "name": "Full name",
+      "email": "Email address",
+      "phone": "Phone number",
+      "address": "Address",
+      "addressHelp": "Start typing your address. If map suggestions are not available, write the address manually.",
+      "interest": "Type of interest",
+      "workRight": "Right to work in New Zealand",
+      "message": "Short message",
+      "cv": "Upload CV",
+      "coverLetter": "Upload cover letter",
+      "additionalFile": "Additional file",
+      "submit": "Submit expression of interest",
+      "sending": "Sending...",
+      "note": "This form currently emails the application to the company contact. Database storage will be added in a later phase.",
+      "fileHelp": "Accepted files: PDF, DOC, DOCX. Maximum size: 10 MB per file.",
+      "success": "Your expression of interest has been sent successfully.",
+      "error": "Something went wrong while sending the application.",
+      "interestOptions": [
+        "AI / Machine Learning",
+        "Software Development",
+        "Robotics and Automation",
+        "Data Science and Analytics",
+        "Mechanical / Project Engineering",
+        "Research and Prototyping",
+        "Business Development / Partnerships",
+        "Internship or Graduate Opportunity",
+        "Other"
+      ],
+      "workRightOptions": [
+        "New Zealand citizen",
+        "New Zealand resident",
+        "Permanent resident visa",
+        "Accredited Employer Work Visa",
+        "Post-study work visa",
+        "Open work visa",
+        "Student visa",
+        "Visitor visa",
+        "Need visa sponsorship",
+        "Other"
+      ]
     }
   },
   "collaborate": {
@@ -840,7 +907,11 @@
       "message": "Message",
       "submit": "Send enquiry",
       "success": "Thanks. Your enquiry has been received.",
-      "error": "The message could not be sent. Please try again or contact the company directly."
+      "error": "The message could not be sent. Please try again or contact the company directly.",
+      "attachmentLabel": "Attach file",
+      "attachmentHelp": "Optional. Accepted files: PDF, DOC, DOCX, TXT, PNG, JPG. Maximum size: 10 MB.",
+      "sending": "Sending...",
+      "sendingMessage": "Sending your enquiry..."
     }
   },
   "auth": {
@@ -852,7 +923,14 @@
     "name": "Name",
     "login": "Sign in",
     "signup": "Register",
-    "note": "Authentication and persistent account storage are not enabled in this public website release."
+    "note": "Authentication and persistent account storage are not enabled in this public website release.",
+    "loginIntro": "Access the future IndustrialOrigami.AI dashboard. Authentication is currently a front-end prototype.",
+    "signupIntro": "Create an account for future collaboration, dashboard and enquiry features. This form is currently a front-end prototype.",
+    "company": "Company or organisation",
+    "loginButton": "Log in",
+    "signupButton": "Sign up",
+    "noAccount": "Do not have an account?",
+    "haveAccount": "Already have an account?"
   },
   "footer": {
     "summary": "AI, robotics, software, data, CAD and intelligent engineering from Christchurch, New Zealand.",

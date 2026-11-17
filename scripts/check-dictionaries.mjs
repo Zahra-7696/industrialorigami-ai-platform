@@ -2,96 +2,131 @@ import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const dir = join(dirname(fileURLToPath(import.meta.url)), "..", "i18n", "dictionaries");
+const dir = join(
+  dirname(fileURLToPath(import.meta.url)),
+  "..",
+  "i18n",
+  "dictionaries",
+);
+
 const locales = ["fa", "zh", "pa"];
-const verbose = process.argv.includes("--verbose");
 const strict = process.argv.includes("--strict");
-
-const load = (name) => JSON.parse(readFileSync(join(dir, `${name}.json`), "utf8"));
-
-function flatten(value, path = "", out = new Map()) {
-  if (Array.isArray(value)) {
-    out.set(`${path}[]`, value.length);
-    value.forEach((item, i) => flatten(item, `${path}[${i}]`, out));
-  } else if (value && typeof value === "object") {
-    for (const key of Object.keys(value)) {
-      flatten(value[key], path ? `${path}.${key}` : key, out);
-    }
-  } else {
-    out.set(path, value);
-  }
-  return out;
-}
-
-function needsTranslation(key, value) {
-  if (typeof value !== "string") return false;
-  if (/(^|\.)slug$/.test(key)) return false;
-  return value.trim().split(/\s+/).length >= 3;
-}
+const verbose = process.argv.includes("--verbose");
 
 const mojibakeMarkers = [
   "Ã", "Â", "Ø", "Ù", "Û", "å", "æ", "ç", "ä", "é", "è", "ð", "â", "ï¿½",
 ];
 
-function hasMojibake(value) {
-  return mojibakeMarkers.some((marker) => value.includes(marker));
+function load(locale) {
+  return JSON.parse(
+    readFileSync(join(dir, `${locale}.json`), "utf8"),
+  );
+}
+
+function flatten(value, path = "", out = new Map()) {
+  if (Array.isArray(value)) {
+    out.set(`${path}[]`, value.length);
+    value.forEach((item, index) =>
+      flatten(item, `${path}[${index}]`, out),
+    );
+  } else if (value && typeof value === "object") {
+    for (const [key, item] of Object.entries(value)) {
+      flatten(item, path ? `${path}.${key}` : key, out);
+    }
+  } else {
+    out.set(path, value);
+  }
+
+  return out;
+}
+
+function containsMojibake(value) {
+  return (
+    typeof value === "string" &&
+    mojibakeMarkers.some((marker) => value.includes(marker))
+  );
+}
+
+function shouldBeLocalised(path, value) {
+  if (typeof value !== "string") return false;
+  if (value === "IndustrialOrigami.AI") return false;
+  if (value.trim().length < 18) return false;
+
+  if (
+    /\.(slug|src|image|email|linkedin)$/.test(path) ||
+    /\.technolog(y|ies)\[\d+\]$/.test(path) ||
+    /\.name$/.test(path)
+  ) {
+    return false;
+  }
+
+  return true;
 }
 
 const en = flatten(load("en"));
-let errors = 0;
+let failures = 0;
 
 for (const locale of locales) {
   const other = flatten(load(locale));
   const problems = [];
+  const identical = [];
 
-  for (const [key, value] of en) {
-    if (!other.has(key)) problems.push(`missing: ${key}`);
-    else if (key.endsWith("[]") && other.get(key) !== value) {
-      problems.push(`array length ${other.get(key)} (en has ${value}): ${key}`);
+  for (const [path, value] of en) {
+    if (!other.has(path)) {
+      problems.push(`missing: ${path}`);
+      continue;
+    }
+
+    if (
+      path.endsWith("[]") &&
+      other.get(path) !== value
+    ) {
+      problems.push(
+        `array length mismatch: ${path} (${other.get(path)} vs ${value})`,
+      );
+      continue;
+    }
+
+    if (
+      shouldBeLocalised(path, value) &&
+      other.get(path) === value
+    ) {
+      identical.push(path);
     }
   }
 
-  for (const key of other.keys()) {
-    if (!en.has(key)) problems.push(`extra: ${key}`);
+  for (const path of other.keys()) {
+    if (!en.has(path)) {
+      problems.push(`extra: ${path}`);
+    }
   }
 
-  const mojibake = [...other]
-    .filter(([, value]) => typeof value === "string" && hasMojibake(value))
-    .map(([key]) => key);
-
-  for (const key of mojibake) {
-    problems.push(`mojibake: ${key}`);
-  }
-
-  const untranslated = [...en]
-    .filter(([key, value]) => needsTranslation(key, value) && other.get(key) === value)
-    .map(([key]) => key);
-
-  const bySection = {};
-  for (const key of untranslated) {
-    const section = key.split(/[.[]/)[0];
-    bySection[section] = (bySection[section] ?? 0) + 1;
+  for (const [path, value] of other) {
+    if (containsMojibake(value)) {
+      problems.push(`mojibake: ${path}`);
+    }
   }
 
   console.log(
-    `\n${locale}: ${problems.length} structure/encoding problem(s), ${untranslated.length} string(s) identical to English`,
+    `\n${locale}: ${problems.length} structure/encoding problem(s), ${identical.length} long string(s) still identical to English`,
   );
 
-  if (untranslated.length) {
-    console.log(`  by section: ${JSON.stringify(bySection)}`);
+  for (const problem of problems) {
+    console.log(`  ERROR ${problem}`);
   }
 
-  for (const problem of problems) console.log(`  ERROR ${problem}`);
-  if (verbose) {
-    for (const key of untranslated) console.log(`  untranslated: ${key}`);
+  if (verbose || strict) {
+    for (const path of identical) {
+      console.log(`  IDENTICAL ${path}`);
+    }
   }
 
-  errors += problems.length;
-  if (strict) errors += untranslated.length;
+  failures += problems.length;
+  if (strict) failures += identical.length;
 }
 
-if (errors) {
-  console.error(`\nDictionary check failed with ${errors} problem(s).`);
+if (failures > 0) {
+  console.error(`\nDictionary check failed with ${failures} problem(s).`);
   process.exit(1);
 }
 
