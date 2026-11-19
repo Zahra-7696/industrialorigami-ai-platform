@@ -137,22 +137,24 @@ export function AboutPage({ dictionary }: AboutPageProps) {
                         )}
 
                         {hasLinkedIn ? (
-                          <a
-                            href={profile.linkedin.trim()}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="group rounded-xl border border-[#0A66C2]/30 bg-[#0A66C2]/5 px-4 py-3 transition hover:border-[#0A66C2] hover:shadow-md"
-                          >
-                            <span className="block text-xs font-black uppercase tracking-wider text-[#0A66C2]">
-                              {labels.linkedin}
-                            </span>
-                            <span className="mt-1 block break-all text-sm font-bold text-brand-900 group-hover:text-[#0A66C2]">
+                          <div className="rounded-xl border border-[#0A66C2]/30 bg-[#0A66C2]/5 px-4 py-3 transition hover:border-[#0A66C2] hover:shadow-md">
+                            <a
+                              href={profile.linkedin.trim()}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="inline-flex items-center gap-1 text-xs font-black uppercase tracking-wider text-[#0A66C2] underline decoration-[#0A66C2]/40 underline-offset-4 transition hover:text-[#084d94]"
+                              aria-label={`${labels.linkedin} - ${member.name}`}
+                            >
+                              {labels.linkedin} ↗
+                            </a>
+
+                            <p className="mt-1 break-all text-sm font-bold text-brand-900">
                               {profile.linkedin
                                 .trim()
                                 .replace(/^https?:\/\/(www\.)?/, "")
                                 .replace(/\/$/, "")}
-                            </span>
-                          </a>
+                            </p>
+                          </div>
                         ) : (
                           <span className="rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-400">
                             {labels.linkedinUnavailable}
