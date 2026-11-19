@@ -142,7 +142,7 @@ export function AboutPage({ dictionary }: AboutPageProps) {
                               href={profile.linkedin.trim()}
                               target="_blank"
                               rel="noreferrer"
-                              className="inline-flex items-center gap-1 text-xs font-black uppercase tracking-wider text-[#0A66C2] underline decoration-[#0A66C2]/40 underline-offset-4 transition hover:text-[#084d94]"
+                              className="inline-flex items-center gap-1 text-xs font-black uppercase tracking-wider text-brand-orange underline decoration-brand-orange/40 underline-offset-4 transition hover:text-brand-700"
                               aria-label={`${labels.linkedin} - ${member.name}`}
                             >
                               {labels.linkedin} ↗
